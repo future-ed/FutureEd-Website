@@ -31,19 +31,6 @@ body {
 }
 
 
-
-.custom-img-signup {
-  background-image: url(assets/background_laundingpage2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.custom-img-fp {
-  background-image: url(assets/background_laundingpage.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .custom-img {
   background-image: url(assets/background_laundingpage3.jpg);
   background-repeat: no-repeat;
@@ -58,18 +45,6 @@ body {
 
 .custom-img-support {
   background-image: url(assets/support.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.custom-img-support1 {
-  background-image: url(assets/Support1.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.custom-img-signin {
-  background-image: url(assets/login.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }

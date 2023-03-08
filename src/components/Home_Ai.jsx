@@ -15,7 +15,7 @@ const Ai = () => {
             	
             </h1>
           <p>
-          Ben je het zat om eindeloos te moeten worstelen met het samenvatten van ellenlange teksten, 
+          Ben je het zat om eindeloos te moeten worstelen met het samenvatten van ellendelange teksten, 
           het zoeken naar de juiste referenties of het bekijken van urenlange video's voor een paar belangrijke punten? 
           Goed nieuws: wij zijn bezig met het ontwikkelen van AI-functies die het studieproces eenvoudiger maken!
           </p>

@@ -22,7 +22,7 @@ function Question ({question, answer}) {
         </div>
         <div className={expand ? 'display p-4 text-xl bg-white whitespace-pre-wrap' : 'hidden p-4'}>
             {
-                answer.split(/\r\n|\n|\r/gm).map(line => {
+                answer.split('#').map(line => {
                     return <React.Fragment>{line}<br /></React.Fragment>
                             }
                 )

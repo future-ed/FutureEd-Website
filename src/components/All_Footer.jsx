@@ -16,7 +16,7 @@ const Footer = () => {
         <p className='py-4'>
           Bridging the gap between 
           education and society.
-          Established in 2022.
+          Established in 2023.
         </p>
         <h3 className='w-full text-2xl font-bold'>
           Follow us soon on

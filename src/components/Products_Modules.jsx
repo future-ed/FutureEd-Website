@@ -11,69 +11,68 @@ const ModulesContent = () => {
                
                 <Question 
                         question='1. Persoonlijke financiën' 
-                        answer=' Deze module focust op de basis van persoonlijke financiën. Ongeacht of je al ervaring hebt of niet, deze module bevat handige informatie voor iedereen. Hierbij behandelen we onderwerp zoals:
-                        - Planning van je financiële toekomst
-                        - Budgetteringstechnieken
-                        - Productieve leningen en schuldbeheer
-                        - Vormen van inkomen
-                        - Ontdekken welke manieren van geld te verdienen bij jou passen
-                        - En nog veel meer!'
-                        
+                        answer=' Deze module focust op de basis van persoonlijke financiën. Ongeacht of je al ervaring hebt of niet, deze module bevat handige informatie voor iedereen. Hierbij behandelen we onderwerpen zoals:
+                        #- Planning van je financiële toekomst
+                        #- Budgetteringstechnieken
+                        #- Productieve leningen en schuldbeheer
+                        #- Vormen van inkomen
+                        #- Ontdekken welke manieren van geld te verdienen bij jou passen
+                        #- En nog veel meer!'
                         />
 
                     <Question
                         question='2. Belastingen'
                         answer=' Bij deze module leer je de basis van belastingen. Hierbij behandelen we onderwerp zoals:
-                        - Loonbelasting
-                        - Inkomstenbelasting
-                        - Dividendbelasting
-                        - Verband tussen loon en belasting
-                        - Belasting verband tussen ZZP, VOF en BV
-                        - Hoe kun je belasting in je voordeel gebruiken?
-                        - Belastingsaangifte uitgelegd
-                        - En nog veel meer!'
+                        #- Loonbelasting
+                        #- Inkomstenbelasting
+                        #- Dividendbelasting
+                        #- Verband tussen loon en belasting
+                        #- Belasting verband tussen ZZP, VOF en BV
+                        #- Hoe kun je belasting in je voordeel gebruiken?
+                        #- Belastingsaangifte uitgelegd
+                        #- En nog veel meer!'
                     />
 
                     <Question   
                         question='3. Auto & Huis & Op kamers '
-                        answer=' Bij deze module leer je hoe het zit met auos, huis en op kamers gaan. Hierbij behandelen we onderwerp zoals:
-                        - Autoverzekeringen
-                        - Huisverzekeringen
-                        - Process doorlopen van een huis of auto kopen
-                        - Kosten van verschillende opties
-                        - Op kamers gaan wonen en de kosten
-                        - Welke rechten heb je als huurder?
-                        - En nog veel meer!'
+                        answer=' Bij deze module leer je hoe het zit met auto, huis en op kamers gaan. Hierbij behandelen we onderwerp zoals:
+                        #- Autoverzekeringen
+                        #- Huisverzekeringen
+                        #- Process doorlopen van een huis of auto kopen
+                        #- Kosten van verschillende opties
+                        #- Op kamers gaan wonen en de kosten
+                        #- Welke rechten heb je als huurder?
+                        #- En nog veel meer!'
                     />
 
                     <Question
                         question='4. Verzekeringen'
                         answer=' Bij deze module leer je de basis van verzekeringen die jij wellicht tegen gaat komen in het leven. Hierbij behandelen we onderwerp zoals:
-                        - Zorgverzekeringen
-                        - Aansprakelijkheidsverzekeringen
-                        - Reisverzekeringen
-                        - UWV
-                        - En nog meer!'
+                        #- Zorgverzekeringen
+                        #- Aansprakelijkheidsverzekeringen
+                        #- Reisverzekeringen
+                        #- UWV
+                        #- En nog meer!'
                     />
 
                     <Question
                         question='5. Pensioen'
                         answer=' Bij deze module leer je hoe pensioen werkt en hoe je er voor kan voorbereiden. Hierbij behandelen we onderwerp zoals:
-                        - Staatspensioen
-                        - Aanvullend pensioen
-                        - Hoe zit het met je belastingen?
-                        - Alternateive opties?
-                        - En nog meer!'
+                        #- Staatspensioen
+                        #- Aanvullend pensioen
+                        #- Hoe zit het met je belastingen?
+                        #- Alternatieve opties?
+                        #- En nog meer!'
                     />
                     
                     <Question
                         question='6. Persoonlijke ontwikkeling'
                         answer=' Bij deze module leer je jezelf ontwikkelen en ontdekken hoe je alle geleerde stof tot nu toe kunt gebruiken in je leven. Hierbij behandelen we onderwerp zoals:
-                        - Jezelf leren kennen 
-                        - Technieken om je productiviteit te verhogen
-                        - Werk-privé balans
-                        - Hoe bereik je je doelen?
-                        - En nog meer!'
+                        #- Jezelf leren kennen 
+                        #- Technieken om je productiviteit te verhogen
+                        #- Werk-privé balans
+                        #- Hoe bereik je je doelen?
+                        #- En nog meer!'
                     />
                 </div>
         </div>

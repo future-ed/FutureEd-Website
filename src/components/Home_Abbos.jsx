@@ -18,7 +18,7 @@ const Abbos = () => {
                   <p className='py-2 border-b mx-8'>6 modules, 20 opdrachten</p>
                   <p className='py-2 border-b mx-8'>Wekelijks 1 online les van 1.5 uur</p>
               </div>
-              <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3'><HashLink smooth to='/support/#Contact' >Start</HashLink></button>
+              <HashLink smooth to='/support/#Contact' ><button className='bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3'>Start</button></HashLink>
           </div>
           <div className='w-full shadow-xl bg-gray-100 flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
               <img className='w-20 mx-auto mt-[-3rem] bg-transparent' src={Double} alt="/" />
@@ -30,7 +30,7 @@ const Abbos = () => {
                   <p className='py-2 border-b mx-8'>6 modules, 20 opdrachten</p>
                   <p className='py-2 border-b mx-8'>Wekelijks 1 online les van 1.5 uur</p>
               </div>
-              <button className='bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3'><HashLink smooth to='/support/#Contact' >Start</HashLink></button>
+              <HashLink smooth to='/support/#Contact' ><button className='bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3'>Start</button></HashLink>
           </div>
           <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
               <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Triple} alt="/" />
@@ -42,7 +42,7 @@ const Abbos = () => {
                   <p className='py-2 border-b mx-8'>Modules en opdrachten naar wens</p>
                   <p className='py-2 border-b mx-8'>Vormgeving naar wens</p>
               </div>
-              <button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3'><HashLink smooth to='/support/#Contact' >Meer info</HashLink></button>
+              <HashLink smooth to='/support/#Contact' ><button className='bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3'>Meer info</button></HashLink>
           </div>
       </div>
     </div>

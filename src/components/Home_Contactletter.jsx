@@ -21,9 +21,11 @@ const Contactletter = () => {
               type='email'
               placeholder='Enter Email'
             /> */}
+            <HashLink smooth to='/support/#Contact' >
             <button className='bg-black text-[#00df9a] rounded-md font-medium w-[200px] ml-4 my-6 px-6 py-3'>
-            <HashLink smooth to='/support/#Contact' >Neem contact op</HashLink>
+            Neem contact op
             </button>
+            </HashLink>
           </div>
           {/* <p>
             We care bout the protection of your data. Read our{' '}

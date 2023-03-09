@@ -19,9 +19,11 @@ const Ai = () => {
           het zoeken naar de juiste referenties of het bekijken van urenlange video's voor een paar belangrijke punten? 
           Goed nieuws: wij zijn bezig met het ontwikkelen van AI-functies die het studieproces eenvoudiger maken!
           </p>
+          <HashLink smooth to='/products/#ProductAI' > 
           <button className='bg-[#00df9a] text-black  w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3'>
-          <HashLink smooth to='/products/#ProductAI' > Meer informatie </HashLink>
+            Meer informatie 
           </button>
+          </HashLink>
         </div>
       </div>
     </div>

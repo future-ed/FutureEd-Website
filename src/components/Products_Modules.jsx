@@ -57,7 +57,7 @@ const ModulesContent = () => {
 
                     <Question
                         question='5. Pensioen'
-                        answer=' Bij deze module leer je hoe pensioen werkt en hoe je er voor kan voorbereiden. Hierbij behandelen we onderwerp zoals:
+                        answer=' Bij deze module leer je hoe pensioen werkt en waarom het belangrijk is om vroegtijdig al te weten welke opties je hebt. Hierbij behandelen we onderwerp zoals:
                         #- Staatspensioen
                         #- Aanvullend pensioen
                         #- Hoe zit het met je belastingen?

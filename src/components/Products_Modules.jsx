@@ -66,12 +66,13 @@ const ModulesContent = () => {
                     />
                     
                     <Question
-                        question='6. Persoonlijke ontwikkeling'
+                        question='6. Leven optimalisatie'
                         answer=' Bij deze module leer je jezelf ontwikkelen en ontdekken hoe je alle geleerde stof tot nu toe kunt gebruiken in je leven. Hierbij behandelen we onderwerp zoals:
-                        #- Jezelf leren kennen 
-                        #- Technieken om je productiviteit te verhogen
-                        #- Werk-privé balans
-                        #- Hoe bereik je je doelen?
+                        #- Voordelen en valkuilen van jouw karakter en persoonlijkheid
+                        #- Productiviteits verhogende technieken
+                        #- Hoe leer je sneller?
+                        #- Hoe rust je optimaal?
+                        #- Science-based motivatie en mood hacks
                         #- En nog meer!'
                     />
                 </div>

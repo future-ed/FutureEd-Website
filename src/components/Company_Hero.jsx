@@ -18,14 +18,8 @@ const HeroCompany = () => {
           Voor studenten
         </h1>
         <p className={`${styles.paragraph} max-w-[470px] mt-5 text-white`}>
-        {/* Our mission is to provide you with cutting-edge technology based solutions to enhance your learning efficiency.  
-        With our AI-powered educational tools you can focus on what really matters for your educational life and learn much faster.  
-        Furthermore, we find it extremely important that every student, regardless of their academic excellence is well-prepared for the future with our fun and engaging content modules. 
-        We strive to deliver top-notch quality content that is easy to understand at an affordable price for every student.  */}
-        Onze missie is om je te voorzien van op technologie gebaseerde oplossingen om je leer efficiëntie te verbeteren.
-        Met onze AI-gestuurde educatieve tools kun je je richten op wat er echt toe doet voor je studie en veel sneller leren.
-        Daarnaast vinden we het erg belangrijk dat elke student, ongeacht hun academische excellentie, goed voorbereid is op de toekomst met onze leuke en aansprekende lesmodules.
-        We streven ernaar om topkwaliteit inhoud te leveren die gemakkelijk te begrijpen is tegen een betaalbare prijs voor elke student.
+        Onze missie is om je te voorzien van praktische kennis en vaardigheden die je nodig hebt voordat je de arbeidsmarkt en maatschappij betreedt.
+        Daarnaast helpen we scholen met AI gedreven tools om het onderwijs te verbeteren en de leerervaring te optimaliseren van studenten.
         </p>
       </div>
 

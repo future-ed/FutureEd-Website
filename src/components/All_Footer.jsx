@@ -31,10 +31,11 @@ const Footer = () => {
     <div>
         <h6 className='font-medium text-gray-400'><Link to='/products'>Products</Link></h6>
         <ul>
-            <li className='py-2 text-sm'><HashLink smooth to='/products/#ProductModule' > Modules </HashLink></li>
-            <li className='py-2 text-sm'><HashLink smooth to='/products/#ProductAI' > AI-features </HashLink></li>
+            <li className='py-2 text-sm'><HashLink smooth to='/products/#ProductModule' > Lesmodules </HashLink></li>
             {/* <li className='py-2 text-sm'><HashLink smooth to='/products/#Reviews' > Reviews </HashLink></li> */}
-             <li className='py-2 text-sm'><HashLink smooth to='/products/#Abbos' > Pricing lesmodules </HashLink></li>
+             <li className='py-2 text-sm'><HashLink smooth to='/products/#Abbos' > Pricing Lesmodules </HashLink></li>
+             <li className='py-2 text-sm'><HashLink smooth to='/products/#ProductAI' > AI-features </HashLink></li>
+            <li className='py-2 text-sm'><HashLink smooth to='/products/#PricingAI' > Pricing AI-features </HashLink></li>
         </ul>
     </div>
     <div>

@@ -15,7 +15,7 @@ const Hero = () => {
         </h1>
         
         <p className='md:text-2xl text-xl font-bold text-gray-500'>
-            Learn smarter, Learn faster, Learn better
+            Leer slimmer, Leer efficienter, Leer beter
         </p>
         <Link to='/support'>
         <button className='bg-green-gradient w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Meld je aan</button>

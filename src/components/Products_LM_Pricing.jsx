@@ -6,9 +6,9 @@ import { HashLink } from 'react-router-hash-link';
 
 const Abbos = () => {
   return (
-    <div className='mx-auto w-full bg-white'>
+    <div id = 'Abbos' className='mx-auto w-full bg-white'>
                 <h1 className='text-4xl py-16 font-bold text-center text-black'>Pricing Lesmodules</h1>
-    <div id = 'Abbos' className='w-full px-4 py-8 bg-white'>
+    <div className='w-full px-4 py-8 bg-white'>
       <div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8'>
           <div className='w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300'>
               <img className='w-20 mx-auto mt-[-3rem] bg-white' src={Single} alt="/" />

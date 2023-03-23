@@ -3,18 +3,18 @@ import styles from "../style";
 const stats = [
     {
       id: "stats-1",
-      title: "high content modules",
+      title: "Lesmodules",
       value: "6",
     },
     {
       id: "stats-2",
-      title: "interactive exercises",
+      title: "Praktische Opdrachten",
       value: "20",
     },
     {
       id: "stats-3",
-      title: "AI-tools available soon",
-      value: "3",
+      title: "AI-tools voor scholen",
+      value: "2+",
     },
   ];
 

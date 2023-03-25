@@ -31,26 +31,27 @@ const Hero = () => {
     }
 
   return (
-    <div id = 'Contact' className='text-white custom-img-support '>
-      <div className='bg-black/70'>
-      <div className='max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center'>
-        <p className='text-[#00df9a] text-xl font-bold p-6 uppercase'>
-          Heb je vragen, interesse of wil je aanmelden?
+    <div id="Contact" className="text-white custom-img-support ">
+      <div className="bg-black/70">
+      <div className="max-w-[800px] mt-[-96px] w-full h-screen mx-auto text-center flex flex-col justify-center">
+        <p className="text-[#00df9a] text-xl font-bold p-6 uppercase">
+          Heb je nog vragen?
         </p>
         {/* <h1 className='md:text-6xl text-white sm:text-5xl text-4xl font-bold md:py-6'>
           Still have questions?
         </h1> */}
-        <h1 className='md:text-5xl text-white sm:text-5xl text-4xl font-bold md:py-6'>
+        <h1 className="md:text-5xl text-white sm:text-5xl text-4xl font-bold md:py-6">
           Neem contact met ons op!
-        </h1> 
+        </h1>
 
-        <p className='text-[#00df9a] text-xl font-bold p-6 uppercase'>
-          Email :
-        </p>
-        <h1 className='md:text-3xl text-white sm:text-5xl text-4xl font-bold md:py-6'>
-          contact@future-ed.dev
-        </h1> 
-      
+        <button
+          className="bg-green-gradient w-70 text-black active:bg-darkblue-gradient font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+          onClick={() =>
+            (window.location.href = "mailto:contact@future-ed.dev")
+          }
+        >
+          Email
+        </button>
         {/* <form
           className="bg-black opacity-80 my-8 shadow-md rounded px-8 pt-6 pb-8 mb-4 mx-10"
           action={FORM_ENDPOINT}
@@ -94,11 +95,11 @@ const Hero = () => {
             </button>
           </div>
         </form> */}
-    
       </div>
       </div>
     </div>
   );
 };
+
 
 export default Hero;

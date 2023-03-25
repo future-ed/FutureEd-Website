@@ -1,63 +1,106 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Question from './Support_FAQ_Question';
 
 const Faq = () => {
+    const [activeQuestion, setActiveQuestion] = useState(null);
+
+    const handleQuestionClick = (index) => {
+        if (index === activeQuestion) {
+            setActiveQuestion(null);
+        } else {
+            setActiveQuestion(index);
+        }
+    };
+
     return (
-        <div id = 'FAQ' className='bg-color-faq'>
-            <div className='bg-black/50' >
-            <div className='py-16 mx-auto w-full px-4 max-w-4xl'>
-                <h1 className='text-4xl py-8 font-bold text-center text-white'>Frequently Asked Questions</h1>
-                <hr className='py-4 border-b border-[#00df9a]' />
+        <div id='FAQ' className='bg-color-faq'>
+            <div className='bg-black/50'>
+                <div className='py-16 mx-auto w-full px-4 max-w-4xl'>
+                    <h1 className='text-4xl py-8 font-bold text-center text-white'>
+                        Veelgestelde Vragen
+                    </h1>
+                    <hr className='py-4 border-b border-[#00df9a]' />
 
-                <Question
-                    question='1. Hoe kan ik FutureEd gebruiken?'
-                    answer='FutureEd is een online platform dat AI-gebaseerde technologieën biedt om je studie-efficiëntie te verbeteren. We bieden ook unieke en aantrekkelijke inhoud die niet algemeen wordt onderwezen in traditionele onderwijssystemen.'
+                    <Question
+                        index={0}
+                        activeQuestion={activeQuestion}
+                        handleQuestionClick={handleQuestionClick}
+                        question='1. Waar kan ik FutureEd voor gebruiken als student?'
+                        answer='FutureEd is een online platform dat unieke en aantrekkelijke inhoud biedt die niet algemeen wordt onderwezen in traditionele onderwijssystemen.'
                     />
 
                     <Question
-                    question='2. Wanneer zullen de AI features beschikbaar zijn?'
-                    answer='De AI features zijn momenteel nog in ontwikkeling. We verwachten dat ze in de loop van april 2023 beschikbaar zullen zijn.'
+                        index={1}
+                        activeQuestion={activeQuestion}
+                        handleQuestionClick={handleQuestionClick}
+                        question='2. Wat voor soort onderwerpen worden behandeld in de lessen?'
+                        answer='We behandelen meer dan 40 onderwerpen, waaronder budgettering, schuldbeheer, belastingaangifte, kosten voor autos, huisvesting en persoonlijke ontwikkeling.'
                     />
 
                     <Question
-                    question='3. Wat voor soort onderwerpen worden behandeld in de lessen?'
-                    answer='We behandelen meer dan 40 onderwerpen, waaronder budgettering, schuldbeheer, belastingaangifte, kosten voor autos, huisvesting en persoonlijke ontwikkeling.'
+                        index={2}
+                        activeQuestion={activeQuestion}
+                        handleQuestionClick={handleQuestionClick}
+                        question='3. Wat voor soort onderwerpen worden behandeld in de lessen?'
+                        answer='We behandelen meer dan 40 onderwerpen, waaronder budgettering, schuldbeheer, belastingaangifte, kosten voor autos, huisvesting en persoonlijke ontwikkeling.'
                     />
 
                     <Question
-                    question='4. Wie geven de lessen?'
-                    answer='De lessen worden gegeven door de medeoprichters van FutureEd.'
+                        index={3}
+                        activeQuestion={activeQuestion}
+                        handleQuestionClick={handleQuestionClick}
+                        question='4. Op welke manier worden de lessen gegeven?'
+                        answer='De lessen worden gegeven door middel van korte en beelgevende kennis clips. Daarnaast bieden we ook interactieve opdrachten aan.'
                     />
 
                     <Question
-                    question='5. Voor wie zijn deze lessen bedoeld?'
-                    answer='De lessen zijn bedoeld voor middelbare scholieren en studenten in beroeps- of wetenschappelijk onderwijs tussen de 16 en 23 jaar oud.'
+                        index={4}
+                        activeQuestion={activeQuestion}
+                        handleQuestionClick={handleQuestionClick}
+                        question='5. Voor wie zijn deze lessen bedoeld?'
+                        answer='De lessen zijn bedoeld voor middelbare scholieren en studenten in beroeps- of wetenschappelijk onderwijs.'
                     />
 
                     <Question
-                    question='6. Wat zijn de vereisten om deel te nemen aan de lessen?'
-                    answer='Er zijn geen vereisten! Iedereen kan deelnemen ongeacht academische vaardigheden.'
+                        index={5}
+                        activeQuestion={activeQuestion}
+                        handleQuestionClick={handleQuestionClick}
+                        question='6. Wat zijn de vereisten om deel te nemen aan de lessen?'
+                        answer='Er zijn geen vereisten! Iedereen kan deelnemen ongeacht academische vaardigheden.'
                     />
 
                     <Question
-                    question='7. Waar vinden de lessen plaats?'
-                    answer='De lessen vinden online plaats in groepen van 4 studenten en duren gemiddeld 1.5 uur per week.'
+                        index={6}
+                        activeQuestion={activeQuestion}
+                        handleQuestionClick={handleQuestionClick}
+                        question='7. Is het mogelijk om de lessen aan te bieden in mijn onderwijsinstelling?'
+                        answer='Ben je onderdeel van een onderwijsinstelling en lijken onze lesmodules je interessant? Neem dan contact met ons op om de beste opties te bespreken voor jouw school.'
                     />
 
                     <Question
-                    question='8. Wat gebeurt er als ik een les mis?'
-                    answer='Als je een les mist, krijg je een samenvatting van de afgelopen week en de opdracht(en) die je hebt gemist. Bij de volgende les kun je vragen stellen aan de lesgever.'
+                        index={7}
+                        activeQuestion={activeQuestion}
+                        handleQuestionClick={handleQuestionClick}
+                        question='8. Kunnen er andere AI features of lesmodules worden gemaakt voor mijn onderwijsinstelling?'
+                        answer='Ja, we kunnen andere AI features en lesmodules maken voor jouw onderwijsinstelling. Neem contact met ons op zodat we samen ervoor kunnen zorgen dat jouw studenten de beste leerervaring krijgen en jouw school zich kan onderscheiden.'
                     />
 
                     <Question
-                    question='9. Hoe kan ik me aanmelden voor de lessen en wanneer zullen deze plaatsvinden?'
-                    answer='Je kunt je aanmelden door een e-mail te sturen naar contact@future-ed.dev. De lessen voor de eerste groep zullen beginnen in de eerste week van april 2023 en zullen eindigen in de laatste week van juni 2023.'
+                        index={8}
+                        activeQuestion={activeQuestion}
+                        handleQuestionClick={handleQuestionClick}
+                        question='9. Hoe kan ik me aanmelden voor de lesmodules en wanneer zullen deze plaatsvinden?'
+                        answer='Je kunt je aanmelden door in te schrijven op de wachtlijst. Degene die vroegtijdig aanmelden, krijgen tot 70% korting!'
                     />
 
                     <Question
-                    question='10. Is er een deadline om me aan te melden voor de lessen?'
-                    answer='Er is geen deadline om je aan te melden, maar er zijn een beperkt aantal plekken beschikbaar, dus wacht niet te lang om je aan te melden om je plek te garanderen!'
+                        index={9}
+                        activeQuestion={activeQuestion}
+                        handleQuestionClick={handleQuestionClick}
+                        question='10. Is er een deadline om me aan te melden voor de lesmodule?'
+                        answer='Er is geen deadline om je aan te melden, maar de korting is beperkt tot de eerste 500 aanmeldingen. Dus wees er snel bij!'
                     />
+
                
                     {/* <Question 
                         question='1. What is FutureEd and what service does it offer?' 

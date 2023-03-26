@@ -29,13 +29,21 @@ const Footer = () => {
       </div>
       <div className='lg:col-span-2 flex justify-between mt-6'>
     <div>
-        <h6 className='font-medium text-gray-400'><Link to='/products'>Products</Link></h6>
+        <h6 className='font-medium text-gray-400'><Link to='/products-schools'>Teachers</Link></h6>
         <ul>
-            <li className='py-2 text-sm'><HashLink smooth to='/products/#ProductModule' > Lesmodules </HashLink></li>
+            <li className='py-2 text-sm'><HashLink smooth to='/products-schools/#ModulesDocenten' > Lesmodules </HashLink></li>
             {/* <li className='py-2 text-sm'><HashLink smooth to='/products/#Reviews' > Reviews </HashLink></li> */}
-             <li className='py-2 text-sm'><HashLink smooth to='/products/#Abbos' > Pricing Lesmodules </HashLink></li>
-             <li className='py-2 text-sm'><HashLink smooth to='/products/#ProductAI' > AI-features </HashLink></li>
-            <li className='py-2 text-sm'><HashLink smooth to='/products/#PricingAI' > Pricing AI-features </HashLink></li>
+             <li className='py-2 text-sm'><HashLink smooth to='/products-schools/#AbbosDocenten' > Pricing Lesmodules </HashLink></li>
+             <li className='py-2 text-sm'><HashLink smooth to='/products-schools/#ProductAI' > AI-features </HashLink></li>
+            <li className='py-2 text-sm'><HashLink smooth to='/products-schools/#PricingAIDocenten' > Pricing AI-features </HashLink></li>
+        </ul>
+    </div>
+    <div>
+        <h6 className='font-medium text-gray-400'><Link to='/products-students'>Students</Link></h6>
+        <ul>
+            <li className='py-2 text-sm'><HashLink smooth to='/products-students/#ProductModule' > Lesmodules </HashLink></li>
+            {/* <li className='py-2 text-sm'><HashLink smooth to='/products/#Reviews' > Reviews </HashLink></li> */}
+             <li className='py-2 text-sm'><HashLink smooth to='/products-students/#Abbos' > Pricing Lesmodules </HashLink></li>
         </ul>
     </div>
     <div>

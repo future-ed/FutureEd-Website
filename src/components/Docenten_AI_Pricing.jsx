@@ -3,7 +3,7 @@ import { HashLink } from 'react-router-hash-link';
 
 const PricingAI = () => {
   return (
-    <div id = 'PricingAI' className='mx-auto w-full bg-white'>
+    <div id = 'PricingAIDocenten' className='mx-auto w-full bg-white'>
                 <h1 className='text-4xl py-16 font-bold text-center text-black'>Pricing AI Features</h1>
     <div className='w-full px-4 py-8 bg-white'>
       <div className='max-w-[1240px] mx-auto grid md:grid-cols-3 gap-8'>

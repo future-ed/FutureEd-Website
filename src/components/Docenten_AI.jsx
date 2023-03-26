@@ -19,7 +19,7 @@ const Ai = () => {
           Ook bieden bij ook een AI chatbot die met studenten maandelijks een gesprek voert over hun persoonlijke situatie en het samenvat in een rapport voor de docent.
           Daarnaast ontwikkelen wij ook op maat gemaakte AI features voor scholen.
           </p>
-          <HashLink smooth to='/products/#ProductAI' > 
+          <HashLink smooth to='/products-schools/#ProductAI' > 
           <button className='bg-[#00df9a] text-black  w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3'>
             Meer informatie 
           </button>

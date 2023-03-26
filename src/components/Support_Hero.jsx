@@ -44,14 +44,16 @@ const Hero = () => {
           Neem contact met ons op!
         </h1>
 
-        <button
-          className="bg-green-gradient w-70 text-black active:bg-darkblue-gradient font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-          onClick={() =>
-            (window.location.href = "mailto:contact@future-ed.dev")
-          }
-        >
-          Email
-        </button>
+        <div className="items-center flex justify-center my-4">
+          <button
+            className="bg-green-gradient w-40 flex items-center justify-center text-black active:bg-darkblue-gradient font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+            onClick={() =>
+              (window.location.href = "mailto:contact@future-ed.dev")
+            }
+          >
+            Email
+          </button>
+        </div>
         {/* <form
           className="bg-black opacity-80 my-8 shadow-md rounded px-8 pt-6 pb-8 mb-4 mx-10"
           action={FORM_ENDPOINT}

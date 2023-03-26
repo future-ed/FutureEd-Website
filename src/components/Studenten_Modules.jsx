@@ -18,7 +18,7 @@ const ModulesHome = () => {
           Voel je alsof je belangrijke informatie mist over persoonlijke financiën, persoonlijke ontwikkeling, verzekeringen, pensioen, huisvesting en auto's? 
           Dan is onze dienst perfect voor jou! Wij zorgen ervoor dat je geen belangrijke informatie mist die je niet op school mee krijgt!
           </p>
-          <HashLink smooth to='/products/#ProductModule' >
+          <HashLink smooth to='/products-students/#ProductModule' >
           <button className='bg-black text-[#00df9a]  w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3'>
             Meer informatie
           </button>

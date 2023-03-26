@@ -1,5 +1,5 @@
 import React from "react";
-import { HashLink } from "react-router-hash-link";
+import { Link } from 'react-router-dom'
 // import PandaAnalytics from '../assets/panda-analytics-logo.png';
 // import { Link } from 'react-router-dom'
 
@@ -18,10 +18,10 @@ const Hero = () => {
         </h1>
         <div className='flex flex-row justify-center'>
           <button className='bg-green-gradient w-[200px] rounded-md font-medium my-6 mx-4 py-3 text-black'>
-            <HashLink to='/#Modules'>Voor studenten</HashLink>
+              <Link to='/products-students'>Voor studenten</Link>
           </button>
           <button className='bg-green-gradient w-[200px] rounded-md font-medium my-6 mx-4 py-3 text-black'>
-            <HashLink to='/#Modules'>Voor scholen</HashLink>
+              <Link to='/products-schools'>Voor scholen</Link>
           </button>
           </div>
         {/* <img className='float-left h-[100px] w-[350px] mx-auto my-8' src={PandaAnalytics} alt='/' /> */}

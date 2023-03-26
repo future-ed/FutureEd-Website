@@ -4,7 +4,7 @@ import { HashLink } from 'react-router-hash-link';
 
 const ModulesHome = () => {
   return (
-    <div id='Modules' className='w-full bg-white py-16 px-4'>
+    <div id='ModulesDocenten' className='w-full bg-white py-16 px-4'>
       <div className='max-w-[1240px] mx-auto grid md:grid-cols-2'>
       <img className='float-left h-[300px] w-[550px] mx-auto my-8' src={Module} alt='/' />
         <div className='flex flex-col justify-center'>
@@ -17,7 +17,7 @@ const ModulesHome = () => {
           <p>
           Wil je jouw studenten voorbereiden op de toekomst? Dan is onze dienst perfect voor jou! Wij zorgen ervoor dat je geen belangrijke informatie mist die je niet op school mee krijgt!
           </p>
-          <HashLink smooth to='/products/#ProductModule' >
+          <HashLink smooth to='/products-schools/#ProductModuleDocenten' >
           <button className='bg-black text-[#00df9a]  w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3'>
             Meer informatie
           </button>

@@ -43,6 +43,12 @@ body {
   background-size: cover;
 }
 
+.custom-img-school-hero {
+  background-image: url(assets/bg-schools.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .custom-img-support {
   background-image: url(assets/support.png);
   background-repeat: no-repeat;

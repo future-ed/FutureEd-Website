@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from 'react-router-dom'
 
 const Hero = () => {
   return (
@@ -17,9 +16,9 @@ const Hero = () => {
         <p className='md:text-2xl text-xl font-bold text-gray-500'>
           Krijg 10 jaar voorsprong op je maatschappijgenoten
         </p>
-        <Link to='/support'>
-        <button className='bg-green-gradient w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Meld je aan</button>
-        </Link> 
+        <a href="https://docs.google.com/forms/d/1EAAHF5Sm5Fw2548eh5jqTvVQLP3s_3_-RUqC6lEDaLQ/viewform?edit_requested=true">
+          <button className='bg-green-gradient w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Meld je aan</button>
+        </a>
       </div>
       </div>
     </div>

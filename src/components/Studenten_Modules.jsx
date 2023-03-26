@@ -2,18 +2,18 @@ import React from 'react';
 import Module from '../assets/landing_modules.jpeg';
 import { HashLink } from 'react-router-hash-link';
 
-const Modules = () => {
+const ModulesHome = () => {
   return (
     <div id='Modules' className='w-full bg-white py-16 px-4'>
       <div className='max-w-[1240px] mx-auto grid md:grid-cols-2'>
       <img className='float-left h-[300px] w-[550px] mx-auto my-8' src={Module} alt='/' />
         <div className='flex flex-col justify-center'>
           <p className='text-[#00df9a] font-bold '>
-            Lesmodules (voor studenten en scholen)
-        </p>
-        <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>
+            Lesmodules
+          </p>
+          <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>
             	Science of life
-            </h1>
+          </h1>
           <p>
           Voel je alsof je belangrijke informatie mist over persoonlijke financiën, persoonlijke ontwikkeling, verzekeringen, pensioen, huisvesting en auto's? 
           Dan is onze dienst perfect voor jou! Wij zorgen ervoor dat je geen belangrijke informatie mist die je niet op school mee krijgt!
@@ -29,4 +29,4 @@ const Modules = () => {
   );
 };
 
-export default Modules;
+export default ModulesHome;

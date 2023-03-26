@@ -21,10 +21,13 @@ const Navbar = () => {
             <Link to='/'>Home</Link>
         </li>
         <li className='p-4'>
-            <Link to='/product'>Producten</Link>
+            <Link to='/products-schools'>Docenten</Link>
         </li>
         <li className='p-4'>
-            <Link to='/company'>Over ons</Link>
+            <Link to='/products-students'>Studenten</Link>
+        </li>
+        <li className='p-4 flex'>
+            <Link to='/company'>Team</Link>
         </li>
         <li className='p-4'>
             <Link to='/support'>Contact</Link>

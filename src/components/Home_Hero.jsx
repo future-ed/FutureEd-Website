@@ -14,7 +14,7 @@ const Hero = () => {
         </p>
         <h1 className='md:text-6xl text-white sm:text-5xl text-4xl font-bold md:py-6'>
           {/* Invest In Your Future */}
-          FutureEd: de toekomst van onderwijs is hier.
+          FutureEd: de toekomst van onderwijs is hier!
         </h1>
         <div className='flex flex-row justify-center'>
           <button className='bg-green-gradient w-[200px] rounded-md font-medium my-6 mx-4 py-3 text-black'>

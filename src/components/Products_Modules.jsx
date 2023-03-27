@@ -66,9 +66,9 @@ const ModulesContent = () => {
                     />
                     
                     <Question
-                        question='6. Leven optimalisatie'
+                        question='6. Levensvaardigheden'
                         answer=' Bij deze module leer je jezelf ontwikkelen en ontdekken hoe je alle geleerde stof tot nu toe kunt gebruiken in je leven. Hierbij behandelen we onderwerp zoals:
-                        #- Voordelen en valkuilen van jouw karakter en persoonlijkheid
+                        #- Leer over jouw karakter en persoonlijkheid
                         #- Productiviteits verhogende technieken
                         #- Hoe leer je sneller?
                         #- Hoe rust je optimaal?

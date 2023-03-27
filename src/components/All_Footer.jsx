@@ -1,8 +1,8 @@
 import React from 'react';
 import {
-  FaFacebookSquare,
+  FaTiktok,
   FaInstagram,
-  FaLinkedin
+  // FaLinkedin
 } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
@@ -14,22 +14,21 @@ const Footer = () => {
       <div>
         <h1 className='w-full text-4xl font-bold text-[#00df9a]'><Link to='/'>FutureEd</Link></h1>
         <p className='py-4'>
-          Bridging the gap between 
-          education and society.
-          Established in 2023.
+          De kloof verkleinen tussen 
+          school en maatschappij.
+          Gevestigd in 2023.
         </p>
         <h3 className='w-full text-2xl font-bold'>
-          Follow us soon on
+          Volg ons op 
         </h3>
-        <div className='flex justify-between md:w-[40%] my-6'>
-            <FaFacebookSquare size={30} />
-            <FaInstagram size={30} />
-            <FaLinkedin size={30} />
+        <div className='flex justify-center gap-6 md:w-[40%] my-6'>
+            <a href='https://www.tiktok.com/@futureed_nl' target='_blank' rel='noreferrer'><FaTiktok size={30} /></a>
+            <a href='https://www.instagram.com/futureed_official/' target='_blank' rel='noreferrer'><FaInstagram size={30} /></a>
         </div>
       </div>
       <div className='lg:col-span-2 flex justify-between mt-6'>
     <div>
-        <h6 className='font-medium text-gray-400'><Link to='/products-schools'>Teachers</Link></h6>
+        <h6 className='font-medium text-gray-400'><Link to='/products-schools'>Scholen</Link></h6>
         <ul>
             <li className='py-2 text-sm'><HashLink smooth to='/products-schools/#ModulesDocenten' > Lesmodules </HashLink></li>
             {/* <li className='py-2 text-sm'><HashLink smooth to='/products/#Reviews' > Reviews </HashLink></li> */}
@@ -39,7 +38,7 @@ const Footer = () => {
         </ul>
     </div>
     <div>
-        <h6 className='font-medium text-gray-400'><Link to='/products-students'>Students</Link></h6>
+        <h6 className='font-medium text-gray-400'><Link to='/products-students'>Studenten</Link></h6>
         <ul>
             <li className='py-2 text-sm'><HashLink smooth to='/products-students/#ProductModule' > Lesmodules </HashLink></li>
             {/* <li className='py-2 text-sm'><HashLink smooth to='/products/#Reviews' > Reviews </HashLink></li> */}
@@ -47,11 +46,11 @@ const Footer = () => {
         </ul>
     </div>
     <div>
-        <h6 className='font-medium text-gray-400'><Link to='/company'>Company</Link></h6>
+        <h6 className='font-medium text-gray-400'><Link to='/company'>Bedrijf</Link></h6>
         <ul>
-            <li className='py-2 text-sm'><HashLink smooth to='/company/#About' >About</HashLink></li>
+            <li className='py-2 text-sm'><HashLink smooth to='/company/#About' >Over ons</HashLink></li>
             {/* <li className='py-2 text-sm'>Jobs</li> */}
-            <li className='py-2 text-sm'>Trusted partners</li>
+            <li className='py-2 text-sm'>Vertrouwde partners</li>
         </ul>
     </div>
     <div>
@@ -62,11 +61,11 @@ const Footer = () => {
         </ul>
     </div>
     <div>
-        <h6 className='font-medium text-gray-400'>Legal</h6>
+        <h6 className='font-medium text-gray-400'>Legaal</h6>
         <ul>
             <li className='py-2 text-sm'>Claim</li>
-            <li className='py-2 text-sm'>Policy</li>
-            <li className='py-2 text-sm'>Terms</li>
+            <li className='py-2 text-sm'>Beleid</li>
+            <li className='py-2 text-sm'>Voorwaarden</li>
         </ul>
     </div>
       </div>

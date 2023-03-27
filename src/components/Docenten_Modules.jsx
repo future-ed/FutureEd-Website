@@ -15,7 +15,7 @@ const ModulesHome = () => {
             	Science of life
           </h1>
           <p>
-          Wil je jouw studenten voorbereiden op de toekomst? Dan is onze dienst perfect voor jou! Wij zorgen ervoor dat je geen belangrijke informatie mist die je niet op school mee krijgt!
+          Wil je jouw leerlingen voorbereiden op de toekomst in de maatschappij? Dan is onze dienst perfect voor jou! Wij hebben unieke en interactieve lesmodules ontworpen om leerlingen een introductie te geven voor de leven na je schooltijd.
           </p>
           <HashLink smooth to='/products-schools/#ProductModuleDocenten' >
           <button className='bg-black text-[#00df9a]  w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3'>

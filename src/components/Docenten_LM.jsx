@@ -16,7 +16,7 @@ const ModulesContent = () => {
                         #- Budgetteringstechnieken
                         #- Productieve leningen en schuldbeheer
                         #- Vormen van inkomen
-                        #- Ontdekken welke manieren van geld te verdienen bij jou passen
+                        #- Ontdekken welke manieren van geld verdienen bij jou passen
                         #- En nog veel meer!'
                         />
 
@@ -66,11 +66,10 @@ const ModulesContent = () => {
                     />
                     
                     <Question
-                        question='6. Leven optimalisatie'
+                        question='6. Groei & ontwikkeling'
                         answer=' Bij deze module leer je jezelf ontwikkelen en ontdekken hoe je alle geleerde stof tot nu toe kunt gebruiken in je leven. Hierbij behandelen we onderwerp zoals:
-                        #- Voordelen en valkuilen van jouw karakter en persoonlijkheid
+                        #- Jouw karakter en persoonlijkheid leren kennen
                         #- Productiviteits verhogende technieken
-                        #- Hoe leer je sneller?
                         #- Hoe rust je optimaal?
                         #- Science-based motivatie en mood hacks
                         #- En nog meer!'

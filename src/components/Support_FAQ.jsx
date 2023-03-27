@@ -41,8 +41,8 @@ const Faq = () => {
                         index={2}
                         activeQuestion={activeQuestion}
                         handleQuestionClick={handleQuestionClick}
-                        question='3. Wat voor soort onderwerpen worden behandeld in de lessen?'
-                        answer='We behandelen meer dan 40 onderwerpen, waaronder budgettering, schuldbeheer, belastingaangifte, kosten voor autos, huisvesting en persoonlijke ontwikkeling.'
+                        question='3. Komen er ook nieuwe onderwerpen bij?'
+                        answer='Ja, FutureEd is continu bezig met het toevoegen van nieuwe lesmodules zodat leerlingen nooit uitgeleerd raken.'
                     />
 
                     <Question
@@ -50,7 +50,7 @@ const Faq = () => {
                         activeQuestion={activeQuestion}
                         handleQuestionClick={handleQuestionClick}
                         question='4. Op welke manier worden de lessen gegeven?'
-                        answer='De lessen worden gegeven door middel van korte en beelgevende kennis clips. Daarnaast bieden we ook interactieve opdrachten aan.'
+                        answer='De lessen worden gegeven door middel van korte en beeldgevende kennis clips. Daarnaast bieden we ook interactieve opdrachten aan.'
                     />
 
                     <Question
@@ -90,7 +90,7 @@ const Faq = () => {
                         activeQuestion={activeQuestion}
                         handleQuestionClick={handleQuestionClick}
                         question='9. Hoe kan ik me aanmelden voor de lesmodules en wanneer zullen deze plaatsvinden?'
-                        answer='Je kunt je aanmelden door in te schrijven op de wachtlijst. Degene die vroegtijdig aanmelden, krijgen tot 70% korting!'
+                        answer='Je kunt je aanmelden door in te schrijven op de wachtlijst. Deze zullen binnenkort beschikbaar zijn. Degene die vroegtijdig aanmelden, krijgen tot 70% korting!'
                     />
 
                     <Question
@@ -98,7 +98,7 @@ const Faq = () => {
                         activeQuestion={activeQuestion}
                         handleQuestionClick={handleQuestionClick}
                         question='10. Is er een deadline om me aan te melden voor de lesmodule?'
-                        answer='Er is geen deadline om je aan te melden, maar de korting is beperkt tot de eerste 500 aanmeldingen. Dus wees er snel bij!'
+                        answer='Er is geen deadline om je aan te melden, maar de korting is beperkt tot de eerste 200 aanmeldingen. Dus wees er snel bij!'
                     />
 
                

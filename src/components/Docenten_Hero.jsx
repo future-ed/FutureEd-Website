@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink } from "react-router-hash-link";
 
 const Hero = () => {
   return (
@@ -14,11 +15,11 @@ const Hero = () => {
         </h1>
         
         <p className='md:text-2xl text-xl font-bold text-gray-500'>
-          Laat leerlingen 10 jaar voorsprong krijgen op maatschappijgenoten
+          Modernizeer tegelijkertijd het onderwijs met FutureEd's AI oplossingen
         </p>
-        <a href="https://docs.google.com/forms/d/1EAAHF5Sm5Fw2548eh5jqTvVQLP3s_3_-RUqC6lEDaLQ/viewform?edit_requested=true">
+        <HashLink smooth to='/support/#Contact'>
           <button className='bg-green-gradient w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Vraag Modules Aan</button>
-        </a> 
+        </HashLink> 
       </div>
       </div>
     </div>

@@ -19,7 +19,7 @@ const HeroCompany = () => {
         </h1>
         <p className={`${styles.paragraph} max-w-[470px] mt-5 text-white`}>
         Onze missie is om studenten te voorzien van praktische kennis en vaardigheden die ze nodig hebben voordat ze de arbeidsmarkt en maatschappij betreden. 
-        Daarnaast helpen we scholen met AI-gedreven tools om het onderwijs te moderniseren en zo zowel docenten als scholen te helpen zich te concentreren op wat echt belangrijk is: 
+        Daarnaast helpen we scholen met AI-gedreven tools om het onderwijs te moderniseren. Op deze manier helpen we docenten en scholen zich te concentreren op wat echt belangrijk is: 
         het begeleiden van studenten.
         
         

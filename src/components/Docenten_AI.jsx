@@ -15,7 +15,7 @@ const Ai = () => {
             	
             </h1>
           <p>
-          Voor scholen hebben we een AI feature ontwikkelt die het maken van roosters zal versnellen en hierdoor de lasten verlagen.
+          Voor scholen hebben we een AI feature ontwikkeld die het maken van roosters zal versnellen en hierdoor de lasten verlagen.
           Tevens ontwikkelen wij een AI chatbot die met studenten een gesprek kan voeren en het samenvat in een rapport voor de docent.
           Bovendien ontwikkelen wij ook op maat gemaakte AI features voor scholen.
           </p>

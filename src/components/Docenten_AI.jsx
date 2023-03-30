@@ -15,9 +15,9 @@ const Ai = () => {
             	
             </h1>
           <p>
-          Voor scholen en docenten hebben wij AI features ontwikkeld die automatisch roosters maken en hierdoor de lasten verlagen.
-          Ook bieden bij ook een AI chatbot die met studenten maandelijks een gesprek voert over hun persoonlijke situatie en het samenvat in een rapport voor de docent.
-          Daarnaast ontwikkelen wij ook op maat gemaakte AI features voor scholen.
+          Voor scholen hebben we een AI feature ontwikkelt die het maken van roosters zal versnellen en hierdoor de lasten verlagen.
+          Tevens ontwikkelen wij een AI chatbot die met studenten een gesprek kan voeren en het samenvat in een rapport voor de docent.
+          Bovendien ontwikkelen wij ook op maat gemaakte AI features voor scholen.
           </p>
           <HashLink smooth to='/products-schools/#ProductAI' > 
           <button className='bg-[#00df9a] text-black  w-[200px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3'>

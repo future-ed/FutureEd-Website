@@ -14,7 +14,7 @@ const Hero = () => {
         </h1>
         
         <p className='md:text-2xl text-xl font-bold text-gray-500'>
-          Krijg 10 jaar voorsprong op je maatschappijgenoten
+          Krijg 10 jaar voorsprong op je maatschappij genoten
         </p>
         <a href="https://docs.google.com/forms/d/1EAAHF5Sm5Fw2548eh5jqTvVQLP3s_3_-RUqC6lEDaLQ/viewform?edit_requested=true"  target='_blank' rel='noreferrer'>
           <button className='bg-green-gradient w-[200px] rounded-md font-medium my-6 mx-auto py-3 text-black'>Meld je aan</button>

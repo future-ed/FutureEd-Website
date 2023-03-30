@@ -22,7 +22,7 @@ const ModulesContent = () => {
 
                     <Question
                         question='2. Belastingen'
-                        answer=' Bij deze module leer je de basis van belastingen. Hierbij behandelen we onderwerp zoals:
+                        answer=' Bij deze module leer je de basis van belastingen. Hierbij behandelen we onderwerpen zoals:
                         #- Loonbelasting
                         #- Inkomstenbelasting
                         #- Dividendbelasting
@@ -35,10 +35,10 @@ const ModulesContent = () => {
 
                     <Question   
                         question='3. Auto & Huis & Op kamers '
-                        answer=' Bij deze module leer je hoe het zit met auto, huis en op kamers gaan. Hierbij behandelen we onderwerp zoals:
+                        answer=' Bij deze module leer je hoe het zit met auto, huis en op kamers gaan. Hierbij behandelen we onderwerpen zoals:
                         #- Autoverzekeringen
                         #- Huisverzekeringen
-                        #- Process doorlopen van een huis of auto kopen
+                        #- Process doorlopen van een huis of auto aanschaffen
                         #- Kosten van verschillende opties
                         #- Op kamers gaan wonen en de kosten
                         #- Welke rechten heb je als huurder?
@@ -47,7 +47,7 @@ const ModulesContent = () => {
 
                     <Question
                         question='4. Verzekeringen'
-                        answer=' Bij deze module leer je de basis van verzekeringen die jij wellicht tegen gaat komen in het leven. Hierbij behandelen we onderwerp zoals:
+                        answer=' Bij deze module leer je de basis van verzekeringen die jij wellicht tegen gaat komen in jouw leven. Hierbij behandelen we onderwerpen zoals:
                         #- Zorgverzekeringen
                         #- Aansprakelijkheidsverzekeringen
                         #- Reisverzekeringen
@@ -57,7 +57,7 @@ const ModulesContent = () => {
 
                     <Question
                         question='5. Pensioen'
-                        answer=' Bij deze module leer je hoe pensioen werkt en waarom het belangrijk is om vroegtijdig al te weten welke opties je hebt. Hierbij behandelen we onderwerp zoals:
+                        answer=' Bij deze module leer je hoe pensioen werkt en waarom het belangrijk is om vroegtijdig al te weten welke opties je hebt. Hierbij behandelen we onderwerpen zoals:
                         #- Staatspensioen
                         #- Aanvullend pensioen
                         #- Hoe zit het met je belastingen?
@@ -67,7 +67,7 @@ const ModulesContent = () => {
                     
                     <Question
                         question='6. Groei & ontwikkeling'
-                        answer=' Bij deze module leer je jezelf ontwikkelen en ontdekken hoe je alle geleerde stof tot nu toe kunt gebruiken in je leven. Hierbij behandelen we onderwerp zoals:
+                        answer=' Bij deze module leer je jezelf ontwikkelen en hoe je alle geleerde stof tot nu toe kunt toepassen in je leven. Hierbij behandelen we onderwerpen zoals:
                         #- Jouw karakter en persoonlijkheid leren kennen
                         #- Productiviteits verhogende technieken
                         #- Hoe rust je optimaal?

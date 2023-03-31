@@ -41,7 +41,8 @@ const Navbar = () => {
     <h1 className='w-full text-3xl font-bold text-[#00df9a] m-4'>FutureEd</h1>
         <ul className='pt-4 uppercase'>
             <li className='p-4 border-b border-gray-600'><Link to='/'>Home</Link></li>
-            <li className='p-4 border-b border-gray-600'><Link to='/products'>Producten</Link></li>
+            <li className='p-4 border-b border-gray-600'><Link to='/products-schools'>Scholen</Link></li>
+            <li className='p-4 border-b border-gray-600'><Link to='/products-students'>Studenten</Link></li>
             <li className='p-4 border-b border-gray-600'><Link to='/company'>Over ons</Link></li>
             <li className='p-4 border-b border-gray-600'><Link to='/support'>Contact</Link></li>
             {/* <button className='pt-4 p-4 uppercase'> <Link to='/signin'>Sign in</Link> </button> */}

@@ -46,18 +46,21 @@ const Hero = () => {
         <ul className='md:text-xl flex space-x-10 text-sm text-black pb-4'>
           <li className='p-4'><HashLink smooth to='/#Subjects' > Subjects </HashLink></li>
           <li className='p-4'><HashLink smooth to='/#Process' > Process </HashLink></li>
+          {/* eslint-disable-next-line */}
           <li className='p-4'><a onClick={handleCareersClick}>Careers</a></li>
           <li className='p-4'><HashLink smooth to='/#Mission' > Company </HashLink></li>
         </ul>
       </div>
-
+      <div className = 'hidden md:flex'>
       <div className="absolute top-0 right-8 justify-center items-center h-[114px] text-white">
         <button className="mt-8 bg-white text-black md:border border-black font-semibold py-2 px-4 rounded-full hover:underline">
+        {/* eslint-disable-next-line */}
           <a onClick={handleSignInClick}>Sign In </a>
         </button>
         <button className=" ml-4 bg-black text-white border font-semibold py-2 px-4 rounded-full hover:underline">
         <HashLink smooth to='/#Contact' > Contact Us </HashLink>
         </button>
+      </div>
       </div>
         
       <div className="w-full h-full flex items-center justify-center md:justify-start md:pl-20 mb-20 md:mb-0">

@@ -42,7 +42,7 @@ const Card = ({ image, title, subtitle, description }) => {
     return (
       <div className='bg-[#F7F6FB] lg:w-[360px] max-w-[360] h-[200px] lg:h-[500px] rounded-lg px-10 my-3 text-[#122A41] flex flex-col justify-start items-start p-6 mx-auto sm:mx-0 shadow-lg relative'>
         <div className="flex flex-row md:flex-col justify-center md:justify-start items-center md:items-start">
-            <img src={image} alt={title} className='w-[100px] h-[100px] mb-0 md:mb-20 mr-4 md:mr-0' />
+            <img src={image} alt={title} className='w-[90px] h-[90px] mb-0 md:mb-20 mr-4 md:mr-0' />
             <div className="flex flex-col">
                 <div className="ml-4">
                     <h1 className='text-start text-xl font-bold'>{title}</h1>

@@ -45,7 +45,7 @@ const Hero = () => {
       <div className='lg:flex hidden absolute top-1 left-0 right-0 justify-center items-center h-[114px] text-white'>
         <ul className='md:text-xl flex space-x-10 text-sm text-black pb-4'>
           <li className='p-4'><HashLink smooth to='/#Subjects' > Subjects </HashLink></li>
-          <li className='p-4'><HashLink smooth to='/#Process' > Process </HashLink></li>
+          <li className='p-4'><HashLink smooth to='/#School' > School </HashLink></li>
           {/* eslint-disable-next-line */}
           <li className='p-4'><a onClick={handleCareersClick}>Careers</a></li>
           <li className='p-4'><HashLink smooth to='/#Mission' > Company </HashLink></li>

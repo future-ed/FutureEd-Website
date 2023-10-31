@@ -1,5 +1,5 @@
 import React from 'react';
-import MissionImage from '../assets/bg_mission.png'; // Import the mission image
+import MissionImage from '../../assets/bg_mission.png'; // Import the mission image
 
 const Mission = () => {
     const gradientStylePink = {
@@ -13,13 +13,10 @@ const Mission = () => {
     <div id= 'Mission' className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-[400px] flex items-center justify-center relative" style={{ backgroundImage: `url(${MissionImage})`,}}>
         <div className='max-w-screen-xl mx-auto py-20 px-4 text-center'>
         <p className='text-white text-2xl md:text-3xl' style={gradientStylePink}>
-            “Our primary mission is to better prepare students for their
+            “Our primary mission is make your life easier
         </p>
         <p className='text-white text-2xl md:text-3xl mt-2' style={gradientStylePink}>
-            transition into society, addressing the critical skills they
-        </p>
-        <p className='text-white text-2xl md:text-3xl mt-2' style={gradientStylePink}>
-            often don't acquire in traditional educational settings.”
+            by providing practical knowledge"
         </p>
       </div>
     </div>

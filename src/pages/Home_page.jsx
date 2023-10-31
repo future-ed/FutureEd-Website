@@ -1,9 +1,10 @@
 import React from 'react';
-import Hero from '../components/Home_Hero';
-import Subjects from '../components/Home_Subjects'; 
-import Mission from '../components/Home_Mission';
-import Process from '../components/Home_Process';
-import Contact from '../components/Home_Contact';
+import Hero from '../components/Home/Home_Hero';
+import Subjects from '../components/Home/Home_Subjects'; 
+import Mission from '../components/Home/Home_Mission';
+import Process from '../components/Home/Home_School';
+import Contact from '../components/Home/Home_Contact';
+// import Testimonials from '../components/Home_Testimonials';
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
       <Subjects />
       <Mission />
       <Process />
+      {/* <Testimonials /> */}
       <Contact />
     </div>
   );

@@ -1,8 +1,8 @@
 import React from 'react'
-import Icon1 from '../assets/icon_p1.png'
-import Icon2 from '../assets/icon_p2.png'
-import Icon3 from '../assets/icon_p3.png'
-import BG from '../assets/bg_school.png';
+import Icon1 from '../../assets/icon_p1.png'
+import Icon2 from '../../assets/icon_p2.png'
+import Icon3 from '../../assets/icon_p3.png'
+import BG from '../../assets/bg_school.png';
 
 const School = () => {
   return (
@@ -22,7 +22,7 @@ const School = () => {
           />
           <Card
             image={Icon2}
-            title="Implementation"
+            title="Implement"
             description="We implement our solution in your school, ensuring that it is tailored to your school's needs and students' learning styles."
           />
           <Card

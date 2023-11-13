@@ -21,7 +21,7 @@ const Welcome_Back = () => {
     setError('')
     try {
       await signIn(email,password)
-      navigate('/AccountMain')
+      navigate('/PersonalFinances')
     } catch (e) {
       if (e.code === 'auth/invalid-login-credentials') {
         setError('Invalid email or password. Please try again.');
@@ -33,16 +33,18 @@ const Welcome_Back = () => {
   }
 
   return (
-    <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen items-center relative flex flex-col">
-      <img src={Logo} alt="Logo" className="top-4 mt-6 md:ml-10 my-16" style={{ width: '150px', height: 'auto', marginLeft: '-2px'  }} />
-      <h1 className='font-bold md:text-3xl py-10'>Welcome Back</h1>
-      <form onSubmit={handleSubmit}>
-        <div className='flex flex-col'>
+    <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen flex flex-col">
+    <img src={Logo} alt="Logo" className="mt-7 self-center" style={{ width: '150px', height: 'auto' }} />
+    
+    <div className="flex-grow flex flex-col items-center justify-center px-4">
+      <h1 className='font-bold text-3xl my-10 mt-[-50px]'>Welcome Back</h1>
+      <form onSubmit={handleSubmit} className="w-full max-w-[575px] mx-auto">
+        <div className='flex flex-col mb-4'>
             <input onChange={(e) => setEmail(e.target.value)} className='font-light text-black border p-3 rounded-lg md:w-[575px] md:h-[65px]' type='email' placeholder='Email Address'/>
         </div>
-        <div className='flex flex-col py-3 relative'>
+        <div className='flex flex-col mb-4 relative'>
           <input onChange={(e) => setPassword(e.target.value)} className='font-light text-black border p-3 rounded-lg md:w-[575px] md:h-[65px]' type={isPasswordVisible ? 'text' : 'password'} placeholder='Password' />
-            <span onClick={togglePasswordVisibility} style={{ position: 'absolute', right: '20px', top: '45%', transform: 'translateY(-50%)', cursor: 'pointer' }}>
+            <span onClick={togglePasswordVisibility} style={{ position: 'absolute', right: '20px', top: '45%', transform: 'translateY(-70%)', cursor: 'pointer' }}>
               {isPasswordVisible ? <img src={invisibility} alt="Invisibility Icon" style={{ width: '20px', height: '15px' }} /> : 
              <img src={visibility} alt="Visibility Icon" style={{ width: '20px', height: '15px' }} />}
             </span>
@@ -61,6 +63,7 @@ const Welcome_Back = () => {
       </form>   
       
       <p className='text-[#32403B]'>Don't have an account? <Link to='/CreateAccount' className='underline'>Sign up</Link> </p>
+    </div>
     </div>
   )
 }

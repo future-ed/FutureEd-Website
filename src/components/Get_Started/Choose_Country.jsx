@@ -28,40 +28,34 @@ const Choose_Country = () => {
     const info = doc(db, 'users', `${user?.email}`)
   
     return (
-    <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen items-center relative flex flex-col">
-      <img src={Logo} alt="Logo" className="top-4 mt-6 md:ml-10 my-10" style={{ width: '150px', height: 'auto', marginLeft: '-2px'}} />
-      <h1 className='font-bold md:text-3xl py-10 mt-[40px]'>Choose Your Country</h1>
-      <select 
-            value={selectedCountry} 
-            onChange={e => setSelectedCountry(e.target.value)}
-            style={{
-                width: '400px', 
-                height: '50px', 
-                fontSize: '18px', 
-                padding: '10px',
-                border: '2px solid grey',
-                borderRadius: '1rem'
-             }}
-        >
-            <option className="font-light" value="">Select a country</option>
-            {countries.map(country => (
-                <option key={country} value={country}>
-                    {country}
-                </option>
-            ))}
-        </select>
-        <div className='flex justify-center items-center mt-12 '>
-        <div>
-            <div className='h-5 mb-2'> 
-                {error && <p className='text-red-500 text-center'>{error}</p>}
+        <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen flex flex-col">
+        <img src={Logo} alt="Logo" className="mt-6 self-center" style={{ width: '150px', height: 'auto' }} />
+    
+        <div className="flex-grow flex flex-col items-center justify-center px-4">
+            <h1 className='font-bold md:text-3xl py-10 mt-[-35px] text-center'>Choose Your Country</h1>
+            <select 
+                value={selectedCountry} 
+                onChange={e => setSelectedCountry(e.target.value)}
+                className="font-light w-[400px] h-[50px] text-[18px] p-2 border-2 border-solid border-grey-300 rounded-xl"
+            >
+                <option value="">Select a country</option>
+                {countries.map(country => (
+                    <option key={country} value={country}>{country}</option>
+                ))}
+            </select>
+            <div className='w-full flex justify-center mt-12'>
+                {error && <p className='text-red-500 text-center mb-2'>{error}</p>}
+                <button 
+                    onClick={handleSubmit}
+                    className='font-bold md:w-[330px] md:h-[60px] bg-[#000B28] hover:bg-blue-900 border p-3 rounded-full text-white'
+                >
+                    Continue
+                </button>
             </div>
-            <button 
-            onClick={handleSubmit}
-            className='font-bold md:w-[330px] md:h-[60px] bg-[#000B28] hover:bg-blue-900 border p-3 rounded-full text-white'>Continue</button>
         </div>
-        </div>
-        <h1 className='font-medium absolute bottom-7 text-[#000B28]'>TERMS OF USE | PRIVACY POLICY</h1>  
+        <h1 className='font-medium self-center mb-7 text-[#000B28]'>TERMS OF USE | PRIVACY POLICY</h1>  
     </div>
+    
   )
 }
 

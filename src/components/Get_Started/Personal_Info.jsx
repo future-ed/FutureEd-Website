@@ -50,34 +50,35 @@ const Personal_Info = () => {
         }
     }
   return (
-    <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen items-center relative flex flex-col">
-      <img src={Logo} alt="Logo" className="top-4 mt-6 md:ml-10 my-16" style={{ width: '150px', height: 'auto', marginLeft: '-2px'  }} />
-      <h1 className='font-bold md:text-3xl py-10'>Personal Information</h1>
-      
+    <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen flex flex-col justify-between">
+        <img src={Logo} alt="Logo" className="mt-7 self-center" style={{ width: '150px', height: 'auto' }} />
     
-      
-      <form onSubmit={handleSubmit}>
-        <div className='flex flex-col'>
-            <input onChange={(e) => setName(e.target.value)} className='font-light text-[#B5B2B2] border p-3 rounded-lg md:w-[575px] md:h-[65px]' type='text' placeholder='Your Name'/>
-        </div>
-        <div className='flex flex-col py-3 relative'>
-            <input onChange={(e) => setBirthday(e.target.value)} className='font-light text-[#B5B2B2] border p-3 rounded-lg md:w-[575px] md:h-[65px]' type='text' placeholder='Your Birthdate  DD/MM/YYYY' />
-        </div>
-        
-        <div className='flex justify-center items-center relative'>
-        <div>
-            <div className='h-7 mb-2 overflow-y-auto'> 
-                {error && <p className='text-red-500 text-center'>{error}</p>}
-            </div>
-            <button 
-            onClick={handleSubmit}
-            className='font-bold md:w-[330px] md:h-[60px] bg-[#000B28] hover:bg-blue-900 border p-3 rounded-full text-white'>Continue</button>
-        </div>
-        </div>
-      </form> 
-      <h1 className='font-medium absolute bottom-7 text-[#000B28]'>TERMS OF USE | PRIVACY POLICY</h1>  
-       
-    </div>
+    <div className="flex flex-col items-center justify-center ">
+    
+    <h1 className='font-bold text-3xl my-10 mt-[-5px]'>Personal Information</h1>
+    <form onSubmit={handleSubmit} className="w-full max-w-[575px] mx-auto">
+      <div className='flex flex-col mb-4'>
+        <input onChange={(e) => setName(e.target.value)} className='font-light text-black border p-3 rounded-lg w-full' type='text' placeholder='Your Name'/>
+      </div>
+      <div className='flex flex-col mb-4 relative'>
+        <input onChange={(e) => setBirthday(e.target.value)} className='font-light text-black border p-3 rounded-lg w-full' type='text' placeholder='Your Birthdate  DD/MM/YYYY' />
+      </div>
+      {error && <p className='text-red-500 text-center mb-4'>{error}</p>}
+      <div className='flex justify-center w-full md:mt-6'>
+      <button 
+        type="submit"
+        className='font-bold w-full md:w-[330px] md:h-[60px] bg-[#000B28] hover:bg-blue-900 border p-3 rounded-full text-white'
+      >
+        Continue
+      </button>
+      </div>
+    </form> 
+  </div>
+
+  {/* Fixed bottom text */}
+  <h1 className='font-medium self-center mb-7 text-[#000B28]'>TERMS OF USE | PRIVACY POLICY</h1>  
+</div>
+
   )
 }
 

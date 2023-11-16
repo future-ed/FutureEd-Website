@@ -1,7 +1,7 @@
 import React from 'react'
 import ProgressBar from "@ramonak/react-progress-bar"
 
-const Card = ({emoji, title, completed }) => {
+const Card = ({emoji, title, completed, onCardClick }) => {
   const isCompleted = completed === 100;
   return (
     <div className='bg-[#F7F6FB] w-[200px]  max-w-[360] h-[250px] rounded-lg my-3 text-[#122A41] flex flex-col justify-start items-start p-5 mx-auto sm:mx-0 shadow-lg relative'>
@@ -36,19 +36,26 @@ const Card = ({emoji, title, completed }) => {
               </div>
             </div>
             </div>
-            <svg className="absolute bottom-3 right-2.5" width="50" height="20" viewBox="0 0 50 20" xmlns="http://www.w3.org/2000/svg">
+
+            <svg onClick={onCardClick} className="absolute bottom-3 right-2.5 cursor-pointer" width="50" height="20" viewBox="0 0 50 20" xmlns="http://www.w3.org/2000/svg">
               <path d="M 0,10 L 40,10 L 35,5 M 40,10 L 35,15" fill="none" stroke="black" strokeWidth="2"/>
             </svg>
+
           </div>
       </div>
   </div>
   )
 }
 
-const Main = ({ background, mainTitle, cardsData, gridCols }) => {
+const Main = ({ background, mainTitle, cardsData, gridCols, navigateTo }) => {
+  const handleCardClick = (path) => {
+    navigateTo(path);
+  }
+
   return (
     <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen items-center relative flex flex-col"
          style={{ backgroundImage: `url(${background})`}}>
+
       <div className="absolute inset-0 flex justify-center items-center">
         <div className="bg-white w-[90%] h-[90%]">
           <h1 className='md:text-[42px] font-bold ml-12 mt-6 text-[30px]'>
@@ -61,13 +68,16 @@ const Main = ({ background, mainTitle, cardsData, gridCols }) => {
                 emoji={card.emoji}
                 title={card.title}
                 completed={card.completed}
+                onCardClick={() => handleCardClick(card.path)}
               />
             ))}
           </div>
         </div>
       </div>
+
     </div>
   );
 };
+
 
 export default Main

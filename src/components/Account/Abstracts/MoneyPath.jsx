@@ -11,7 +11,7 @@ const MoneyPath = ({ onBackClick }) => {
             <p>• The Pros and Cons of All Paths</p>
             <p>• Understanding Your Money Motivations</p>
             <p>• Making a Choice which direction you are working towards (Exercise)</p>
-            <div>
+            <div className='mt-3'>
                 <p>In this chapter, we explore the ESBI framework—Employee, Self-Employed, Business Owner, and Investor— 
                     a framework to understand different paths to financial independence. We examine the distinct traits of 
                     each path, aiming to illuminate the advantages and challenges of each path.</p>

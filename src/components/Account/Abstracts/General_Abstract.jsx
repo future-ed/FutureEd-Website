@@ -23,9 +23,14 @@ const General_Abstract = ({ backgroundImage, title, content, onBackClick }) => {
                                 {content}
                             </div>
                             <div className="absolute bottom-[60px] right-[60px] flex items-center ml-3">
-                                <button onClick={handleClick} className="border-2 border-red-500 px-1 py-1/2 rounded">
-                                    <span style={{ visibility: isChecked ? 'visible' : 'hidden' }}>&#10004;</span>
-                                </button>
+                            <button
+                                onClick={handleClick}
+                                className={`border-2 px-1 py-1/2 rounded ${isChecked ? 'border-green-500' : 'border-red-500'}`}>
+                                <span style={{ visibility: isChecked ? 'visible' : 'hidden' }}>
+                                    &#10004;
+                                </span>
+                            </button>
+
                                 <span className="ml-2 text-black">Read</span>
                             </div>
                         </div>

@@ -74,7 +74,7 @@ const navbar = () => {
             fontSize: '13px',
             position: 'absolute', 
             right: 0, 
-            top: '-40px', 
+            top: '-41px', 
             transform: 'translateY(0)'
         }}
             height="10px"
@@ -86,7 +86,7 @@ const navbar = () => {
 
       <div className='text-[14px] mt-7'>
         What I did
-        <div style={{ position: 'relative', width: '80%', marginTop: '1rem' }}> 
+        <div style={{ position: 'relative', width: '80%', marginTop: '0.9rem' }}> 
         <ProgressBar 
             completed={50}
             customLabelStyles={{

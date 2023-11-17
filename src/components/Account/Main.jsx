@@ -4,13 +4,17 @@ import ProgressBar from "@ramonak/react-progress-bar"
 const Card = ({emoji, title, completed, onCardClick }) => {
   const isCompleted = completed === 100;
   return (
-    <div className='bg-[#F7F6FB] w-[200px]  max-w-[360] h-[250px] rounded-lg my-3 text-[#122A41] flex flex-col justify-start items-start p-5 mx-auto sm:mx-0 shadow-lg relative'>
-      <div className="bg-white w-[40px] h-[40px] rounded-full mt-[-6px] ml-[-4px] mb-3">
+    <button
+      onClick={onCardClick}
+      className='bg-[#F7F6FB] w-[200px]  max-w-[360] h-[250px] rounded-lg my-3 text-[#122A41] flex flex-col justify-start items-start p-5 mx-auto sm:mx-0 shadow-lg relative' 
+      style={{ border: 'none', padding: 0 }} 
+    >
+      <div className="bg-white w-[40px] h-[40px] rounded-full mt-[12px] ml-[14px] mb-3">
         <span className='w-[30px] h-[30px] mb-[3px] md:mb-[3px] mr-4 md:mr-0 ml-[5px] flex justify-center mt-[2px] text-[23px]'>{emoji}</span>
       </div>
       <div className="flex flex-row md:flex-col justify-center md:justify-start items-center md:items-start">
           
-          <div className="flex flex-col">
+          <div className="flex flex-col ml-[14px]">
                 <h1 className='text-start text-md font-bold'>{title}</h1>
               <div className="flex-grow mt-3 h-[100px] ">
               <p className='text-black text-start leading-[1.25rem] font-light text-[15px]'>Progress</p>
@@ -37,13 +41,13 @@ const Card = ({emoji, title, completed, onCardClick }) => {
             </div>
             </div>
 
-            <svg onClick={onCardClick} className="absolute bottom-3 right-2.5 cursor-pointer" width="50" height="20" viewBox="0 0 50 20" xmlns="http://www.w3.org/2000/svg">
+            <svg className="absolute bottom-3 right-2.5" width="50" height="20" viewBox="0 0 50 20" xmlns="http://www.w3.org/2000/svg">
               <path d="M 0,10 L 40,10 L 35,5 M 40,10 L 35,15" fill="none" stroke="black" strokeWidth="2"/>
             </svg>
 
           </div>
       </div>
-  </div>
+  </button>
   )
 }
 

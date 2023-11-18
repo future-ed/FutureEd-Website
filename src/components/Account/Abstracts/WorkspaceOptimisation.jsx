@@ -11,7 +11,7 @@ const WorkspaceOptimisation = ({ onBackClick }) => {
           <div className='mt-3'>
               <p> In this section, we'll focus on optimizing your workspace, offering guidance on designing an effective 
                 and efficient working environment. Additionally, we'll provide an exercise to help students conceptualize 
-                and create their ideal workspace, promoting productivity and comfort in their working area.</p>
+                and create their ideal workspace, promoting productivity and comfort in their working area. </p>
           </div>          
       </div>
   );

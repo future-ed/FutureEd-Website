@@ -3,6 +3,8 @@ import BG from '../../assets/bg_homepage.jpg';
 import Logo from '../../assets/logo.png';
 import { HashLink } from 'react-router-hash-link';
 import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
+
 
 const Hero = () => {
   const gradientStylePink = {
@@ -27,19 +29,29 @@ const Hero = () => {
       confirmButtonColor: '#000000',
     });
   };
-  const handleSignInClick = () => {
+
+  const SignUpToCome = () => {
     Swal.fire({
       icon: 'info', 
       title: 'Coming Soon',
-      text: 'The sign in dashboard is coming soon. Please check back later.',
+      text: 'Sign up will be available soon. Please check back later.',
       confirmButtonText: 'OK',
       confirmButtonColor: '#000000',
     });
   };
 
+  const navigate = useNavigate();
+
+  const handleSignInClick = () => {
+    navigate("/SignIn");
+  };
+
+  const handleCreateAccountClick = () => {
+    navigate("/CreateAccount");
+  }
 
   return (
-    <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen flex items-center relative flex flex-col" style={{ backgroundImage: `url(${BG})`,}}>
+    <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen items-center relative flex flex-col" style={{ backgroundImage: `url(${BG})`,}}>
       <img src={Logo} alt="Logo" className="absolute top-4 left-4 mt-6 ml-4 md:ml-10" style={{ width: '150px', height: 'auto' }} />
       
       <div className='lg:flex hidden absolute top-1 left-0 right-0 justify-center items-center h-[114px] text-white'>
@@ -56,9 +68,9 @@ const Hero = () => {
         {/* eslint-disable-next-line */}
           <a onClick={handleSignInClick}>Sign In </a>
         </button>
-        <button className=" ml-4 bg-black text-white border font-semibold py-2 px-4 rounded-full hover:underline">
+        <button className=" ml-4 bg-black text-white border font-semibold py-2 px-4 rounded-full hover:underline" >
           {/* eslint-disable-next-line */}
-          <a onClick={handleSignInClick}>Get Started </a>
+          <a onClick={SignUpToCome}>Get Started </a>
         </button>
       </div>
       </div>
@@ -73,7 +85,7 @@ const Hero = () => {
 
             <button className="mt-6 bg-black text-white border font-semibold py-2 px-4 rounded-full hover:underline">
               {/* eslint-disable-next-line */}
-              <a onClick={handleSignInClick}>Get Started </a>
+              <a onClick={handleCreateAccountClick}>Get Started </a>
           </button>
           <button className="mt-4 ml-2 bg-white text-black border border-black font-semibold py-2 px-4 rounded-full hover:underline">
             <HashLink smooth to='/#Contact' > Contact Us </HashLink>

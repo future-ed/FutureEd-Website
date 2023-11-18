@@ -2,7 +2,7 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 body {
-  background-color: #051622;
+  background-color: white;
 }
 
 * {
@@ -11,4 +11,71 @@ body {
 
 .text-gray-818283 {
   color: #818283;
+}
+
+.button-with-line {
+  position: relative;
+  padding-left: 30px; /* Adjust as needed */
+}
+
+.button-with-line:hover:before {
+  content: '';
+  position: absolute;
+  left: 10px; 
+  top: 25%;
+  bottom: 25%;
+  width: 2px;
+  background-color: black; 
+}
+
+.arrow-bottom-right {
+  width: 0; 
+  height: 0; 
+  border-left: 10px solid transparent;
+  border-top: 10px solid #000; 
+  position: absolute;
+  bottom: 10px; 
+  right: 10px; 
+}
+
+.progress-bar-container {
+  width: 100%; 
+}
+
+
+@media (min-width: 1050px) { 
+  .progress-bar-container {
+    width: 150%; 
+  }
+}
+
+li.filled {
+  margin-bottom: 5px; /* Space between items */
+}
+
+li.filled:before {
+  content: '\2022'; /* Unicode character for the filled bullet point */
+  font-size: 20px; /* Size of the bullet point */
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 10px; /* Space between the bullet and text */
+}
+
+li.hollow {
+  position: relative; /* Allows absolute positioning inside the li */
+  padding-left: 20px; /* Space for the bullet */
+  margin-bottom: 5px; /* Space between items */
+}
+
+li.hollow:before {
+  content: ''; /* Empty content for the pseudo-element */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border: 2px solid black; /* Border for the hollow bullet */
+  border-radius: 50%; /* Makes it circular */
+  background-color: white; /* Background color of the bullet */
 }

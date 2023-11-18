@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/Health.png';
 const Perfectionism = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Perfectionism</h1>
             <p>• What is Perfectionism</p>
             <p>• Methods to Minimize Perfectionism</p>
 
@@ -20,7 +19,7 @@ const Perfectionism = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Perfectionism"
             content={content}
             onBackClick={ onBackClick }
     />

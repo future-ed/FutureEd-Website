@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/Personal_Finances.png';
 const $0_to_$10k = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>$0 to $10k</h1>
             <p>• The Current Average Student Debt is €20.000, with Locals Generally Having Much More Debt </p>
             <p>• How to Prevent Debt</p>
             <p>• Multiple (Doable) Ways to Save Up $10.000</p>
@@ -20,7 +19,7 @@ const $0_to_$10k = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="$0 to $10k"
             content={content}
             onBackClick={ onBackClick }
     />

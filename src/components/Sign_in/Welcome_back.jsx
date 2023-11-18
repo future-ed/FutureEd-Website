@@ -4,6 +4,7 @@ import { UserAuth } from '../../context/AuthContext'
 import Logo from '../../assets/logo.png';
 import visibility from '../../assets/icon_visibility.png'
 import invisibility from '../../assets/icon_invisible.png'
+// import { setSelectionRange } from '@testing-library/user-event/dist/utils';
 
 
 const Welcome_Back = () => {
@@ -23,11 +24,7 @@ const Welcome_Back = () => {
       await signIn(email,password)
       navigate('/PersonalFinances')
     } catch (e) {
-      if (e.code === 'auth/invalid-login-credentials') {
-        setError('Invalid email or password. Please try again.');
-      } else {
-        setError(e.message);
-      }
+      setError('Invalid email or password. Please try again.')
       console.log(e.message);
     }
   }
@@ -62,7 +59,7 @@ const Welcome_Back = () => {
         </div>
       </form>   
       
-      <p className='text-[#32403B]'>Don't have an account? <Link to='/CreateAccount' className='underline'>Sign up</Link> </p>
+      {/* <p className='text-[#32403B]'>Don't have an account? <Link to='/CreateAccount' className='underline'>Sign up</Link> </p> */}
     </div>
     </div>
   )

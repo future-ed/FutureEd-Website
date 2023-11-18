@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/CareerBuilding.png';
 const Negotiation = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Negotiation</h1>
             <p>• The Goal of Negotiation</p>
             <p>• Techniques for Effective Negotiation Like:</p>
             <ul>
@@ -25,7 +24,7 @@ const Negotiation = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Negotiations"
             content={content}
             onBackClick={ onBackClick }
     />

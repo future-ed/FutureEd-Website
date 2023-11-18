@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/Personal_Finances.png';
 const MultipleJobs = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Multiple Jobs</h1>
             <p>• How do taxes work when combining multiple jobs?</p>
             <p>• Combing Your Job + Side Business</p>
             <div className='mt-3'>
@@ -18,7 +17,7 @@ const MultipleJobs = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Multiple Jobs"
             content={content}
             onBackClick={ onBackClick }
     />

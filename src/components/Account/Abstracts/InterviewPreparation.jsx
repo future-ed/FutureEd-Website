@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/CareerBuilding.png';
 const InterviewPreparation = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Interview Preparation</h1>
             <p>• Tips to Prepare Yourself for an Interview </p>
             <p>• Often used Interview Questions and How to Approach Them </p>
             <p>• Make your own template with answers to the common questions (Exercise)</p>
@@ -20,7 +19,7 @@ const InterviewPreparation = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Interview Preparation"
             content={content}
             onBackClick={ onBackClick }
     />

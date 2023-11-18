@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/CareerBuilding.png';
 const LinkedInProfileBuilding = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>LinkedIn Profile Building</h1>
             <p>• How to set up a LinkedIn </p>
             <p>• Key Points in Building a Professional LinkedIn Profile </p>
             <p>• How to use LinkedIn to Network and find jobs</p>
@@ -20,7 +19,7 @@ const LinkedInProfileBuilding = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="LinkedIn Profile Building"
             content={content}
             onBackClick={ onBackClick }
     />

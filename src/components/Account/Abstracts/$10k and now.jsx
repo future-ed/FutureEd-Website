@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/Personal_Finances.png';
 const $10k_and_now = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>$10k and now?</h1>
             <p>• How to spend $10.000 Effectively</p>
             <ul>
                 <li className='ml-3'>Further Financial Gains</li>
@@ -24,7 +23,7 @@ const $10k_and_now = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="$10k and now?"
             content={content}
             onBackClick={ onBackClick }
     />

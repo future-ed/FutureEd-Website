@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/IndependentLiving.png';
 const IndepIntroduction = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Introduction</h1>
             <p>• Introduction to Independent Living</p>
             <div className='mt-3'>
                 <p>In this section, we'll introduce the concept of independent living. We'll explore what it means to live 
@@ -17,7 +16,7 @@ const IndepIntroduction = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Introduction"
             content={content}
             onBackClick={ onBackClick }
     />

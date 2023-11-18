@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/Personal_Finances.png';
 const Budgeting = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Budgeting</h1>
             <p>• The 50/30/20-Framework (Living/Fun/Saving)</p>
             <p>• Managing Money (Cash-Flow Organisation)</p>
             <p>• Making the budgeting ratio that works for you (Exercise)</p>
@@ -20,7 +19,7 @@ const Budgeting = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Budgeting"
             content={content}
             onBackClick={ onBackClick }
     />

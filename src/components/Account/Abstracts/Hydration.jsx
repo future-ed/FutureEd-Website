@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/Health.png';
 const Hydration = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Hydration</h1>
             <p>• The Importance of Water</p>
             <p>• Tracking Water Intake (Exercise)</p>
 
@@ -20,7 +19,7 @@ const Hydration = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Hydration"
             content={content}
             onBackClick={ onBackClick }
     />

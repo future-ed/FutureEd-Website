@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/CareerBuilding.png';
 const CVBuilding = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>CV Building</h1>
             <p>• Key Tips for Writing a CV  </p>
             <p>• CV Template to Fill In and Start With (Exercise)</p>
             
@@ -18,7 +17,7 @@ const CVBuilding = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="CV Building"
             content={content}
             onBackClick={ onBackClick }
     />

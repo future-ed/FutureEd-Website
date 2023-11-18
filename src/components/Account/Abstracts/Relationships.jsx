@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/Health.png';
 const Relationships = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Relatioonships</h1>
             <p>• The Importance of Relationships</p>
             <p>• How to be More Socially Likable</p>
             
@@ -20,7 +19,7 @@ const Relationships = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Relationships"
             content={content}
             onBackClick={ onBackClick }
     />

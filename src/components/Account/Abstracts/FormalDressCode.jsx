@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/CareerBuilding.png';
 const FormalDressCode = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Formal Dress Code</h1>
             <p>• How to dress in an interview / during work? </p>
 
             <div className='mt-3'>
@@ -18,7 +17,7 @@ const FormalDressCode = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Formal Dress Code"
             content={content}
             onBackClick={ onBackClick }
     />

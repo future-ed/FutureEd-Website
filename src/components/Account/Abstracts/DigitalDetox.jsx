@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/Health.png';
 const DigitalDetox = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Digital Detox</h1>
             <p>• Phone Addiction and Digital Detox</p>
             <p>• Why should you take a Digital Detox</p>
             <p>• Digital Detox Challenge (Exercise)</p>
@@ -22,7 +21,7 @@ const DigitalDetox = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Digital Detox"
             content={content}
             onBackClick={ onBackClick }
     />

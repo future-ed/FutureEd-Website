@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/Personal_Finances.png';
 const GrowingMoney = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Growing Money</h1>
             <p>• How to Make Yourself Less Dependent </p>
             <p>• The 50/30/20-framework to Invest, focusing mainly on the 20-part</p>
             <p>• Investing Safely + Basic Fundamental Rules</p>
@@ -22,7 +21,7 @@ const GrowingMoney = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Growing Money"
             content={content}
             onBackClick={ onBackClick }
     />

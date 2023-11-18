@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/Personal_Finances.png';
 const MoneyPath = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Money Paths</h1>
             <p>• The ESBI Framework</p>
             <p className='italic ml-3'> E:Employee, S:Self-Employed, B:Business Owner, I: Investor</p>
             <p>• The Pros and Cons of All Paths</p>
@@ -21,7 +20,7 @@ const MoneyPath = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Money Paths"
             content={content}
             onBackClick={ onBackClick }
     />

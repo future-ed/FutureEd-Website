@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/Personal_Finances.png';
 const RuleOfThumb = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Rules of Thumb</h1>
             <p>• The Maximum You Should Pay For a House </p>
             <p>• The Maximum You Should Pay For a Personal Vehicle</p>
             
@@ -19,7 +18,7 @@ const RuleOfThumb = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Rules of Thumb"
             content={content}
             onBackClick={ onBackClick }
     />

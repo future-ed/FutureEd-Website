@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/LifeSkills.png';
 const StudyHacks = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Study Hacks</h1>
             <p>• Why People Fail to Learn Effectively</p>
             <p>• Effective Study Techniques</p>
             <p>• Sample Study Plan</p>
@@ -22,7 +21,7 @@ const StudyHacks = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Study Hacks"
             content={content}
             onBackClick={ onBackClick }
     />

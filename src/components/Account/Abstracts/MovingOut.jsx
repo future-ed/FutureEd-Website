@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/IndependentLiving.png';
 const MovingOut = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Moving Out</h1>
             <p>• The Pros and Cons of Moving Out</p>
             <p>• How to Find a House</p>
             <p>• The Contract and Your Rights</p>
@@ -20,7 +19,7 @@ const MovingOut = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Moving Out"
             content={content}
             onBackClick={ onBackClick }
     />

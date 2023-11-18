@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/LifeSkills.png';
 const WorkspaceOptimisation = ({ onBackClick }) => {
   const content = (
       <div>
-          <h1 className='mt-1'>Workspace Optimization</h1>
           <p>• How to Design an Effective Workspace </p>
           <p>• Design Your Ideal Workspace (Exercise)</p>
 
@@ -19,7 +18,7 @@ const WorkspaceOptimisation = ({ onBackClick }) => {
 return (
   <GeneralAbstract 
           backgroundImage={backgroundImage}
-          title="Abstract"
+          title="Workspace Optimization"
           content={content}
           onBackClick={ onBackClick }
   />

@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/Health.png';
 const Insurance = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Insurance</h1>
             <p>• Basic Health Insurance</p>
             <p>• Additional Health Insurance</p>
             <p>• Own Risk (everything not insured)</p>
@@ -21,7 +20,7 @@ const Insurance = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Insurance"
             content={content}
             onBackClick={ onBackClick }
     />

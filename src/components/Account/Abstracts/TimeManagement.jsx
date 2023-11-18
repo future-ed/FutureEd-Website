@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/LifeSkills.png';
 const TimeManagement = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Time Management</h1>
             <p>• The Importance of Time Management</p>
             <p>• Setting Goals</p>
             <p>• Making a Plan (Exercise)</p>
@@ -23,7 +22,7 @@ const TimeManagement = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Time Management"
             content={content}
             onBackClick={ onBackClick }
     />

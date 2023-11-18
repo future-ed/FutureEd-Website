@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/IndependentLiving.png';
 const ChecklistMovingOut = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Checklist Moving Out</h1>
             <p>• Doing Paperwork</p>
             <p>• Potential Deposit</p>
             <p>• Insurance For Personal Belongings</p>
@@ -22,7 +21,7 @@ const ChecklistMovingOut = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Checklist Moving Out"
             content={content}
             onBackClick={ onBackClick }
     />

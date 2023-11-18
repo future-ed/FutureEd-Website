@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/LifeSkills.png';
 const Procrastination = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Procrastination</h1>
             <p>• What is Procrastination</p>
             <p>• How to Minimize Procrastination</p>
             <p>• How to use Procrastination</p>
@@ -20,7 +19,7 @@ const Procrastination = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Procrastination"
             content={content}
             onBackClick={ onBackClick }
     />

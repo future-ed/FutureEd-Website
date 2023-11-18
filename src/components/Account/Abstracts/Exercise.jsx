@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/Health.png';
 const Exercise = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Exercise</h1>
             <p>• The Basics of Exercise</p>
             <p>• The Benefits of Exercise</p>
             <p>• Follow Along Training Plan</p>
@@ -22,7 +21,7 @@ const Exercise = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Exercise"
             content={content}
             onBackClick={ onBackClick }
     />

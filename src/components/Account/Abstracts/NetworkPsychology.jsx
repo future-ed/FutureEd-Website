@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/CareerBuilding.png';
 const NetworkPsychology = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Network Psychology</h1>
             <p>• The Importance of Referrals and Reputation</p>
             <p>• Understanding Hidden Networks </p>
             <p>• The Balance Between Confidence and Modesty</p>
@@ -22,7 +21,7 @@ const NetworkPsychology = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Network Psychology"
             content={content}
             onBackClick={ onBackClick }
     />

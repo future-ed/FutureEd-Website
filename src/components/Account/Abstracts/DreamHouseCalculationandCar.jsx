@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/IndependentLiving.png';
 const DreamHouseCalculationandCar = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Dream House Calculation and Car</h1>
             <p>• Calculating Monthly Expenses for your Dream House and Car (Exercise)</p>
 
             <div className='mt-3'>
@@ -21,7 +20,7 @@ const DreamHouseCalculationandCar = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Dream House Calculation and Car"
             content={content}
             onBackClick={ onBackClick }
     />

@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/Personal_Finances.png';
 const TaxesB = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Taxes B</h1>
             <p>• The Different Business Types (VOF and BV)</p>
             <p>• What are the Taxes as VOF</p>
             <p>• What are the Taxes as BV</p>
@@ -20,7 +19,7 @@ const TaxesB = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Taxes B"
             content={content}
             onBackClick={ onBackClick }
     />

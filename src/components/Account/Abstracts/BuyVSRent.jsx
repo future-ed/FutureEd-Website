@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/IndependentLiving.png';
 const BuyVSRent = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Buy vs Rent</h1>
             <p>• The Financial decision</p>
             <p>• Your Situation and Possibilities</p>
 
@@ -19,7 +18,7 @@ const BuyVSRent = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Buy vs Rent"
             content={content}
             onBackClick={ onBackClick }
     />

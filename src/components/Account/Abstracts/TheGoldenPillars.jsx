@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/Personal_Finances.png';
 const TheGoldenPillars = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>The Golden Pillars</h1>
             <p>• Your First Financial Pillars (Goals) to Achieve</p>
             <ul>
                 <li className='ml-3'>#1 Saving a $1.000 emergency fund</li>
@@ -21,7 +20,7 @@ const TheGoldenPillars = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="The Golden Pillars"
             content={content}
             onBackClick={ onBackClick }
     />

@@ -29,6 +29,17 @@ const Hero = () => {
       confirmButtonColor: '#000000',
     });
   };
+
+  const SignUpToCome = () => {
+    Swal.fire({
+      icon: 'info', 
+      title: 'Coming Soon',
+      text: 'Sign up will be available soon. Please check back later.',
+      confirmButtonText: 'OK',
+      confirmButtonColor: '#000000',
+    });
+  };
+
   const navigate = useNavigate();
 
   const handleSignInClick = () => {
@@ -59,7 +70,7 @@ const Hero = () => {
         </button>
         <button className=" ml-4 bg-black text-white border font-semibold py-2 px-4 rounded-full hover:underline" >
           {/* eslint-disable-next-line */}
-          <a onClick={handleCreateAccountClick}>Get Started </a>
+          <a onClick={SignUpToCome}>Get Started </a>
         </button>
       </div>
       </div>

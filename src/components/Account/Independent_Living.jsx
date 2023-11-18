@@ -32,7 +32,7 @@ const Independent_Living = () => {
       { emoji: '🧹', title: 'Chores', completed: 60, path: 'chores' },
       { emoji: '😘', title: 'Dream House Calculation', completed: 60, path: 'dreamHouseCalculation' },
     ];
-    const gridCols = 'md:grid-cols-4 grid-cols-1';
+    const gridCols = 'md:grid-cols-3 grid-cols-1';
     const navigateTo = (path) => {
       const ComponentToShow = componentMapping[path];
       if (ComponentToShow) {

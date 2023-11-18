@@ -5,7 +5,6 @@ import backgroundImage from '../../../assets/Health.png';
 const StressAnxiety = ({ onBackClick }) => {
     const content = (
         <div>
-            <h1 className='mt-1'>Stress & Anxiety</h1>
             <p>• Common Causes of Stress and Anxiety</p>
             <p>• How to Prevent Stress and Anxiety</p>
             <p>• How to Minimize Stress and Anxiety</p>
@@ -23,7 +22,7 @@ const StressAnxiety = ({ onBackClick }) => {
   return (
     <GeneralAbstract 
             backgroundImage={backgroundImage}
-            title="Abstract"
+            title="Stress & Anxiety"
             content={content}
             onBackClick={ onBackClick }
     />

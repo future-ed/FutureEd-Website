@@ -17,6 +17,7 @@ import IndependentLiving from './pages/Independent_Living_page';
 import Health from './pages/Health_page';
 import LifeSkills from './pages/LifeSkills_page';
 
+// Test
 function App() {
   return (
     <div className="App">
@@ -63,7 +64,7 @@ function App() {
             } 
             />
           <Route 
-            path="/Health" 
+            path="/Health"     
             element={<ProtectedRoute>
               <Health />
               </ProtectedRoute>

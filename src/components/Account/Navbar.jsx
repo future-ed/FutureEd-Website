@@ -62,7 +62,7 @@ const navbar = () => {
       </Link>
       </div>
 
-    <div className='ml-10' style={{ marginTop: '400px' }}>
+    <div className='ml-10' style={{ marginTop: '200px' }}>
 
       <div className='text-[14px] mt-12'>
         What I've Read

@@ -1,21 +1,23 @@
 import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home_page';
-import Helmet from 'react-helmet';
-import CreateAccount from './pages/Create_Account_page';
-import WelcomeBack from './pages/Welcome_Back_page';
 import { AuthContextProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
-import SelectPlan from './pages/Select_Plan_page';
-import ChooseCountry from './pages/Choose_Country_page';
-import PersonalInformation from './pages/Personal_Information_page';
-import ForgotPassword from './pages/Forgot_Password_page';
-import PersonalFinances from './pages/Personal_Finances_Page';
-import Taxes from './pages/Taxes_page';
-import CareerBuilding from './pages/Career_Building_page';
-import IndependentLiving from './pages/Independent_Living_page';
-import Health from './pages/Health_page';
-import LifeSkills from './pages/LifeSkills_page';
+import Home from './pages/Home_page';
+import Helmet from 'react-helmet';
+
+import CreateAccount from './pages/Log_In_Phase/Create_Account_page';
+import WelcomeBack from './pages/Log_In_Phase/Welcome_Back_page';
+import SelectPlan from './pages/Log_In_Phase/Select_Plan_page';
+import ChooseCountry from './pages/Log_In_Phase/Choose_Country_page';
+import PersonalInformation from './pages/Log_In_Phase/Personal_Information_page';
+import ForgotPassword from './pages/Log_In_Phase/Forgot_Password_page';
+
+import PersonalFinances from './pages/Dashboard/Personal_Finances_Page';
+import Taxes from './pages/Dashboard/Taxes_page';
+import CareerBuilding from './pages/Dashboard/Career_Building_page';
+import IndependentLiving from './pages/Dashboard/Independent_Living_page';
+import Health from './pages/Dashboard/Health_page';
+import LifeSkills from './pages/Dashboard/LifeSkills_page';
 
 // Test
 function App() {

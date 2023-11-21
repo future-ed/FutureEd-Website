@@ -79,7 +79,7 @@ const Hero = () => {
         <div className="text-black text-center md:text-left">
           <p className="text-md md:text-xl mb-2 text-gray-818283">THE ULTIMATE SELF-DEVELOPMENT PLATFORM</p>
           <h1 className="text-4xl md:text-6xl font-bold">Bridge the gap</h1>
-          <h1 className="text-4xl md:text-6xl font-bold">between <span style={gradientStylePink}>Students</span></h1>
+          <h1 className="text-4xl md:text-6xl font-bold">between <span style={gradientStylePink}>Education</span></h1>
           <h1 className="text-4xl md:text-6xl font-bold">and <span style={gradientStyleBlue}>Society</span></h1>
           <p className="text-md md:text-xl mt-4">All the information you need in life in one single place</p>
 

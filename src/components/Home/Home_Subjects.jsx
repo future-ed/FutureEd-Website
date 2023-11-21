@@ -23,37 +23,37 @@ const Subjects = () => {
             image={Icon_pf}
             title="Personal Finance"
             subtitle="How to make and grow money"
-            description="We guide companies through digitalization processes to improve efficiency and competitiveness."
+            description="Comprehensive content covering personal finance, teaching financial literacy."
           />
           <Card
             image={Icon_tax}
             title="Taxes"
             subtitle="How to benefit from taxes"
-            description="We create tailored software solutions to meet your unique business needs, providing scalable applications that drive growth and innovation."
+            description="Explaining the tax system and how to benefit from it."
           />
           <Card
             image={Icon_house}
             title="House & Cars"
             subtitle="Start living independently"
-            description="We implement AI technologies to enhance and automate business processes and decision-making."
+            description="Explain aspects of living independently, such as housing, insurance, and cars."
           />
           <Card
             image={Icon_ins}
-            title="Insurance & Pension"
-            subtitle="Prepare your adult life"
-            description="We collaborate with your domain experts, ensuring rapid development and continuous feedback to deliver effective solutions."
+            title="Career Building" 
+            subtitle="Prepare your professional life"
+            description="Aid with building your CV/LinkedIn, networking, negotiation, and communication skills."
           />
           <Card
             image={Icon_ls}
             title="Life skills"
             subtitle="Learn lifetime useful skills"
-            description="We prioritize transparency through clear communication and a well-defined strategy and roadmap."
+            description="Teach essential life skills such as learning faster, effective time management, overcoming procrastination, and goal setting."
           />
           <Card
             image={Icon_si}
-            title="Social Impact"
-            subtitle="Improve your social image"
-            description="We offer an introductory consultancy session, providing you with valuable insights and expert advice as we explore potential solutions tailored to your business needs."
+            title="Health"
+            subtitle="Improve your wellbeing"
+            description="Teach how to improve your wellbeing, such as mental health, physical health, and nutrition."
           />
         </div>
         <div className='mt-8 flex items-center justify-center'>

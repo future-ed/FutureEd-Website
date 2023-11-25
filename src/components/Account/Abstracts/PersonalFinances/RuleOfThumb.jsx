@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/Personal_Finances.png';
 
-const RuleOfThumb = ({ onBackClick }) => {
+const RuleOfThumb = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• The Maximum You Should Pay For a House </p>
@@ -21,6 +21,8 @@ const RuleOfThumb = ({ onBackClick }) => {
             title="Rules of Thumb"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

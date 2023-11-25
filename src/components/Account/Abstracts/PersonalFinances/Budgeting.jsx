@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/Personal_Finances.png';
 
-const Budgeting = ({ onBackClick }) => {
+const Budgeting = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• The 50/30/20-Framework (Living/Fun/Saving)</p>
@@ -22,6 +22,8 @@ const Budgeting = ({ onBackClick }) => {
             title="Budgeting"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

@@ -8,16 +8,16 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBF5XIpThXh4GfvPhv01ARLNXUK-GXwk4c",
-  authDomain: "fire-auth-futureed.firebaseapp.com",
-  projectId: "fire-auth-futureed",
-  storageBucket: "fire-auth-futureed.appspot.com",
-  messagingSenderId: "842832055215",
-  appId: "1:842832055215:web:bef3c06a2ae728b9313d5a"
+  apiKey: "AIzaSyB2g7G3vKqUa9C6VdlOvM_Fn6gayiucb8U",
+  authDomain: "futureed-c224f.firebaseapp.com",
+  projectId: "futureed-c224f",
+  storageBucket: "futureed-c224f.appspot.com",
+  messagingSenderId: "602849657960",
+  appId: "1:602849657960:web:33a68a1f3291d05ce8e7dd"
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig)
 export const auth = getAuth(app);
 export default app;
 export const db = getFirestore(app);

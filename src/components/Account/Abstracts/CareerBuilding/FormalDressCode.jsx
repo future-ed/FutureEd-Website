@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/CareerBuilding.png';
 
-const FormalDressCode = ({ onBackClick }) => {
+const FormalDressCode = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• How to dress in an interview / during work? </p>
@@ -20,6 +20,8 @@ const FormalDressCode = ({ onBackClick }) => {
             title="Formal Dress Code"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

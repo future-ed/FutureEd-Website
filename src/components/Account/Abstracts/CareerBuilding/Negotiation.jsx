@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/CareerBuilding.png';
 
-const Negotiation = ({ onBackClick }) => {
+const Negotiation = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• The Goal of Negotiation</p>
@@ -27,6 +27,8 @@ const Negotiation = ({ onBackClick }) => {
             title="Negotiations"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

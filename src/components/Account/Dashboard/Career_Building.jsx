@@ -1,6 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Main from './Main'
 import backgroundImage from '../../../assets/CareerBuilding.png';
+import { useReadStatus } from '../../Account/update_read';
+
 import CVBuilding from '../Abstracts/CareerBuilding/CVBuilding';
 import LinkedInProfileBuilding from '../Abstracts/CareerBuilding/LinkedInProfileBuilding';
 import InterviewPreparation from '../Abstracts/CareerBuilding/InterviewPreparation';
@@ -11,49 +13,63 @@ import Negotiation from '../Abstracts/CareerBuilding/Negotiation';
 
 
 const Career_Building = () => {
+    const [readStatuses, toggleReadStatus] = useReadStatus('career building')
     const [currentComponent, setCurrentComponent] = useState(null);
-    const mainTitle = 'Career Building';
-    const componentMapping = {
-      cvBuilding: CVBuilding,
-      linkedInProfileBuilding: LinkedInProfileBuilding,
-      interviewPreparation: InterviewPreparation,
-      formalDressCode: FormalDressCode,
-      networkingPsychology: NetworkingPsychology,
-      negotiation: Negotiation,
-    };
+    const [cardsData, setCardsData] = useState([]);
+
+    useEffect(() => {
+      setCardsData([
+        { emoji: '🔖', title: 'CV Building', completed: readStatuses['cv_building'] ? 100 : 0, path: 'cvBuilding' },
+      { emoji: '👔', title: 'LinkedIn Profile Building', completed: readStatuses['linkedin_profile_building'] ? 100 : 0, path: 'linkedInProfileBuilding' },
+      { emoji: '🙋‍♀️', title: 'Interview Preparation', completed: readStatuses['interview_preparation'] ? 100 : 0, path: 'interviewPreparation' },
+      { emoji: '🤵🏽', title: 'Formal Dress Code', completed: readStatuses['formal_dress_code'] ? 100 : 0, path: 'formalDressCode' },
+      { emoji: '💬', title: 'Negotiation', completed: readStatuses['negotiation'] ? 100 : 0, path: 'networkingPsychology' },
+      { emoji: '🌐', title: 'Networking Psychology', completed: readStatuses['networking_psychology'] ? 100 : 0, path: 'negotiation' },
+      ]);
+  }, [readStatuses]);
+    
+  const handleToggleReadStatus = (path) => {
+    toggleReadStatus(path);
+  };
   
-    const handleBackClick = () => {
-      setCurrentComponent(null);
-    }
-    const cardsData = [
-      { emoji: '🔖', title: 'CV Building', completed: 50, path: 'cvBuilding' },
-      { emoji: '👔', title: 'LinkedIn Profile Building', completed: 60, path: 'linkedInProfileBuilding' },
-      { emoji: '🙋‍♀️', title: 'Interview Preparation', completed: 60, path: 'interviewPreparation' },
-      { emoji: '🤵🏽', title: 'Formal Dress Code', completed: 60, path: 'formalDressCode' },
-      { emoji: '💬', title: 'Negotiation', completed: 60, path: 'networkingPsychology' },
-      { emoji: '🌐', title: 'Networking Psychology', completed: 60, path: 'negotiation' },
-    ];
-    const gridCols = 'md:grid-cols-3 grid-cols-1';
+  const componentMapping = {
+    cvBuilding: <CVBuilding onBackClick={() => setCurrentComponent(null)} 
+                                 readStatus={readStatuses['cv_building']} 
+                                 onToggleRead={() => handleToggleReadStatus('cv_building')} />,
+    linkedInProfileBuilding: <LinkedInProfileBuilding onBackClick={() => setCurrentComponent(null)} 
+                                 readStatus={readStatuses['linkedin_profile_building']} 
+                                 onToggleRead={() => handleToggleReadStatus('linkedin_profile_building')} />,
+    interviewPreparation: <InterviewPreparation onBackClick={() => setCurrentComponent(null)} 
+                                 readStatus={readStatuses['interview_preparation']} 
+                                 onToggleRead={() => handleToggleReadStatus('interview_preparation')} />,
+    formalDressCode: <FormalDressCode onBackClick={() => setCurrentComponent(null)} 
+                                 readStatus={readStatuses['formal_dress_code']} 
+                                 onToggleRead={() => handleToggleReadStatus('formal_dress_code')} />,
+    networkingPsychology: <NetworkingPsychology onBackClick={() => setCurrentComponent(null)} 
+                                 readStatus={readStatuses['negotiation']} 
+                                 onToggleRead={() => handleToggleReadStatus('negotiation')} />,                            
+    negotiation: <Negotiation onBackClick={() => setCurrentComponent(null)} 
+                                 readStatus={readStatuses['networking_psychology']} 
+                                 onToggleRead={() => handleToggleReadStatus('networking_psychology')} />,
+  };
+    
     const navigateTo = (path) => {
       const ComponentToShow = componentMapping[path];
-      if (ComponentToShow) {
-        setCurrentComponent(<ComponentToShow onBackClick={handleBackClick}/>);
-      }
+      setCurrentComponent(ComponentToShow);
     };
 
     return (
       <div>
-        {currentComponent ? React.cloneElement(currentComponent, { onBackClick: handleBackClick }) : (
-            <Main 
-              background={backgroundImage}
-              mainTitle={mainTitle}
-              cardsData={cardsData}
-              gridCols={gridCols}
-              navigateTo={navigateTo}
-            />
-        )}
-      </div>
-    )
+       {currentComponent ? 
+           currentComponent : 
+           <Main background={backgroundImage}
+                 mainTitle='Career Building'
+                 cardsData={cardsData}
+                 gridCols="md:grid-cols-3 grid-cols-1"
+                 navigateTo={navigateTo} />
+         }
+   </div>
+   );
 }
 
 export default Career_Building

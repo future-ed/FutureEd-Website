@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/Personal_Finances.png';
 
-const TheGoldenPillars = ({ onBackClick }) => {
+const TheGoldenPillars = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• Your First Financial Pillars (Goals) to Achieve</p>
@@ -23,6 +23,8 @@ const TheGoldenPillars = ({ onBackClick }) => {
             title="The Golden Pillars"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

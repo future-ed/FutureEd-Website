@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/Personal_Finances.png';
 
-const MultipleJobs = ({ onBackClick }) => {
+const MultipleJobs = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• How do taxes work when combining multiple jobs?</p>
@@ -20,6 +20,8 @@ const MultipleJobs = ({ onBackClick }) => {
             title="Multiple Jobs"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

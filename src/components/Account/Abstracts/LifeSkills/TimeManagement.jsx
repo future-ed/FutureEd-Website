@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/LifeSkills.png';
 
-const TimeManagement = ({ onBackClick }) => {
+const TimeManagement = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• The Importance of Time Management</p>
@@ -25,6 +25,8 @@ const TimeManagement = ({ onBackClick }) => {
             title="Time Management"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
   }

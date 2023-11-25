@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/CareerBuilding.png';
 
-const NetworkPsychology = ({ onBackClick }) => {
+const NetworkPsychology = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• The Importance of Referrals and Reputation</p>
@@ -24,6 +24,8 @@ const NetworkPsychology = ({ onBackClick }) => {
             title="Network Psychology"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

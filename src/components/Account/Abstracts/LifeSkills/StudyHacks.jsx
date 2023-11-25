@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
-import backgroundImage from '../../../../assets/LifeSkills.png';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
+import backgroundImage from '../../../../assets/LifeSkills.png';;
 
-const StudyHacks = ({ onBackClick }) => {
+const StudyHacks = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• Why People Fail to Learn Effectively</p>
@@ -24,6 +24,8 @@ const StudyHacks = ({ onBackClick }) => {
             title="Study Hacks"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

@@ -4,9 +4,11 @@ import Logo from '../../../assets/logo.png'
 import { Link } from 'react-router-dom'
 import { UserAuth } from '../../../context/AuthContext';
 import profileIcon from '../../../assets/Profile_Icon.png'
+import { useOverallReadProgress} from '../../Account/overall_read_progress';
 
-const navbar = () => {
+const Navbar = () => {
   const { user } = UserAuth();
+  const readPercentage = useOverallReadProgress();
   
   return (
     <div className='h-screen w-[261px]'>
@@ -68,7 +70,7 @@ const navbar = () => {
         What I've Read
         <div style={{ position: 'relative', width: '80%', marginTop: '1rem' }}> 
         <ProgressBar 
-            completed={50}
+            completed={readPercentage}
             customLabelStyles={{
             color: '#000000',
             fontSize: '13px',
@@ -88,7 +90,7 @@ const navbar = () => {
         What I did
         <div style={{ position: 'relative', width: '80%', marginTop: '0.9rem' }}> 
         <ProgressBar 
-            completed={50}
+            completed={10}
             customLabelStyles={{
             color: '#000000',
             fontSize: '13px',
@@ -111,4 +113,4 @@ const navbar = () => {
   )
 }
 
-export default navbar
+export default Navbar

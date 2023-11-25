@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/CareerBuilding.png';
 
-const InterviewPreparation = ({ onBackClick }) => {
+const InterviewPreparation = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• Tips to Prepare Yourself for an Interview </p>
@@ -22,6 +22,8 @@ const InterviewPreparation = ({ onBackClick }) => {
             title="Interview Preparation"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/IndependentLiving.png';
 
-const MovingOut = ({ onBackClick }) => {
+const MovingOut = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• The Pros and Cons of Moving Out</p>
@@ -22,6 +22,8 @@ const MovingOut = ({ onBackClick }) => {
             title="Moving Out"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

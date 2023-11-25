@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/Health.png';
 
-const Sleep = ({ onBackClick }) => {
+const Sleep = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• Why is Sleep Important</p>
@@ -25,6 +25,8 @@ const Sleep = ({ onBackClick }) => {
             title="Sleep"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

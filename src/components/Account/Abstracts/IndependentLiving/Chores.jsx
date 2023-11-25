@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/IndependentLiving.png';
 
-const Chores = ({ onBackClick }) => {
+const Chores = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• A List of Chores to Do in a House, With The Corresponding Frequency</p>
@@ -20,6 +20,8 @@ const Chores = ({ onBackClick }) => {
             title="Chores"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

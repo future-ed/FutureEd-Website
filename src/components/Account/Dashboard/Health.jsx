@@ -1,6 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import Main from './Main'
 import backgroundImage from '../../../assets/Health.png';
+import { useReadStatus } from '../../Account/update_read';
+
 import Sleep from '../Abstracts/Health/Sleep';
 import Exercise from '../Abstracts/Health/Exercise';
 import StressAnxiety from '../Abstracts/Health/Stress&Anxiety';
@@ -11,53 +13,71 @@ import Insurance from '../Abstracts/Health/Insurance';
 import Hydration from '../Abstracts/Health/Hydration';
 
 const Health = () => {
+    const [readStatuses, toggleReadStatus] = useReadStatus('health')
     const [currentComponent, setCurrentComponent] = useState(null);
-    const mainTitle = 'Health';
-    const componentMapping = {
-      sleep: Sleep,
-      exercise: Exercise,
-      stressAnxiety: StressAnxiety,
-      digitalDetox: DigitalDetox,
-      perfectionism: Perfectionism,
-      relationships: Relationships,
-      insurance: Insurance,
-      hydration: Hydration,
-    };
+    const [cardsData, setCardsData] = useState([]);
+
+    useEffect(() => {
+      setCardsData([
+        { emoji: '😴', title: 'Sleep', completed: readStatuses['sleep'] ? 100 : 0, path: 'sleep' },
+      { emoji: '💪🏻', title: 'Exercise', completed: readStatuses['exercise'] ? 100 : 0, path: 'exercise' },
+      { emoji: '😣', title: 'Stress & Anxiety', completed: readStatuses['stress_and_anxiety'] ? 100 : 0, path: 'stressAnxiety' },
+      { emoji: '📱', title: 'Digital Detox', completed: readStatuses['digital_detox'] ? 100 : 0, path: 'digitalDetox' },
+      { emoji: '😇', title: 'Perfectionism', completed: readStatuses['perfectionism'] ? 100 : 0, path: 'perfectionism' },
+      { emoji: '🫱🏻‍🫲🏼', title: 'Relationships', completed: readStatuses['relationships'] ? 100 : 0, path: 'relationships' },
+      { emoji: '⛑️', title: 'Insurance', completed: readStatuses['insurance'] ? 100 : 0, path: 'insurance' },
+      { emoji: '💧', title: 'Hydration', completed: readStatuses['hydration'] ? 100 : 0, path: 'hydration' },
+      ]);
+  }, [readStatuses]);
+    
+  const handleToggleReadStatus = (path) => {
+    toggleReadStatus(path);
+  };
   
-    const handleBackClick = () => {
-      setCurrentComponent(null);
-    }
-    const cardsData = [
-      { emoji: '😴', title: 'Sleep', completed: 50, path: 'sleep' },
-      { emoji: '💪🏻', title: 'Exercise', completed: 60, path: 'exercise' },
-      { emoji: '😣', title: 'Stress & Anxiety', completed: 60, path: 'stressAnxiety' },
-      { emoji: '📱', title: 'Digital Detox', completed: 60, path: 'digitalDetox' },
-      { emoji: '😇', title: 'Perfectionism', completed: 60, path: 'perfectionism' },
-      { emoji: '🫱🏻‍🫲🏼', title: 'Relationships', completed: 60, path: 'relationships' },
-      { emoji: '⛑️', title: 'Insurance', completed: 60, path: 'insurance' },
-      { emoji: '💧', title: 'Hydration', completed: 60, path: 'hydration' },
-    ];
-    const gridCols = 'md:grid-cols-4 grid-cols-1';
+  const componentMapping = {
+    sleep: <Sleep onBackClick={() => setCurrentComponent(null)} 
+                                 readStatus={readStatuses['sleep']} 
+                                 onToggleRead={() => handleToggleReadStatus('sleep')} />,
+    exercise: <Exercise onBackClick={() => setCurrentComponent(null)} 
+                                 readStatus={readStatuses['exercise']} 
+                                 onToggleRead={() => handleToggleReadStatus('exercise')} />,
+    stressAnxiety: <StressAnxiety onBackClick={() => setCurrentComponent(null)} 
+                                 readStatus={readStatuses['stress_and_anxiety']} 
+                                 onToggleRead={() => handleToggleReadStatus('stress_and_anxiety')} />,
+    digitalDetox: <DigitalDetox onBackClick={() => setCurrentComponent(null)} 
+                                 readStatus={readStatuses['digital_detox']} 
+                                 onToggleRead={() => handleToggleReadStatus('digital_detox')} />,
+    perfectionism: <Perfectionism onBackClick={() => setCurrentComponent(null)} 
+                                 readStatus={readStatuses['perfectionism']} 
+                                 onToggleRead={() => handleToggleReadStatus('perfectionism')} />,                            
+    relationships: <Relationships onBackClick={() => setCurrentComponent(null)} 
+                                 readStatus={readStatuses['relationships']} 
+                                 onToggleRead={() => handleToggleReadStatus('relationships')} />,
+    insurance: <Insurance onBackClick={() => setCurrentComponent(null)} 
+                                 readStatus={readStatuses['insurance']} 
+                                 onToggleRead={() => handleToggleReadStatus('insurance')} />,                            
+    hydration: <Hydration onBackClick={() => setCurrentComponent(null)} 
+                                 readStatus={readStatuses['hydration']} 
+                                 onToggleRead={() => handleToggleReadStatus('hydration')} />,
+  };
+    
     const navigateTo = (path) => {
       const ComponentToShow = componentMapping[path];
-      if (ComponentToShow) {
-        setCurrentComponent(<ComponentToShow onBackClick={handleBackClick}/>);
-      }
+      setCurrentComponent(ComponentToShow);
     };
 
     return (
       <div>
-        {currentComponent ? React.cloneElement(currentComponent, { onBackClick: handleBackClick }) : (
-            <Main 
-              background={backgroundImage}
-              mainTitle={mainTitle}
-              cardsData={cardsData}
-              gridCols={gridCols}
-              navigateTo={navigateTo}
-            />
-        )}
-      </div>
-    )
+       {currentComponent ? 
+           currentComponent : 
+           <Main background={backgroundImage}
+                 mainTitle='Health'
+                 cardsData={cardsData}
+                 gridCols="md:grid-cols-4 grid-cols-1"
+                 navigateTo={navigateTo} />
+         }
+   </div>
+   );
 }
 
 export default Health

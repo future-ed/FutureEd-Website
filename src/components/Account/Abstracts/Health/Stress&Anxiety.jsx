@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/Health.png';
 
-const StressAnxiety = ({ onBackClick }) => {
+const StressAnxiety = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• Common Causes of Stress and Anxiety</p>
@@ -25,6 +25,8 @@ const StressAnxiety = ({ onBackClick }) => {
             title="Stress & Anxiety"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

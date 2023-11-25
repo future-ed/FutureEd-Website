@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/Personal_Finances.png';
 
-const MoneyPath = ({ onBackClick }) => {
+const MoneyPath = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• The ESBI Framework</p>
@@ -23,6 +23,8 @@ const MoneyPath = ({ onBackClick }) => {
             title="Money Paths"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

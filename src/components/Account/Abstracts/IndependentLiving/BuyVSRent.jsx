@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/IndependentLiving.png';
 
-const BuyVSRent = ({ onBackClick }) => {
+const BuyVSRent = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• The Financial decision</p>
@@ -21,6 +21,8 @@ const BuyVSRent = ({ onBackClick }) => {
             title="Buy vs Rent"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

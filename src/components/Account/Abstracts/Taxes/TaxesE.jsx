@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/Personal_Finances.png';
 
-const TaxesE = ({ onBackClick }) => {
+const TaxesE = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• The Basics of Taxes</p>
@@ -22,6 +22,8 @@ const TaxesE = ({ onBackClick }) => {
             title="Taxes E"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

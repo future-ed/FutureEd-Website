@@ -72,7 +72,7 @@ export default Subjects;
 const Card = ({ image, title, subtitle, description }) => {
     return (
       <div className='bg-white lg:w-[400px] max-w-[400px] rounded-lg my-3 text-[#122A41] px-10 flex flex-col justify-center items-start p-6 mx-auto sm:mx-0 shadow-lg relative'>
-        <div className='bg-[#00B0E4] h-1 w-full'></div>
+        <div className='bg-[#F69BF4] h-1 w-full'></div>
         <div className="flex flex-col">
           <img src={image} alt={title} className='w-[110px] h-[110px]' />
           <div className="ml-4">

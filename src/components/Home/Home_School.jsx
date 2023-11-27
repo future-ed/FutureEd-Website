@@ -18,17 +18,17 @@ const School = () => {
           <Card
             image={Icon1}
             title="Contact"
-            description="We offer an introductory consultancy session, providing you with valuable insights and expert advice as we explore potential solutions tailored to your school and students."
+            description="We offer an introductory consultancy session, providing you with valuable insights."
           />
           <Card
             image={Icon2}
             title="Implement"
-            description="We implement our solution in your school, ensuring that it is tailored to your school's needs and students' learning styles."
+            description="We implement our solution in your school, ensuring that it is tailored to your school's needs."
           />
           <Card
             image={Icon3}
             title="Refine"
-            description="We refine our solution based on feedback from students and teachers yearly, ensuring that our solution is the best fit for your school."
+            description="We refine our solution based on feedback from students and teachers yearly."
           />
         </div>
       </div>
@@ -48,7 +48,7 @@ const Card = ({ image, title, description }) => {
                     <h1 className='text-start text-xl font-bold'>{title}</h1>
                 </div>
                 <div className="mt-3 h-[100px] overflow-hidden px-4">
-                    <p className='text-[#B5B2B2] text-start leading-[1.25rem] font-light'>{description}</p>
+                    <p className='text-[#B5B2B2] text-start text-sm md:text-md font-light'>{description}</p>
                 </div>
             </div>
         </div>

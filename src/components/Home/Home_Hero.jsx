@@ -81,11 +81,11 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl font-bold">Bridge the gap</h1>
           <h1 className="text-4xl md:text-6xl font-bold">between <span style={gradientStylePink}>Education</span></h1>
           <h1 className="text-4xl md:text-6xl font-bold">and <span style={gradientStyleBlue}>Society</span></h1>
-          <p className="text-md md:text-xl mt-4">All the information you need in life in one single place</p>
+          <p className="text-sm md:text-xl mt-4 md:px-0 px-4">All the information you need for life in one single place</p>
 
             <button className="mt-6 bg-black text-white border font-semibold py-2 px-4 rounded-full hover:underline">
               {/* eslint-disable-next-line */}
-              <a onClick={handleCreateAccountClick}>Get Started </a>
+              <a onClick={SignUpToCome}>Get Started </a>
           </button>
           <button className="mt-4 ml-2 bg-white text-black border border-black font-semibold py-2 px-4 rounded-full hover:underline">
             <HashLink smooth to='/#Contact' > Contact Us </HashLink>

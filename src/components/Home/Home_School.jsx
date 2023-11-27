@@ -18,12 +18,12 @@ const School = () => {
           <Card
             image={Icon1}
             title="Contact"
-            description="We offer an introductory consultancy session, providing you with valuable insights and expert advice as we explore potential solutions tailored to your school and students."
+            description="We offer an introductory consultancy session, providing you with valuable insights and expert advice as we explore potential solutions."
           />
           <Card
             image={Icon2}
             title="Implement"
-            description="We implement our solution in your school, ensuring that it is tailored to your school's needs and students' learning styles."
+            description="We implement our solution in your school, ensuring that it is tailored to your needs and students' learning styles."
           />
           <Card
             image={Icon3}

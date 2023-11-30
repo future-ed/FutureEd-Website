@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Main from './Main'
 import backgroundImage from '../../../assets/Health.png';
 import { useReadStatus } from '../../Account/update_read';
+import {useChapterReadProgress} from '../Dashboard/Chapter_Read_Progress'
 
 import Sleep from '../Abstracts/Health/Sleep';
 import Exercise from '../Abstracts/Health/Exercise';
@@ -16,6 +17,7 @@ const Health = () => {
     const [readStatuses, toggleReadStatus] = useReadStatus('health')
     const [currentComponent, setCurrentComponent] = useState(null);
     const [cardsData, setCardsData] = useState([]);
+    const chapterReadProgress = useChapterReadProgress('health');
 
     useEffect(() => {
       setCardsData([
@@ -74,7 +76,9 @@ const Health = () => {
                  mainTitle='Health'
                  cardsData={cardsData}
                  gridCols="md:grid-cols-4 grid-cols-1"
-                 navigateTo={navigateTo} />
+                 navigateTo={navigateTo} 
+                 readProgress={chapterReadProgress}
+                 />
          }
    </div>
    );

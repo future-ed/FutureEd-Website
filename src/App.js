@@ -18,6 +18,7 @@ import CareerBuilding from './pages/Dashboard/Career_Building_page';
 import IndependentLiving from './pages/Dashboard/Independent_Living_page';
 import Health from './pages/Dashboard/Health_page';
 import LifeSkills from './pages/Dashboard/LifeSkills_page';
+import Profile from './pages/Dashboard/Profile_page';
 
 // Test
 function App() {
@@ -76,6 +77,13 @@ function App() {
             path="/LifeSkills" 
             element={<ProtectedRoute>
               <LifeSkills />
+              </ProtectedRoute>
+            } 
+            />
+            <Route 
+            path="/Profile" 
+            element={<ProtectedRoute>
+              <Profile />
               </ProtectedRoute>
             } 
             />

@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Main from './Main'
 import backgroundImage from '../../../assets/CareerBuilding.png';
 import { useReadStatus } from '../../Account/update_read';
+import {useChapterReadProgress} from '../Dashboard/Chapter_Read_Progress'
 
 import CVBuilding from '../Abstracts/CareerBuilding/CVBuilding';
 import LinkedInProfileBuilding from '../Abstracts/CareerBuilding/LinkedInProfileBuilding';
@@ -16,6 +17,7 @@ const Career_Building = () => {
     const [readStatuses, toggleReadStatus] = useReadStatus('career building')
     const [currentComponent, setCurrentComponent] = useState(null);
     const [cardsData, setCardsData] = useState([]);
+    const chapterReadProgress = useChapterReadProgress('career building');
 
     useEffect(() => {
       setCardsData([
@@ -66,7 +68,9 @@ const Career_Building = () => {
                  mainTitle='Career Building'
                  cardsData={cardsData}
                  gridCols="md:grid-cols-3 grid-cols-1"
-                 navigateTo={navigateTo} />
+                 navigateTo={navigateTo} 
+                 readProgress={chapterReadProgress}
+                 />
          }
    </div>
    );

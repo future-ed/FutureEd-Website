@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Main from './Main'
 import backgroundImage from '../../../assets/LifeSkills.png';
 import { useReadStatus } from '../../Account/update_read';
+import {useChapterReadProgress} from '../Dashboard/Chapter_Read_Progress'
 
 import StudyHacks from '../Abstracts/LifeSkills/StudyHacks';
 import Procrastination from '../Abstracts/LifeSkills/Procrastination';
@@ -12,6 +13,7 @@ const LifeSkills = () => {
     const [readStatuses, toggleReadStatus] = useReadStatus('life skills')
     const [currentComponent, setCurrentComponent] = useState(null);
     const [cardsData, setCardsData] = useState([]);
+    const chapterReadProgress = useChapterReadProgress('life skills');
 
     useEffect(() => {
       setCardsData([
@@ -54,7 +56,9 @@ const LifeSkills = () => {
                  mainTitle='Life Skills'
                  cardsData={cardsData}
                  gridCols="md:grid-cols-3 grid-cols-1"
-                 navigateTo={navigateTo} />
+                 navigateTo={navigateTo} 
+                 readProgress={chapterReadProgress}
+                 /> 
          }
    </div>
    );

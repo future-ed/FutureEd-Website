@@ -2,6 +2,7 @@ import React,  {useState, useEffect}from 'react'
 import Main from './Main'
 import backgroundImage from '../../../assets/Personal_Finances.png';
 import { useReadStatus } from '../../Account/update_read';
+import {useChapterReadProgress} from '../Dashboard/Chapter_Read_Progress'
 
 import Introduction from '../Abstracts/PersonalFinances/Introduction'
 import MoneyPath from '../Abstracts/PersonalFinances/MoneyPath'
@@ -17,6 +18,7 @@ const Personal_Finances = () => {
   const [readStatuses, toggleReadStatus] = useReadStatus('personal finances');
   const [currentComponent, setCurrentComponent] = useState(null);
   const [cardsData, setCardsData] = useState([]);
+  const chapterReadProgress = useChapterReadProgress('personal finances');
 
   useEffect(() => {
     setCardsData([
@@ -75,7 +77,8 @@ const componentMapping = {
               mainTitle="Personal Finance"
               cardsData={cardsData}
               gridCols="md:grid-cols-4 grid-cols-1"
-              navigateTo={navigateTo} />
+              navigateTo={navigateTo}
+              readProgress={chapterReadProgress} />
       }
 </div>
 );

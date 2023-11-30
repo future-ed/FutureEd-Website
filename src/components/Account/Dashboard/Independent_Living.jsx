@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 import Main from './Main'
 import backgroundImage from '../../../assets/IndependentLiving.png';
 import { useReadStatus } from '../../Account/update_read';
+import {useChapterReadProgress} from '../Dashboard/Chapter_Read_Progress'
 
 import IndepIntroduction from '../Abstracts/IndependentLiving/Introduction';
 import MovingOut from '../Abstracts/IndependentLiving/MovingOut';
@@ -15,6 +16,7 @@ const Independent_Living = () => {
     const [readStatuses, toggleReadStatus] = useReadStatus('independent living')
     const [currentComponent, setCurrentComponent] = useState(null);
     const [cardsData, setCardsData] = useState([]);
+    const chapterReadProgress = useChapterReadProgress('independent living');
 
     useEffect(() => {
       setCardsData([
@@ -65,7 +67,9 @@ const Independent_Living = () => {
                  mainTitle='Independent Living'
                  cardsData={cardsData}
                  gridCols="md:grid-cols-3 grid-cols-1"
-                 navigateTo={navigateTo} />
+                 navigateTo={navigateTo} 
+                 readProgress={chapterReadProgress}
+                 />
          }
    </div>
    );

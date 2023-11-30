@@ -2,6 +2,7 @@ import React,  {useState, useEffect}from 'react'
 import Main from './Main'
 import backgroundImage from '../../../assets/Personal_Finances.png';
 import { useReadStatus } from '../../Account/update_read';
+import {useChapterReadProgress} from '../Dashboard/Chapter_Read_Progress'
 
 import WhyTaxes from '../Abstracts/Taxes/WhyTaxes';
 import TaxesE from '../Abstracts/Taxes/TaxesE';
@@ -14,6 +15,7 @@ const Taxes = () => {
     const [readStatuses, toggleReadStatus] = useReadStatus('taxes');
     const [currentComponent, setCurrentComponent] = useState(null);
     const [cardsData, setCardsData] = useState([]);
+    const chapterReadProgress = useChapterReadProgress('taxes');
   
     useEffect(() => {
       setCardsData([
@@ -64,7 +66,9 @@ const Taxes = () => {
               mainTitle='Taxes'
               cardsData={cardsData}
               gridCols='md:grid-cols-3 grid-cols-1'
-              navigateTo={navigateTo} />}
+              navigateTo={navigateTo} 
+              readProgress={chapterReadProgress}
+              />} 
     </div>  
     )
 }

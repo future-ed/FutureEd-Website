@@ -1,28 +1,17 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract/General_Abstract';
-import backgroundImage from '../../../../assets/Personal_Finances.png';
+import GeneralContent from '../General_Abstract/General_Content';
+import c1 from '../../../../assets/pf_gm1.svg';
+import c2 from '../../../../assets/pf_gm2.svg';
 
 const GrowingMoney = ({ onBackClick, readStatus, onToggleRead }) => {
-    const content = (
-        <div>
-            <p>• How to Make Yourself Less Dependent </p>
-            <p>• The 50/30/20-framework to Invest, focusing mainly on the 20-part</p>
-            <p>• Investing Safely + Basic Fundamental Rules</p>
-            <div className='mt-3'>
-                <p>This part aims to provide students with essential guidelines to invest safely. We emphasize the 
-                    importance of diversification, spreading investments across different asset classes to mitigate 
-                    risk. Additionally, understanding risk and conducting thorough research before investing is 
-                    highlighted as a crucial fundamental. Lastly, we explain the significance of setting clear 
-                    investment goals and having a long-term perspective, avoiding impulsive decisions.</p>
-            </div>
-            
-        </div>
-    );
+  const contentPictures = [
+    c1,
+    c2,
+]
   return (
-    <GeneralAbstract 
-            backgroundImage={backgroundImage}
+    <GeneralContent 
             title="Growing Money"
-            content={content}
+            content={contentPictures}
             onBackClick={ onBackClick }
             readStatus={readStatus}
             onToggleRead={onToggleRead}

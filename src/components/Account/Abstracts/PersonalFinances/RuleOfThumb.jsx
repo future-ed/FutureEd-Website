@@ -13,6 +13,8 @@ const RuleOfThumb = ({ onBackClick, readStatus, onToggleRead }) => {
                     a personal vehicle, aiming to guide individuals toward smart financial decisions. We stress the 
                     importance of considering one's financial situation and priorities when determining these maximums.</p>
             </div>
+
+            <p> COMING SOON </p>
         </div>
     );
   return (

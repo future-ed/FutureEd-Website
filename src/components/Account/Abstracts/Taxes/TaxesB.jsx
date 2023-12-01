@@ -1,26 +1,21 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract/General_Abstract';
-import backgroundImage from '../../../../assets/Personal_Finances.png';
+import GeneralContent from '../General_Abstract/General_Content';
+import c1 from '../../../../assets/tax_b1.svg';
+import c2 from '../../../../assets/tax_b2.svg';
+import c3 from '../../../../assets/tax_b3.svg';
+import c4 from '../../../../assets/tax_b4.svg';
 
 const TaxesB = ({ onBackClick, readStatus, onToggleRead }) => {
-    const content = (
-        <div>
-            <p>• The Different Business Types (VOF and BV)</p>
-            <p>• What are the Taxes as VOF</p>
-            <p>• What are the Taxes as BV</p>
-            <div className='mt-3'>
-                <p>In this section, we're diving into the different types of businesses, specifically VOF (general 
-                    partnership) and BV (private limited company), and how taxes apply to each. We'll briefly explore 
-                    what distinguishes these business structures and how taxes work for both VOF and BV.</p>
-            </div>
-            
-        </div>
-    );
+  const contentPictures = [
+    c1,
+    c2,
+    c3,
+    c4,
+]
   return (
-    <GeneralAbstract 
-            backgroundImage={backgroundImage}
+    <GeneralContent
             title="Taxes B"
-            content={content}
+            content={contentPictures}
             onBackClick={ onBackClick }
             readStatus={readStatus}
             onToggleRead={onToggleRead}

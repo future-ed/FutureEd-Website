@@ -57,8 +57,8 @@ const Profile = () => {
                         <h1>Email</h1>
                         <h1 className='italic font-light mb-6'>{user.email || 'Not set'}</h1>
                     </div>
-                    <div className="flex justify-center">
-                        <button onClick={handleSignOut} className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-16 rounded">
+                    <div className="flex justify-center items-end">
+                        <button onClick={handleSignOut} className="mt-4 bg-black text-white font-bold py-2 px-16 rounded-full">
                             Sign Out
                         </button>
                     </div>

@@ -9,8 +9,8 @@ import MoneyPath from '../Abstracts/PersonalFinances/MoneyPath'
 import TheGoldenPillars from '../Abstracts/PersonalFinances/TheGoldenPillars'
 import Budgeting from '../Abstracts/PersonalFinances/Budgeting'
 import GrowingMoney from '../Abstracts/PersonalFinances/GrowingMoney'
-import Zero_to_ten from '../Abstracts/PersonalFinances/$0 to $10k' 
-import Ten_and_now from '../Abstracts/PersonalFinances/$10k and now'
+import ZeroToTen from '../Abstracts/PersonalFinances/$0 to $10k' 
+import TenAndNow from '../Abstracts/PersonalFinances/$10k and now'
 import RuleOfThumb from '../Abstracts/PersonalFinances/RuleOfThumb'
 
 
@@ -53,10 +53,10 @@ const componentMapping = {
   growingMoney: <GrowingMoney onBackClick={() => setCurrentComponent(null)} 
                                readStatus={readStatuses['growing_money']} 
                                onToggleRead={() => handleToggleReadStatus('growing_money')} />,                            
-  zero_to_ten: <Zero_to_ten onBackClick={() => setCurrentComponent(null)} 
+  zero_to_ten: <ZeroToTen onBackClick={() => setCurrentComponent(null)} 
                                readStatus={readStatuses['zero_to_ten']} 
                                onToggleRead={() => handleToggleReadStatus('zero_to_ten')} />,
-  ten_and_now: <Ten_and_now onBackClick={() => setCurrentComponent(null)} 
+  ten_and_now: <TenAndNow onBackClick={() => setCurrentComponent(null)} 
                                readStatus={readStatuses['ten_and_now']} 
                                onToggleRead={() => handleToggleReadStatus('ten_and_now')} />,
   ruleOfThumb: <RuleOfThumb onBackClick={() => setCurrentComponent(null)} 

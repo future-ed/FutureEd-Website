@@ -65,7 +65,8 @@ const Main = ({ background, mainTitle, cardsData, gridCols, navigateTo, readProg
           <h1 className='lg:text-[42px] font-bold text-[25px]'>
             {mainTitle}
           </h1>
-          <div className='flex'>
+          {/* FOR PROGRESS WITHIN A SUBJECT */}
+          {/* <div className='flex'>
           <div className='flex flex-col items-center text-[14px] mr-10'>
             <span className='whitespace-nowrap'>Read Progress: {readProgress}%</span>
             <ProgressBar 
@@ -99,7 +100,7 @@ const Main = ({ background, mainTitle, cardsData, gridCols, navigateTo, readProg
                 className="w-full" 
               />
             </div>
-          </div>
+          </div> */}
         </div>
         <div className={`grid ${gridCols} ml-12 mt-8`}>
           {cardsData.map((card, index) => (

@@ -30,6 +30,7 @@ const Hero = () => {
     });
   };
 
+  // eslint-disable-next-line
   const SignUpToCome = () => {
     Swal.fire({
       icon: 'info', 

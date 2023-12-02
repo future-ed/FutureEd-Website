@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/CareerBuilding.png';
 
-const LinkedInProfileBuilding = ({ onBackClick }) => {
+const LinkedInProfileBuilding = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• How to set up a LinkedIn </p>
@@ -22,6 +22,8 @@ const LinkedInProfileBuilding = ({ onBackClick }) => {
             title="LinkedIn Profile Building"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

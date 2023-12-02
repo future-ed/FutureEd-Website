@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/CareerBuilding.png';
 
-const CVBuilding = ({ onBackClick }) => {
+const CVBuilding = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• Key Tips for Writing a CV  </p>
@@ -20,6 +20,8 @@ const CVBuilding = ({ onBackClick }) => {
             title="CV Building"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

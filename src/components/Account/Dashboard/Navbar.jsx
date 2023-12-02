@@ -1,18 +1,45 @@
 import React from 'react'
 import ProgressBar from "@ramonak/react-progress-bar"
 import Logo from '../../../assets/logo.png'
-import { Link } from 'react-router-dom'
+import { Link,useNavigate } from 'react-router-dom'
 import { UserAuth } from '../../../context/AuthContext';
 import profileIcon from '../../../assets/Profile_Icon.png'
+import { useOverallReadProgress} from '../../Account/overall_read_progress';
 
-const navbar = () => {
+
+const Navbar = () => {
   const { user } = UserAuth();
+  const readPercentage = useOverallReadProgress();
+  const navigate = useNavigate();
+
+  const handleProfileClick = () => {
+    navigate('/Profile');
+  }
   
   return (
     <div className='h-screen w-[261px]'>
       <div className='flex items-center text-black text-[14px] w-[261px] h-[72px] border-b'>
       <img src={profileIcon} alt="profileIcon" className="self-center ml-7" style={{ width: '40px', height: '40px' }} />
-        {user ? user.email : 'No user logged in'}
+      {user ? 
+        <button 
+          onClick={handleProfileClick}
+          style={{
+            backgroundColor: 'transparent',
+            border: 'none',
+            color: 'inherit',
+            textAlign: 'left',
+            padding: '0',
+            cursor: 'pointer',
+            textDecoration: 'none',
+          }}
+          onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
+          onMouseOut={(e) => e.currentTarget.style.textDecoration = 'none'}
+        >
+        {user.email}
+    </button>
+    : 
+    'No user logged in'
+  }
       </div>
 
       <div>
@@ -68,7 +95,7 @@ const navbar = () => {
         What I've Read
         <div style={{ position: 'relative', width: '80%', marginTop: '1rem' }}> 
         <ProgressBar 
-            completed={50}
+            completed={readPercentage}
             customLabelStyles={{
             color: '#000000',
             fontSize: '13px',
@@ -88,7 +115,7 @@ const navbar = () => {
         What I did
         <div style={{ position: 'relative', width: '80%', marginTop: '0.9rem' }}> 
         <ProgressBar 
-            completed={50}
+            completed={10}
             customLabelStyles={{
             color: '#000000',
             fontSize: '13px',
@@ -111,4 +138,4 @@ const navbar = () => {
   )
 }
 
-export default navbar
+export default Navbar

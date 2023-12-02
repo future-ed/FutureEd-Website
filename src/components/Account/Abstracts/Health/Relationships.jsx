@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/Health.png';
 
-const Relationships = ({ onBackClick }) => {
+const Relationships = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• The Importance of Relationships</p>
@@ -22,6 +22,8 @@ const Relationships = ({ onBackClick }) => {
             title="Relationships"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

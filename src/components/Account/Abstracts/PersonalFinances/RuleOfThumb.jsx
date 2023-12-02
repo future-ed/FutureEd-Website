@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/Personal_Finances.png';
 
-const RuleOfThumb = ({ onBackClick }) => {
+const RuleOfThumb = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• The Maximum You Should Pay For a House </p>
@@ -13,6 +13,8 @@ const RuleOfThumb = ({ onBackClick }) => {
                     a personal vehicle, aiming to guide individuals toward smart financial decisions. We stress the 
                     importance of considering one's financial situation and priorities when determining these maximums.</p>
             </div>
+
+            <p> COMING SOON </p>
         </div>
     );
   return (
@@ -21,6 +23,8 @@ const RuleOfThumb = ({ onBackClick }) => {
             title="Rules of Thumb"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

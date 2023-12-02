@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/Health.png';
 
-const DigitalDetox = ({ onBackClick }) => {
+const DigitalDetox = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• Phone Addiction and Digital Detox</p>
@@ -24,6 +24,8 @@ const DigitalDetox = ({ onBackClick }) => {
             title="Digital Detox"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

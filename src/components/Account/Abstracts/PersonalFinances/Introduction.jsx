@@ -1,23 +1,19 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
-import backgroundImage from '../../../../assets/Personal_Finances.png';
+import c1 from '../../../../assets/pf_intro.svg';
+import GeneralContent from '../General_Abstract/General_Content';
 
-const Introduction = ({ onBackClick }) => {
-    const content = (
-        <div>
-            <p>• Introduction to Personal Finance</p>
-            <p>• The Goal for this Chapter</p>
-            <p>• The Methods of Education</p>
-            
-        </div>
-    );
+const Introduction = ({ onBackClick, readStatus, onToggleRead }) => {   
+    const contentPictures = [
+        c1
+    ]
   return (
-    <GeneralAbstract 
-            backgroundImage={backgroundImage}
+    <GeneralContent
             title="Introduction"
-            content={content}
+            content={contentPictures}
             onBackClick={ onBackClick }
-    />
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
+            />
   )
 }
 

@@ -1,27 +1,24 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
-import backgroundImage from '../../../../assets/Personal_Finances.png';
+import c1 from '../../../../assets/pf_zt1.svg';
+import c2 from '../../../../assets/pf_zt2.svg';
+import c3 from '../../../../assets/pf_zt3.svg';
+import c4 from '../../../../assets/pf_zt4.svg';
+import GeneralContent from '../General_Abstract/General_Content';
 
-const $0_to_$10k = ({ onBackClick }) => {
-    const content = (
-        <div>
-            <p>• The Current Average Student Debt is €20.000, with Locals Generally Having Much More Debt </p>
-            <p>• How to Prevent Debt</p>
-            <p>• Multiple (Doable) Ways to Save Up $10.000</p>
-            <div className='mt-3'>
-                <p>Here we address the current student debt issue, where the current average student has a debt of $20,000. 
-                    Our focus is to prevent debt and present multiple feasible strategies to save $10,000, helping individuals 
-                    remove their financial burdens and build a financial foundation for their future. </p>
-            </div>
-            
-        </div>
-    );
+const $0_to_$10k = ({ onBackClick, readStatus, onToggleRead }) => {
+  const contentPictures = [
+    c1,
+    c2,
+    c3,
+    c4,
+]
   return (
-    <GeneralAbstract 
-            backgroundImage={backgroundImage}
+    <GeneralContent 
             title="$0 to $10k"
-            content={content}
+            content={contentPictures}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

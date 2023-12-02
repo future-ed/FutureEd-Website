@@ -30,6 +30,7 @@ const Hero = () => {
     });
   };
 
+  // eslint-disable-next-line
   const SignUpToCome = () => {
     Swal.fire({
       icon: 'info', 
@@ -70,7 +71,7 @@ const Hero = () => {
         </button>
         <button className=" ml-4 bg-black text-white border font-semibold py-2 px-4 rounded-full hover:underline" >
           {/* eslint-disable-next-line */}
-          <a onClick={SignUpToCome}>Get Started </a>
+          <a onClick={handleCreateAccountClick}>Get Started </a>
         </button>
       </div>
       </div>

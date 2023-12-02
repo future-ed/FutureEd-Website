@@ -1,28 +1,26 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
-import backgroundImage from '../../../../assets/Personal_Finances.png';
+import GeneralContent from '../General_Abstract/General_Content';
+import c1 from '../../../../assets/tax_s1.svg';
+import c2 from '../../../../assets/tax_s2.svg';
+import c3 from '../../../../assets/tax_s3.svg';
+import c4 from '../../../../assets/tax_s4.svg';
+import c5 from '../../../../assets/tax_s5.svg';
 
-const TaxesS = ({ onBackClick }) => {
-    const content = (
-        <div>
-            <p>• What is Tax-Free Profit</p>
-            <p>• Income Tax as Self-Employed</p>
-            <p>• The Health Insurance Act (ZVW)</p>
-            <p>• How to get Tax Deductions as Self-employed</p>
-            <div className='mt-3'>
-                <p>In this section, we're exploring how income tax works for freelancers and self-employed. Our main focus 
-                    is to explain what the Health Insurance Act (ZVW) in the Netherlands means for self-employed individuals 
-                    and what expenses a freelancer can use as tax deductions.</p>
-            </div>
-            
-        </div>
-    );
+const TaxesS = ({ onBackClick, readStatus, onToggleRead }) => {
+    const contentPictures = [
+      c1,
+      c2,
+      c3,
+      c4,
+      c5
+  ]
   return (
-    <GeneralAbstract 
-            backgroundImage={backgroundImage}
+    <GeneralContent 
             title="Taxes S"
-            content={content}
+            content={contentPictures}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

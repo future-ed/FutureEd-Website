@@ -1,9 +1,10 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/LifeSkills.png';
 
-const WorkspaceOptimisation = ({ onBackClick }) => {
-  const content = (
+const WorkspaceOptimisation = ({ onBackClick, readStatus, onToggleRead }) => {
+  
+    const content = (
       <div>
           <p>• How to Design an Effective Workspace </p>
           <p>• Design Your Ideal Workspace (Exercise)</p>
@@ -21,6 +22,8 @@ return (
           title="Workspace Optimization"
           content={content}
           onBackClick={ onBackClick }
+          readStatus={readStatus}
+          onToggleRead={onToggleRead}
   />
 )
 }

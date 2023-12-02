@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/IndependentLiving.png';
 
-const ChecklistMovingOut = ({ onBackClick }) => {
+const ChecklistMovingOut = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• Doing Paperwork</p>
@@ -24,6 +24,8 @@ const ChecklistMovingOut = ({ onBackClick }) => {
             title="Checklist Moving Out"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

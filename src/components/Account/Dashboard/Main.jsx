@@ -51,37 +51,71 @@ const Card = ({emoji, title, completed, onCardClick }) => {
   )
 }
 
-const Main = ({ background, mainTitle, cardsData, gridCols, navigateTo }) => {
+const Main = ({ background, mainTitle, cardsData, gridCols, navigateTo, readProgress, doProgress }) => {
   const handleCardClick = (path) => {
     navigateTo(path);
   }
 
   return (
-    <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen items-center relative flex flex-col"
-         style={{ backgroundImage: `url(${background})`}}>
+    <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen flex items-center justify-center"
+         style={{ backgroundImage: `url(${background})` }}>
 
-      <div className="absolute inset-0 flex justify-center items-center">
-        <div className="bg-white w-[90%] h-[90%]">
-          <h1 className='md:text-[42px] font-bold ml-12 mt-6 text-[30px]'>
+      <div className="bg-white w-[90%] h-[90%] flex flex-col">
+        <div className="flex justify-between items-center mt-3 ml-12 mr-12">
+          <h1 className='lg:text-[42px] font-bold text-[25px]'>
             {mainTitle}
           </h1>
-          <div className={`grid ${gridCols} ml-12`}>
-            {cardsData.map((card, index) => (
-              <Card
-                key={index}
-                emoji={card.emoji}
-                title={card.title}
-                completed={card.completed}
-                onCardClick={() => handleCardClick(card.path)}
-              />
-            ))}
+          {/* FOR PROGRESS WITHIN A SUBJECT */}
+          {/* <div className='flex'>
+          <div className='flex flex-col items-center text-[14px] mr-10'>
+            <span className='whitespace-nowrap'>Read Progress: {readProgress}%</span>
+            <ProgressBar 
+              completed={readProgress}
+              label=""
+              customLabelStyles={{
+                color: 'transparent',
+                fontSize: '0px'
+              }}
+              height="10px"
+              bgColor="linear-gradient(to left, #94A9F6, #CA7ED4)"
+              labelColor="#e80909"
+              transitionTimingFunction="linear"
+              className="w-full" 
+            />
           </div>
+
+            <div className='flex flex-col items-center text-[14px]'>
+            <span className='whitespace-nowrap'>Do Progress: {doProgress}%</span>
+              <ProgressBar 
+                completed={doProgress}
+                label=""
+                customLabelStyles={{
+                  color: 'transparent',
+                  fontSize: '0px'
+                }}
+                height="10px"
+                bgColor="linear-gradient(to left, #94A9F6, #CA7ED4)"
+                labelColor="#e80909"
+                transitionTimingFunction="linear"
+                className="w-full" 
+              />
+            </div>
+          </div> */}
+        </div>
+        <div className={`grid ${gridCols} ml-12 mt-8`}>
+          {cardsData.map((card, index) => (
+            <Card
+              key={index}
+              emoji={card.emoji}
+              title={card.title}
+              completed={card.completed}
+              onCardClick={() => handleCardClick(card.path)}
+            />
+          ))}
         </div>
       </div>
-
     </div>
   );
 };
 
-
-export default Main
+export default Main;

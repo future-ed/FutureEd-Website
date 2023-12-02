@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/LifeSkills.png';
 
-const Procrastination = ({ onBackClick }) => {
+const Procrastination = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• What is Procrastination</p>
@@ -22,6 +22,8 @@ const Procrastination = ({ onBackClick }) => {
             title="Procrastination"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

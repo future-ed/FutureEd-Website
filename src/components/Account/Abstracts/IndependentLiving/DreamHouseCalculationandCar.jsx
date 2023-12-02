@@ -1,8 +1,8 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract';
+import GeneralAbstract from '../General_Abstract/General_Abstract';
 import backgroundImage from '../../../../assets/IndependentLiving.png';
 
-const DreamHouseCalculationandCar = ({ onBackClick }) => {
+const DreamHouseCalculationandCar = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (
         <div>
             <p>• Calculating Monthly Expenses for your Dream House and Car (Exercise)</p>
@@ -23,6 +23,8 @@ const DreamHouseCalculationandCar = ({ onBackClick }) => {
             title="Dream House Calculation and Car"
             content={content}
             onBackClick={ onBackClick }
+            readStatus={readStatus}
+            onToggleRead={onToggleRead}
     />
   )
 }

@@ -36,7 +36,7 @@ const General_Content = ({ title, content, onBackClick, readStatus, onToggleRead
       ))}
   
       {/* Navigation arrows */}
-        <div className="absolute bottom-[60px] left-[60px] flex items-center ml-3">
+        <div className="absolute top-[30px] right-[180px] flex items-center ml-3">
             {/* Back button (only for not the first page) */}
             {currentImageIndex !== 0 && (
                 <button
@@ -49,7 +49,7 @@ const General_Content = ({ title, content, onBackClick, readStatus, onToggleRead
         </div>
                 
         
-        <div className="absolute bottom-[60px] right-[60px] flex items-center ml-3">
+        <div className="absolute top-[30px] right-[60px] flex items-center ml-3">
             {/* Next arrow or button for the last page */}
             {currentImageIndex !== content.length - 1 ? (
                 <button
@@ -62,7 +62,7 @@ const General_Content = ({ title, content, onBackClick, readStatus, onToggleRead
                 <div>
                 <button
                   onClick={handleToggleRead}
-                  className={`border-2 px-1 py-1/2 rounded ${isChecked ? 'border-green-500' : 'border-red-500'}`}>
+                  className={`border-2 px-1 py-1/2 mt-1 rounded ${isChecked ? 'border-green-500' : 'border-red-500'}`}>
                      <span style={{ visibility: isChecked ? 'visible' : 'hidden' }}>
                         &#10004;
                     </span>

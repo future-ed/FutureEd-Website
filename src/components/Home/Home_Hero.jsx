@@ -47,9 +47,9 @@ const Hero = () => {
     navigate("/SignIn");
   };
 
-  // const handleCreateAccountClick = () => {
-  //   navigate("/CreateAccount");
-  // }
+  const handleCreateAccountClick = () => {
+    navigate("/CreateAccount");
+  }
 
   return (
     <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen items-center relative flex flex-col" style={{ backgroundImage: `url(${BG})`,}}>

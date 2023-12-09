@@ -1,6 +1,6 @@
 import React from 'react'
 import GeneralAbstract from '../General_Abstract/General_Abstract';
-import backgroundImage from '../../../../assets/Personal_Finances.png';
+import backgroundImage from '../../../../assets/bg/Personal_Finances.png';
 
 const RuleOfThumb = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (

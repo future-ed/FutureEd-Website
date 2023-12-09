@@ -1,28 +1,25 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract/General_Abstract';
-import backgroundImage from '../../../../assets/LifeSkills.png';;
+import GeneralContent from '../General_Abstract/General_Content';
+import c1 from '../../../../assets/content/nl-en/ls_sh1.svg';
+import c2 from '../../../../assets/content/nl-en/ls_sh2.svg';
+import c3 from '../../../../assets/content/nl-en/ls_sh3.svg';
+import c4 from '../../../../assets/content/nl-en/ls_sh4.svg';
+import c5 from '../../../../assets/content/nl-en/ls_sh5.svg';
+import c6 from '../../../../assets/content/nl-en/ls_sh6.svg';
 
 const StudyHacks = ({ onBackClick, readStatus, onToggleRead }) => {
-    const content = (
-        <div>
-            <p>• Why People Fail to Learn Effectively</p>
-            <p>• Effective Study Techniques</p>
-            <p>• Sample Study Plan</p>
-            <p>• Making Your Own Study Plan (Exercise)</p>
-
-            <div className='mt-3'>
-                <p>In this section, we'll address common reasons why students might struggle with effective learning. 
-                    We'll then discuss various effective study techniques and provide a sample study plan. Additionally, 
-                    there'll be an exercise to guide students in creating their own personalized study plans to optimize 
-                    their learning and study process.</p>
-            </div>          
-        </div>
-    );
+  const contentPictures = [
+    c1,
+    c2,
+    c3,
+    c4,
+    c5,
+    c6,
+  ]
   return (
-    <GeneralAbstract 
-            backgroundImage={backgroundImage}
+    <GeneralContent 
             title="Study Hacks"
-            content={content}
+            content={contentPictures}
             onBackClick={ onBackClick }
             readStatus={readStatus}
             onToggleRead={onToggleRead}

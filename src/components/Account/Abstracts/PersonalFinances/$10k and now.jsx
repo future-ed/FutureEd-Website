@@ -1,6 +1,6 @@
 import React from 'react'
-import c1 from '../../../../assets/pf_zn1.svg';
-import c2 from '../../../../assets/pf_zn2.svg';
+import c1 from '../../../../assets/content/nl-en/pf_zn1.svg';
+import c2 from '../../../../assets/content/nl-en/pf_zn2.svg';
 import GeneralContent from '../General_Abstract/General_Content';
 
 const $10k_and_now = ({ onBackClick, readStatus, onToggleRead }) => {

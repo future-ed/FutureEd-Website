@@ -1,6 +1,6 @@
 import React from 'react'
-import c1 from '../../../../assets/tax_e1.svg';
-import c2 from '../../../../assets/tax_e2.svg';
+import c1 from '../../../../assets/content/nl-en/tax_e1.svg';
+import c2 from '../../../../assets/content/nl-en/tax_e2.svg';
 import GeneralContent from '../General_Abstract/General_Content';
 
 const TaxesE = ({ onBackClick, readStatus, onToggleRead }) => {

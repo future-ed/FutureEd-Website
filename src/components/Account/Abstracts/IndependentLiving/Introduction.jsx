@@ -1,23 +1,15 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract/General_Abstract';
-import backgroundImage from '../../../../assets/IndependentLiving.png';
+import GeneralContent from '../General_Abstract/General_Content';
+import c1 from '../../../../assets/content/nl-en/il_intro.svg';
 
 const Introduction = ({ onBackClick, readStatus, onToggleRead }) => {
-    const content = (
-        <div>
-            <p>• Introduction to Independent Living</p>
-            <div className='mt-3'>
-                <p>In this section, we'll introduce the concept of independent living. We'll explore what it means to live 
-                   independently and what you need to know and prepare before you do so.</p>
-            </div>
-            
-        </div>
-    );
+  const contentPictures = [
+    c1,
+  ]
   return (
-    <GeneralAbstract 
-            backgroundImage={backgroundImage}
+    <GeneralContent 
             title="Introduction"
-            content={content}
+            content={contentPictures}
             onBackClick={ onBackClick }
             readStatus={readStatus}
             onToggleRead={onToggleRead}

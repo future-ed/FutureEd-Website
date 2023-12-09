@@ -1,31 +1,27 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract/General_Abstract';
-import backgroundImage from '../../../../assets/IndependentLiving.png';
+import GeneralContent from '../General_Abstract/General_Content';
+import c1 from '../../../../assets/content/nl-en/il_mo1.svg';
+import c2 from '../../../../assets/content/nl-en/il_mo2.svg';
+import c3 from '../../../../assets/content/nl-en/il_mo3.svg';
+import c4 from '../../../../assets/content/nl-en/il_mo4.svg';
 
 const MovingOut = ({ onBackClick, readStatus, onToggleRead }) => {
-    const content = (
-        <div>
-            <p>• The Pros and Cons of Moving Out</p>
-            <p>• How to Find a House</p>
-            <p>• The Contract and Your Rights</p>
-
-            <div className='mt-3'>
-                <p>In this section, we'll explore the pros and cons of moving out, covering essential aspects such as 
-                    finding a house, understanding contracts, and your rights as a tenant.</p>
-            </div>
-            
-        </div>
-    );
+  const contentPictures = [
+    c1,
+    c2,
+    c3,
+    c4,
+  ]
   return (
-    <GeneralAbstract 
-            backgroundImage={backgroundImage}
-            title="Moving Out"
-            content={content}
+    <GeneralContent 
+            title="MovingOut"
+            content={contentPictures}
             onBackClick={ onBackClick }
             readStatus={readStatus}
             onToggleRead={onToggleRead}
     />
   )
 }
+
 
 export default MovingOut

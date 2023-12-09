@@ -1,6 +1,6 @@
 import React from 'react'
 import GeneralAbstract from '../General_Abstract/General_Abstract';
-import backgroundImage from '../../../../assets/LifeSkills.png';
+import backgroundImage from '../../../../assets/bg/LifeSkills.png';
 
 const Procrastination = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (

@@ -1,7 +1,7 @@
 import React from 'react'
 import GeneralContent from '../General_Abstract/General_Content';
-import c1 from '../../../../assets/pf_gm1.svg';
-import c2 from '../../../../assets/pf_gm2.svg';
+import c1 from '../../../../assets/content/nl-en/pf_gm1.svg';
+import c2 from '../../../../assets/content/nl-en/pf_gm2.svg';
 
 const GrowingMoney = ({ onBackClick, readStatus, onToggleRead }) => {
   const contentPictures = [

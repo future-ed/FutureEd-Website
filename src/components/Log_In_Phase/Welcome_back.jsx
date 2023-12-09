@@ -2,8 +2,8 @@ import React, {useState} from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../../context/AuthContext'
 import Logo from '../../assets/logo.png';
-import visibility from '../../assets/icon_visibility.png'
-import invisibility from '../../assets/icon_invisible.png'
+import visibility from '../../assets/icons/icon_visibility.png'
+import invisibility from '../../assets/icons/icon_invisible.png'
 // import { setSelectionRange } from '@testing-library/user-event/dist/utils';
 
 

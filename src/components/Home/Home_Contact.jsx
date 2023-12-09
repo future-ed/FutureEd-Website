@@ -1,5 +1,5 @@
 import React from 'react';
-import BG from '../../assets/bg_contact2.png';
+import BG from '../../assets/bg/bg_contact2.png';
 
 const Contact = () => {
   return (

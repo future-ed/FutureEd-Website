@@ -1,8 +1,8 @@
 import React from 'react'
-import Icon1 from '../../assets/icon_p1.png'
-import Icon2 from '../../assets/icon_p2.png'
-import Icon3 from '../../assets/icon_p3.png'
-import BG from '../../assets/bg_school.png';
+import Icon1 from '../../assets/icons/icon_p1.png'
+import Icon2 from '../../assets/icons/icon_p2.png'
+import Icon3 from '../../assets/icons/icon_p3.png'
+import BG from '../../assets/bg/bg_school.png';
 
 const School = () => {
   return (

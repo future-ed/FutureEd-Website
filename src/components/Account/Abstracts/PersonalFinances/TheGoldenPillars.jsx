@@ -1,9 +1,9 @@
 import React from 'react'
-import c1 from '../../../../assets/pf_gp1.svg';
-import c2 from '../../../../assets/pf_gp2.svg';
-import c3 from '../../../../assets/pf_gp3.svg';
-import c4 from '../../../../assets/pf_gp4.svg';
-import c5 from '../../../../assets/pf_gp5.svg';
+import c1 from '../../../../assets/content/nl-en/pf_gp1.svg';
+import c2 from '../../../../assets/content/nl-en/pf_gp2.svg';
+import c3 from '../../../../assets/content/nl-en/pf_gp3.svg';
+import c4 from '../../../../assets/content/nl-en/pf_gp4.svg';
+import c5 from '../../../../assets/content/nl-en/pf_gp5.svg';
 import GeneralContent from '../General_Abstract/General_Content';
 
 const TheGoldenPillars = ({ onBackClick, readStatus, onToggleRead }) => {

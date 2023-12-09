@@ -1,5 +1,5 @@
 import React from 'react';
-import BG from '../../assets/bg_homepage.jpg';
+import BG from '../../assets/bg/bg_homepage.jpg';
 import Logo from '../../assets/logo.png';
 import { HashLink } from 'react-router-hash-link';
 import Swal from 'sweetalert2';

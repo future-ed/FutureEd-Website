@@ -1,24 +1,15 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract/General_Abstract';
-import backgroundImage from '../../../../assets/Personal_Finances.png';
+import GeneralContent from '../General_Abstract/General_Content';
+import c1 from '../../../../assets/content/nl-en/tax_mj1.svg';
 
 const MultipleJobs = ({ onBackClick, readStatus, onToggleRead }) => {
-    const content = (
-        <div>
-            <p>• How do taxes work when combining multiple jobs?</p>
-            <p>• Combing Your Job + Side Business</p>
-            <div className='mt-3'>
-                <p>In this section, we’ll discuss how taxes function when you combine multiple jobs or when you have a 
-                    business alongside your primary employment.</p>
-            </div>
-            
-        </div>
-    );
+  const contentPictures = [
+    c1,
+]
   return (
-    <GeneralAbstract 
-            backgroundImage={backgroundImage}
+    <GeneralContent 
             title="Multiple Jobs"
-            content={content}
+            content={contentPictures}
             onBackClick={ onBackClick }
             readStatus={readStatus}
             onToggleRead={onToggleRead}

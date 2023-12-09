@@ -1,24 +1,21 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract/General_Abstract';
-import backgroundImage from '../../../../assets/CareerBuilding.png';
+import GeneralContent from '../General_Abstract/General_Content';
+import c1 from '../../../../assets/content/nl-en/cb_cv1.svg';
+import c2 from '../../../../assets/content/nl-en/cb_cv2.svg';
+import c3 from '../../../../assets/content/nl-en/cb_cv3.svg';
+import c4 from '../../../../assets/content/nl-en/cb_cv4.svg';
 
 const CVBuilding = ({ onBackClick, readStatus, onToggleRead }) => {
-    const content = (
-        <div>
-            <p>• Key Tips for Writing a CV  </p>
-            <p>• CV Template to Fill In and Start With (Exercise)</p>
-            
-            <div className='mt-3'>
-                <p>In this section, we're focusing on key tips and guidelines for crafting an effective CV. We'll cover 
-                    essential strategies and insights to help students create a strong and impactful resume.</p>
-            </div>
-        </div>
-    );
+  const contentPictures = [
+    c1,
+    c2,
+    c3,
+    c4,
+  ]
   return (
-    <GeneralAbstract 
-            backgroundImage={backgroundImage}
+    <GeneralContent 
             title="CV Building"
-            content={content}
+            content={contentPictures}
             onBackClick={ onBackClick }
             readStatus={readStatus}
             onToggleRead={onToggleRead}

@@ -1,7 +1,7 @@
 import React from 'react'
-import c1 from '../../../../assets/pf_mp1.svg';
-import c2 from '../../../../assets/pf_mp2.svg';
-import General_Content from '../General_Abstract/General_Content';
+import c1 from '../../../../assets/content/nl-en/pf_mp1.svg';
+import c2 from '../../../../assets/content/nl-en/pf_mp2.svg';
+import GeneralContent from '../General_Abstract/General_Content';
 
 const MoneyPath = ({ onBackClick, readStatus, onToggleRead }) => {
   const contentPictures = [
@@ -9,7 +9,7 @@ const MoneyPath = ({ onBackClick, readStatus, onToggleRead }) => {
     c2,
 ]
   return (
-    <General_Content 
+    <GeneralContent 
             title="Money Paths"
             content={contentPictures}
             onBackClick={ onBackClick }

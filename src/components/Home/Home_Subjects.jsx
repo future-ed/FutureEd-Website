@@ -1,11 +1,11 @@
 import React from 'react'
-import Icon_pf from '../../assets/icon_pf.png'
-import Icon_tax from '../../assets/icon_tax.png'
-import Icon_house from '../../assets/icon_house.png'
-import Icon_ins from '../../assets/icon_ins.png'
-import Icon_ls from '../../assets/icon_ls.png'
-import Icon_si from '../../assets/icon_si.png'
-import Icon_r from '../../assets/icon_arrow_right.png'
+import Icon_pf from '../../assets/icons/icon_pf.png'
+import Icon_tax from '../../assets/icons/icon_tax.png'
+import Icon_house from '../../assets/icons/icon_house.png'
+import Icon_ins from '../../assets/icons/icon_ins.png'
+import Icon_ls from '../../assets/icons/icon_ls.png'
+import Icon_si from '../../assets/icons/icon_si.png'
+import Icon_r from '../../assets/icons/icon_arrow_right.png'
 import { HashLink } from 'react-router-hash-link';
 
 const Subjects = () => {

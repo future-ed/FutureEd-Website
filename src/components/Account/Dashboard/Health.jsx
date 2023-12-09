@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import Main from './Main'
-import backgroundImage from '../../../assets/Health.png';
+import backgroundImage from '../../../assets/bg/Health.png';
 import { useReadStatus } from '../../Account/update_read';
 import {useChapterReadProgress} from '../Dashboard/Chapter_Read_Progress'
 

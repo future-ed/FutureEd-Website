@@ -1,6 +1,6 @@
 import React from 'react'
 import GeneralAbstract from '../General_Abstract/General_Abstract';
-import backgroundImage from '../../../../assets/Health.png';
+import backgroundImage from '../../../../assets/bg/Health.png';
 
 const Perfectionism = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (

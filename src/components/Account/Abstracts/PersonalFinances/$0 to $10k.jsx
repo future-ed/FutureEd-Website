@@ -1,8 +1,8 @@
 import React from 'react'
-import c1 from '../../../../assets/pf_zt1.svg';
-import c2 from '../../../../assets/pf_zt2.svg';
-import c3 from '../../../../assets/pf_zt3.svg';
-import c4 from '../../../../assets/pf_zt4.svg';
+import c1 from '../../../../assets/content/nl-en/pf_zt1.svg';
+import c2 from '../../../../assets/content/nl-en/pf_zt2.svg';
+import c3 from '../../../../assets/content/nl-en/pf_zt3.svg';
+import c4 from '../../../../assets/content/nl-en/pf_zt4.svg';
 import GeneralContent from '../General_Abstract/General_Content';
 
 const $0_to_$10k = ({ onBackClick, readStatus, onToggleRead }) => {

@@ -1,9 +1,9 @@
 import React from 'react'
-import c1 from '../../../../assets/pf_bg1.svg';
-import c2 from '../../../../assets/pf_bg2.svg';
-import c3 from '../../../../assets/pf_bg3.svg';
-import c4 from '../../../../assets/pf_bg4.svg';
-import c5 from '../../../../assets/pf_bg5.svg';
+import c1 from '../../../../assets/content/nl-en/pf_bg1.svg';
+import c2 from '../../../../assets/content/nl-en/pf_bg2.svg';
+import c3 from '../../../../assets/content/nl-en/pf_bg3.svg';
+import c4 from '../../../../assets/content/nl-en/pf_bg4.svg';
+import c5 from '../../../../assets/content/nl-en/pf_bg5.svg';
 import GeneralContent from '../General_Abstract/General_Content';
 
 const Budgeting = ({ onBackClick, readStatus, onToggleRead }) => {

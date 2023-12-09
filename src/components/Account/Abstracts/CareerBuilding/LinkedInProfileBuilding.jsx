@@ -1,6 +1,6 @@
 import React from 'react'
 import GeneralAbstract from '../General_Abstract/General_Abstract';
-import backgroundImage from '../../../../assets/CareerBuilding.png';
+import backgroundImage from '../../../../assets/bg/CareerBuilding.png';
 
 const LinkedInProfileBuilding = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (

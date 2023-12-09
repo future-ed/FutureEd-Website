@@ -3,7 +3,7 @@ import ProgressBar from "@ramonak/react-progress-bar"
 import Logo from '../../../assets/logo.png'
 import { Link,useNavigate } from 'react-router-dom'
 import { UserAuth } from '../../../context/AuthContext';
-import profileIcon from '../../../assets/Profile_Icon.png'
+import profileIcon from '../../../assets/icons/Profile_Icon.png'
 import { useOverallReadProgress} from '../../Account/overall_read_progress';
 
 

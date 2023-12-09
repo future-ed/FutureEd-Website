@@ -1,6 +1,6 @@
 import React from 'react'
 import GeneralAbstract from '../General_Abstract/General_Abstract';
-import backgroundImage from '../../../../assets/IndependentLiving.png';
+import backgroundImage from '../../../../assets/bg/IndependentLiving.png';
 
 const Chores = ({ onBackClick, readStatus, onToggleRead }) => {
     const content = (

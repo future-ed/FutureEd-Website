@@ -1,31 +1,21 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract/General_Abstract';
-import backgroundImage from '../../../../assets/CareerBuilding.png';
+import GeneralContent from '../General_Abstract/General_Content';
+import c1 from '../../../../assets/content/nl-en/cb_ng1.svg';
+import c2 from '../../../../assets/content/nl-en/cb_ng2.svg';
+import c3 from '../../../../assets/content/nl-en/cb_ng3.svg';
+import c4 from '../../../../assets/content/nl-en/cb_ng4.svg';
 
 const Negotiation = ({ onBackClick, readStatus, onToggleRead }) => {
-    const content = (
-        <div>
-            <p>• The Goal of Negotiation</p>
-            <p>• Techniques for Effective Negotiation Like:</p>
-            <ul>
-                <li className='ml-3'>Mirroring</li>
-                <li className='ml-3'>Anchoring</li>
-                <li className='ml-3'>Loss Aversion</li>
-            </ul>
-            
-            <div className='mt-3'>
-                <p>In this section, we'll discuss the art of negotiation, focusing on effective techniques such as 
-                    mirroring, anchoring, and understanding loss aversion. How these strategies play a role in successful 
-                    negotiations such as negotiating a higher salary, and how to employ them effectively to achieve 
-                    favorable outcomes.</p>
-            </div>
-        </div>
-    );
+  const contentPictures = [
+    c1,
+    c2,
+    c3,
+    c4,
+  ]
   return (
-    <GeneralAbstract 
-            backgroundImage={backgroundImage}
-            title="Negotiations"
-            content={content}
+    <GeneralContent 
+            title="Negotiation"
+            content={contentPictures}
             onBackClick={ onBackClick }
             readStatus={readStatus}
             onToggleRead={onToggleRead}

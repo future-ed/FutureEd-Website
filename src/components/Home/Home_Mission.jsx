@@ -1,5 +1,5 @@
 import React from 'react';
-import MissionImage from '../../assets/bg_mission.png'; // Import the mission image
+import MissionImage from '../../assets/bg/bg_mission.png'; // Import the mission image
 
 const Mission = () => {
     const gradientStylePink = {

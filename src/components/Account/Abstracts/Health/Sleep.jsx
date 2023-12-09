@@ -1,29 +1,21 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract/General_Abstract';
-import backgroundImage from '../../../../assets/Health.png';
+import GeneralContent from '../General_Abstract/General_Content';
+import c1 from '../../../../assets/content/nl-en/health_sl1.svg';
+import c2 from '../../../../assets/content/nl-en/health_sl2.svg';
+import c3 from '../../../../assets/content/nl-en/health_sl3.svg';
+import c4 from '../../../../assets/content/nl-en/health_sl4.svg';
 
 const Sleep = ({ onBackClick, readStatus, onToggleRead }) => {
-    const content = (
-        <div>
-            <p>• Why is Sleep Important</p>
-            <p>• How to Optimizing Sleep</p>
-            <p>• Sleeping Problems Solutions</p>
-            <p>• Creating Good Sleep Habits (Exercise)</p>
-
-            <div className='mt-3'>
-                <p>In this section, we'll discuss the realm of sleep, why it's important for overall well-being, 
-                    understanding the mechanics of sleep, and exploring methods to optimize your sleep quality. 
-                    Additionally, we'll address common sleeping problems and offer possible solutions to improve 
-                    the quality of your sleep.</p>
-            </div>
-            
-        </div>
-    );
+  const contentPictures = [
+    c1,
+    c2,
+    c3,
+    c4,
+  ]
   return (
-    <GeneralAbstract 
-            backgroundImage={backgroundImage}
+    <GeneralContent 
             title="Sleep"
-            content={content}
+            content={contentPictures}
             onBackClick={ onBackClick }
             readStatus={readStatus}
             onToggleRead={onToggleRead}

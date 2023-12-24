@@ -3,6 +3,7 @@ import ProgressBar from "@ramonak/react-progress-bar"
 
 const Card = ({emoji, title, completed, onCardClick }) => {
   const isCompleted = completed === 100;
+  
   return (
     <button
       onClick={onCardClick}
@@ -51,10 +52,32 @@ const Card = ({emoji, title, completed, onCardClick }) => {
   )
 }
 
-const Main = ({ background, mainTitle, cardsData, gridCols, navigateTo, readProgress, doProgress }) => {
+const Main = ({ background, mainTitle, cardsData, gridCols, navigateTo, readProgress, doProgress, subChapter }) => {
   const handleCardClick = (path) => {
     navigateTo(path);
   }
+
+    const feedbackLinks = {
+      'personal_finance': 'https://www.google.com/maps',
+      'taxes': 'https://github.com/future-ed/FutureEd-Website',
+      'career_building': 'https://www.google.com/maps',
+      'independent_living': 'https://github.com/future-ed/FutureEd-Website',
+      'health': 'https://www.google.com/maps',
+      'life_skills': 'https://github.com/future-ed/FutureEd-Website',
+    };
+  
+    const navigateToFeedback = () => {
+      const feedbackLink = feedbackLinks[subChapter];
+      if (feedbackLink) {
+        window.open(feedbackLink, '_blank');
+      } else {
+        console.error("No feedback link found for this subchapter");
+      }
+    };
+
+    const isSubchapterCompleted = () => {
+      return cardsData.every(card => card.completed === 100);
+    };
 
   return (
     <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen flex items-center justify-center"
@@ -113,6 +136,15 @@ const Main = ({ background, mainTitle, cardsData, gridCols, navigateTo, readProg
             />
           ))}
         </div>
+        {isSubchapterCompleted() && (
+      <div className="w-full flex justify-center">
+        <button 
+        onClick={navigateToFeedback}
+        className="bg-[#000B28] text-white font-bold py-0 px-4 rounded-full">
+          Feedback
+        </button>
+      </div>
+    )}
       </div>
     </div>
   );

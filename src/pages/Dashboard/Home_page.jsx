@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from '../../components/Account/Dashboard/Navbar'
-import Profile from '../../components/Account/Dashboard/Profile'
+import Home from '../../components/Account/Dashboard/Home_Page'
 
 const Profile_page = () => {
   return (
@@ -9,7 +9,7 @@ const Profile_page = () => {
             <NavBar />
           </div>
           <div className="main flex-grow">
-            <Profile />
+            <Home />
           </div>
         </div>
   )

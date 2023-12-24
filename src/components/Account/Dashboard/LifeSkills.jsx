@@ -58,6 +58,7 @@ const LifeSkills = () => {
                  gridCols="md:grid-cols-3 grid-cols-1"
                  navigateTo={navigateTo} 
                  readProgress={chapterReadProgress}
+                 subChapter={'life_skills'}
                  /> 
          }
    </div>

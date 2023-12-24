@@ -47,9 +47,9 @@ const Hero = () => {
     navigate("/SignIn");
   };
 
-  // const handleCreateAccountClick = () => {
-  //   navigate("/CreateAccount");
-  // }
+  const handleCreateAccountClick = () => {
+     navigate("/CreateAccount");
+   }
 
   return (
     <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen items-center relative flex flex-col" style={{ backgroundImage: `url(${BG})`,}}>
@@ -71,7 +71,7 @@ const Hero = () => {
         </button>
         <button className=" ml-4 bg-black text-white border font-semibold py-2 px-4 rounded-full hover:underline" >
           {/* eslint-disable-next-line */}
-          <a onClick={SignUpToCome}>Get Started </a>
+          <a onClick={handleCreateAccountClick}>Get Started </a>
         </button>
       </div>
       </div>

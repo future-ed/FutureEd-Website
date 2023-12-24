@@ -19,6 +19,7 @@ const Personal_Finances = () => {
   const [currentComponent, setCurrentComponent] = useState(null);
   const [cardsData, setCardsData] = useState([]);
   const chapterReadProgress = useChapterReadProgress('personal finances');
+  
 
   useEffect(() => {
     setCardsData([
@@ -64,10 +65,10 @@ const componentMapping = {
                                onToggleRead={() => handleToggleReadStatus('rules_of_thumb')} />,
 };
   
-  const navigateTo = (path) => {
-    const ComponentToShow = componentMapping[path];
-    setCurrentComponent(ComponentToShow);
-  };
+const navigateTo = (path) => {
+  const ComponentToShow = componentMapping[path];
+  setCurrentComponent(ComponentToShow);
+};
 
   return (
    <div>
@@ -78,7 +79,8 @@ const componentMapping = {
               cardsData={cardsData}
               gridCols="md:grid-cols-4 grid-cols-1"
               navigateTo={navigateTo}
-              readProgress={chapterReadProgress} />
+              readProgress={chapterReadProgress}
+              subChapter={'personal_finance'} />
       }
 </div>
 );

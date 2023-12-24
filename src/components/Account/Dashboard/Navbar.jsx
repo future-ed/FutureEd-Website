@@ -1,51 +1,57 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import ProgressBar from "@ramonak/react-progress-bar"
 import Logo from '../../../assets/logo.png'
-import { Link,useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { UserAuth } from '../../../context/AuthContext';
 import profileIcon from '../../../assets/icons/Profile_Icon.png'
 import { useOverallReadProgress} from '../../Account/overall_read_progress';
+import { db } from '../../../firebase'; 
+import { collection, query, where, onSnapshot } from "firebase/firestore";
 
 
 const Navbar = () => {
   const { user } = UserAuth();
   const readPercentage = useOverallReadProgress();
-  const navigate = useNavigate();
 
-  const handleProfileClick = () => {
-    navigate('/Profile');
-  }
+  const [hasNewNotifications, setHasNewNotifications] = useState(false);
+
+  useEffect(() => {
+    if (user) {
+        const notificationsQuery = query(
+            collection(db, "notifications"),
+            where("userId", "==", user.uid),
+            where("isNew", "==", true)
+        );
+
+        const unsubscribe = onSnapshot(notificationsQuery, (snapshot) => {
+            const hasNew = !snapshot.empty;
+            console.log('New notifications:', hasNew);
+            setHasNewNotifications(hasNew);
+        });
+
+        return () => unsubscribe();
+    }
+  }, [user]);
   
   return (
     <div className='h-screen w-[261px]'>
-      <div className='flex items-center text-black text-[14px] w-[261px] h-[72px] border-b'>
-      <img src={profileIcon} alt="profileIcon" className="self-center ml-7" style={{ width: '40px', height: '40px' }} />
-      {user ? 
-        <button 
-          onClick={handleProfileClick}
-          style={{
-            backgroundColor: 'transparent',
-            border: 'none',
-            color: 'inherit',
-            textAlign: 'left',
-            padding: '0',
-            cursor: 'pointer',
-            textDecoration: 'none',
-          }}
-          onMouseOver={(e) => e.currentTarget.style.textDecoration = 'underline'}
-          onMouseOut={(e) => e.currentTarget.style.textDecoration = 'none'}
-        >
-        {user.email}
-    </button>
-    : 
-    'No user logged in'
-  }
+      <div className='flex items-center justify-center text-black text-[14px] w-[261px] h-[72px] border-b'>
+          <img src={profileIcon} alt="profileIcon" className="mr-0" style={{ width: '40px', height: '40px' }} />
+          <span className='text-center truncate'>{user ? user.email : 'No user logged in'}</span>
       </div>
 
       <div>
       <div className='flex justify-center text-[14px] text-[#aeacac] mt-6 mb-2'>
         Your Personal Content
       </div>
+
+      <Link to="/Home">
+      <button className='flex button-with-line items-center ml-6 mb-1 w-[208px] h-[28px] hover:bg-gray-100 text-[14px] font-bold rounded-lg'>
+                    <span className='mr-2'>📍</span>
+                    Home Page
+                </button>
+      </Link>
+
       <Link to="/PersonalFinances">
         <button className='flex button-with-line items-center ml-6 mb-1 w-[208px] h-[28px] hover:bg-gray-100 text-[14px] font-bold rounded-lg'>
         <span className='mr-2'>💰</span> 
@@ -115,7 +121,7 @@ const Navbar = () => {
         What I did
         <div style={{ position: 'relative', width: '80%', marginTop: '0.9rem' }}> 
         <ProgressBar 
-            completed={10}
+            completed={100}
             customLabelStyles={{
             color: '#000000',
             fontSize: '13px',

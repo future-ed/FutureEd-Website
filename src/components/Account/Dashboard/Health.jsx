@@ -78,6 +78,7 @@ const Health = () => {
                  gridCols="md:grid-cols-4 grid-cols-1"
                  navigateTo={navigateTo} 
                  readProgress={chapterReadProgress}
+                 subChapter={'health'}
                  />
          }
    </div>

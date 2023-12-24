@@ -69,6 +69,7 @@ const Independent_Living = () => {
                  gridCols="md:grid-cols-3 grid-cols-1"
                  navigateTo={navigateTo} 
                  readProgress={chapterReadProgress}
+                 subChapter={'independent_living'}
                  />
          }
    </div>

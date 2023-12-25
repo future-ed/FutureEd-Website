@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import backgroundImage from '../../../assets/profile.png';
+import backgroundImage from '../../../assets/bg/profile.png';
 import home from '../../../assets/bg_home.png';
 import { UserAuth } from '../../../context/AuthContext';
 import { db } from '../../../firebase';

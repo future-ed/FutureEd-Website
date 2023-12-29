@@ -42,7 +42,7 @@ const Personal_Info = () => {
                 "info.birthday": birthday,
                 "info.created_at": Timestamp.now()
             })
-            navigate('/')
+            navigate('/CreateSuccessful')
             
         } catch (e) {
             setError(e.message)

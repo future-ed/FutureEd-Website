@@ -8,8 +8,8 @@ const General_Abstract = ({ backgroundImage, title, content, onBackClick, readSt
       }, [readStatus]);
 
     const handleToggleRead = () => {
-        setIsChecked(!isChecked); // Update local state immediately for UI feedback
-        onToggleRead(); // Update global state
+        setIsChecked(!isChecked); 
+        onToggleRead(); 
     };
 
     return (

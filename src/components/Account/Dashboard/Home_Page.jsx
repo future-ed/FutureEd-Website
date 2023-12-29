@@ -3,7 +3,7 @@ import backgroundImage from '../../../assets/bg/profile.png';
 import home from '../../../assets/bg_home.png';
 import { UserAuth } from '../../../context/AuthContext';
 import { db } from '../../../firebase';
-import { doc, getDoc, onSnapshot } from 'firebase/firestore';
+import { doc, onSnapshot } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
 import { useOverallReadProgress} from '../../Account/overall_read_progress';
 

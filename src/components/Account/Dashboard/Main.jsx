@@ -83,7 +83,7 @@ const Main = ({ background, mainTitle, cardsData, gridCols, navigateTo, readProg
     <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen flex items-center justify-center"
          style={{ backgroundImage: `url(${background})` }}>
 
-      <div className="bg-white w-[90%] h-[90%] flex flex-col">
+      <div className="bg-white w-[90%] h-[90%] flex flex-col rounded-lg justify-between">
         <div className="flex justify-between items-center mt-3 ml-12 mr-12">
           <h1 className='lg:text-[42px] font-bold text-[25px]'>
             {mainTitle}
@@ -125,19 +125,22 @@ const Main = ({ background, mainTitle, cardsData, gridCols, navigateTo, readProg
             </div>
           </div> */}
         </div>
-        <div className={`grid ${gridCols} ml-12 mt-8`}>
-          {cardsData.map((card, index) => (
-            <Card
-              key={index}
-              emoji={card.emoji}
-              title={card.title}
-              completed={card.completed}
-              onCardClick={() => handleCardClick(card.path)}
-            />
-          ))}
-        </div>
+        <div className='flex-grow flex justify-center'> {/* Flex container to center the grid */}
+      <div className={`grid ${gridCols} mt-6 gap-y-1 gap-x-[58px]`}> {/* Grid container */}
+        {cardsData.map((card, index) => (
+          <Card
+            key={index}
+            emoji={card.emoji}
+            title={card.title}
+            completed={card.completed}
+            onCardClick={() => handleCardClick(card.path)}
+          />
+        ))}
+      </div>
+    </div>
+        
         {isSubchapterCompleted() && (
-      <div className="w-full flex justify-center">
+      <div className="flex justify-center pb-1">
         <button 
         onClick={navigateToFeedback}
         className="bg-[#000B28] text-white font-bold py-0 px-4 rounded-full">

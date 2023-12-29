@@ -23,8 +23,8 @@ const Career_Building = () => {
       setCardsData([
         { emoji: '🔖', title: 'CV Building', completed: readStatuses['cv_building'] ? 100 : 0, path: 'cvBuilding' },
       { emoji: '👔', title: 'LinkedIn Profile Building', completed: readStatuses['linkedin_profile_building'] ? 100 : 0, path: 'linkedInProfileBuilding' },
-      { emoji: '🙋‍♀️', title: 'Interview Preparation', completed: readStatuses['interview_preparation'] ? 100 : 0, path: 'interviewPreparation' },
-      { emoji: '🤵🏽', title: 'Formal Dress Code', completed: readStatuses['formal_dress_code'] ? 100 : 0, path: 'formalDressCode' },
+      //{ emoji: '🙋‍♀️', title: 'Interview Preparation', completed: readStatuses['interview_preparation'] ? 100 : 0, path: 'interviewPreparation' },
+      //{ emoji: '🤵🏽', title: 'Formal Dress Code', completed: readStatuses['formal_dress_code'] ? 100 : 0, path: 'formalDressCode' },
       { emoji: '💬', title: 'Negotiation', completed: readStatuses['negotiation'] ? 100 : 0, path: 'negotiation' },
       { emoji: '🌐', title: 'Networking Psychology', completed: readStatuses['networking_psychology'] ? 100 : 0, path: 'networkingPsychology' },
       ]);

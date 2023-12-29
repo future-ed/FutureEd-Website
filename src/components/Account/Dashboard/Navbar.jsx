@@ -34,7 +34,7 @@ const Navbar = () => {
   }, [user]);
   
   return (
-    <div className='h-screen w-[261px]'>
+    <div className='h-screen w-[261px] relative'>
       <div className='flex items-center justify-center text-black text-[14px] w-[261px] h-[72px] border-b'>
           <img src={profileIcon} alt="profileIcon" className="mr-0" style={{ width: '40px', height: '40px' }} />
           <span className='text-center truncate'>{user ? user.email : 'No user logged in'}</span>
@@ -99,7 +99,7 @@ const Navbar = () => {
 
       <div className='text-[14px] mt-12'>
         What I've Read
-        <div style={{ position: 'relative', width: '80%', marginTop: '1rem' }}> 
+        <div style={{ position: 'absolute', width: '80%', marginTop: '1rem' }}> 
         <ProgressBar 
             completed={readPercentage}
             customLabelStyles={{
@@ -117,9 +117,9 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className='text-[14px] mt-7'>
+      <div className='text-[14px] mt-9'>
         What I did
-        <div style={{ position: 'relative', width: '80%', marginTop: '0.9rem' }}> 
+        <div style={{ position: 'absolute', width: '80%', marginTop: '0.9rem' }}> 
         <ProgressBar 
             completed={100}
             customLabelStyles={{

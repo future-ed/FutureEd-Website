@@ -30,7 +30,7 @@ const Personal_Finances = () => {
       { emoji: '📈', title: 'Growing Money', completed: readStatuses['growing_money'] ? 100 : 0, path: 'growingMoney' },
       { emoji: '🚀', title: '€0 to €10k', completed: readStatuses['zero_to_ten'] ? 100 : 0, path: 'zero_to_ten' },
       { emoji: '🔮', title: '€10k And Now?', completed: readStatuses['ten_and_now'] ? 100 : 0, path: 'ten_and_now' },
-      { emoji: '👍🏾', title: 'Rules of Thumb', completed: readStatuses['rules_of_thumb'] ? 100 : 0, path: 'ruleOfThumb' },
+      //{ emoji: '👍🏾', title: 'Rules of Thumb', completed: readStatuses['rules_of_thumb'] ? 100 : 0, path: 'ruleOfThumb' },
     ]);
 }, [readStatuses]);
   

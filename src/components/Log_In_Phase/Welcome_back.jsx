@@ -22,7 +22,7 @@ const Welcome_Back = () => {
     setError('')
     try {
       await signIn(email,password)
-      navigate('/PersonalFinances')
+      navigate('/Home')
     } catch (e) {
       setError('Invalid email or password. Please try again.')
       console.log(e.message);

@@ -11,6 +11,7 @@ import SelectPlan from './pages/Log_In_Phase/Select_Plan_page';
 import ChooseCountry from './pages/Log_In_Phase/Choose_Country_page';
 import PersonalInformation from './pages/Log_In_Phase/Personal_Information_page';
 import ForgotPassword from './pages/Log_In_Phase/Forgot_Password_page';
+import CreateSuccessful from './pages/Log_In_Phase/Create_Successful_page';
 
 import PersonalFinances from './pages/Dashboard/Personal_Finances_Page';
 import Taxes from './pages/Dashboard/Taxes_page';
@@ -37,6 +38,7 @@ function App() {
           <Route path="/SelectPlan" element={<SelectPlan />}/>
           <Route path="/ChooseCountry" element={<ChooseCountry />}/>
           <Route path="/PersonalInformation" element={<PersonalInformation />}/>
+          <Route path="/CreateSuccessful" element={<CreateSuccessful />}/>
           <Route path="/ForgotPassword" element={<ForgotPassword />}/>
           <Route 
             path="/PersonalFinances" 

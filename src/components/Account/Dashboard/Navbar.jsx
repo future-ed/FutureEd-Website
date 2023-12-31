@@ -13,6 +13,7 @@ const Navbar = () => {
   const { user } = UserAuth();
   const readPercentage = useOverallReadProgress();
 
+  // eslint-disable-next-line
   const [hasNewNotifications, setHasNewNotifications] = useState(false);
 
   useEffect(() => {

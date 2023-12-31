@@ -66,7 +66,7 @@ const Independent_Living = () => {
            <Main background={backgroundImage}
                  mainTitle='Independent Living'
                  cardsData={cardsData}
-                 gridCols="md:grid-cols-3 grid-cols-1"
+                 gridCols="md:grid-cols-4 grid-cols-1"
                  navigateTo={navigateTo} 
                  readProgress={chapterReadProgress}
                  subChapter={'independent_living'}

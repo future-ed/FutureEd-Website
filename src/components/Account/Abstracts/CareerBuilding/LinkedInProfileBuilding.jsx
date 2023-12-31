@@ -1,26 +1,25 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract/General_Abstract';
-import backgroundImage from '../../../../assets/bg/CareerBuilding.png';
+import GeneralContent from '../General_Abstract/General_Content';
+import c1 from '../../../../assets/content/nl-en/cb_lb1.svg';
+import c2 from '../../../../assets/content/nl-en/cb_lb2.svg';
+import c3 from '../../../../assets/content/nl-en/cb_lb3.svg';
+import c4 from '../../../../assets/content/nl-en/cb_lb4.svg';
+import c5 from '../../../../assets/content/nl-en/cb_lb5.svg';
+import c6 from '../../../../assets/content/nl-en/cb_lb6.svg';
 
 const LinkedInProfileBuilding = ({ onBackClick, readStatus, onToggleRead }) => {
-    const content = (
-        <div>
-            <p>• How to set up a LinkedIn </p>
-            <p>• Key Points in Building a Professional LinkedIn Profile </p>
-            <p>• How to use LinkedIn to Network and find jobs</p>
-            
-            <div className='mt-3'>
-                <p>In this section, we focus on building a professional LinkedIn profile and key points to consider when 
-                    creating an online presence. We'll explore strategies on how to use LinkedIn for networking and 
-                    establishing professional connections.</p>
-            </div>
-        </div>
-    );
+  const contentPictures = [
+    c1,
+    c2,
+    c3,
+    c4,
+    c5,
+    c6,
+  ]
   return (
-    <GeneralAbstract 
-            backgroundImage={backgroundImage}
+    <GeneralContent 
             title="LinkedIn Profile Building"
-            content={content}
+            content={contentPictures}
             onBackClick={ onBackClick }
             readStatus={readStatus}
             onToggleRead={onToggleRead}
@@ -29,3 +28,4 @@ const LinkedInProfileBuilding = ({ onBackClick, readStatus, onToggleRead }) => {
 }
 
 export default LinkedInProfileBuilding
+

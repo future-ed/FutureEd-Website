@@ -1,32 +1,23 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract/General_Abstract';
-import backgroundImage from '../../../../assets/bg/Personal_Finances.png';
+import GeneralContent from '../General_Abstract/General_Content';
+import c1 from '../../../../assets/content/nl-en/pf_rot1.svg';
+import c2 from '../../../../assets/content/nl-en/pf_rot2.svg';
 
 const RuleOfThumb = ({ onBackClick, readStatus, onToggleRead }) => {
-    const content = (
-        <div>
-            <p>• The Maximum You Should Pay For a House </p>
-            <p>• The Maximum You Should Pay For a Personal Vehicle</p>
-            
-            <div className='mt-3'>
-                <p>In this part, we discuss the maximum recommended expenses for purchasing and maintaining a house and 
-                    a personal vehicle, aiming to guide individuals toward smart financial decisions. We stress the 
-                    importance of considering one's financial situation and priorities when determining these maximums.</p>
-            </div>
-
-            <p> COMING SOON </p>
-        </div>
-    );
+  const contentPictures = [
+    c1,
+    c2,
+  ]
   return (
-    <GeneralAbstract 
-            backgroundImage={backgroundImage}
-            title="Rules of Thumb"
-            content={content}
+    <GeneralContent 
+            title="Rule of Thumb"
+            content={contentPictures}
             onBackClick={ onBackClick }
             readStatus={readStatus}
             onToggleRead={onToggleRead}
     />
   )
 }
+
 
 export default RuleOfThumb

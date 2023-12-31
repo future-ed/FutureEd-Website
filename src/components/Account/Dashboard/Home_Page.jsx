@@ -21,7 +21,7 @@ const Home = () => {
     const [showSignOutConfirmation, setShowSignOutConfirmation] = useState(false);
 
     const handleFeedbackClick = () => {
-        const feedbackUrl = "https://www.google.com/maps/@47.5058859,19.0709642,14z?entry=ttu"; 
+        const feedbackUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfi-AWfU5V4076d1IYM2z_mLdYi3LMGzTY846AZ_JQAxdlP8w/viewform?usp=sharing"; 
         window.open(feedbackUrl, "_blank");
     };
 
@@ -119,9 +119,9 @@ const Home = () => {
                 )}
 
                 
-            <div className="flex items-start mb-5">
+            <div className="flex items-start mb-5 w-full">
                     
-                    <div style={{ width: '565px', height: '60' }}>
+                    <div className='w-1/2 h-60 bg-white rounded-lg'>
                         <div style={{ 
                             backgroundImage: `url(${home})`, 
                             backgroundSize: 'cover', 
@@ -137,7 +137,7 @@ const Home = () => {
                         </div>
                     </div>
                     
-                    <div className="w-96 h-60 bg-gray-100 rounded-lg p-4 ml-4"> 
+                    <div className="w-1/2 h-60 bg-gray-100 rounded-lg p-4 ml-4"> 
                         <p className='font-bold mb-2 text-xl'>Assignments</p>
                         <p>Coming soon</p>
                         {/* Add assignments content here */}

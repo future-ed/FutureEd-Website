@@ -1,29 +1,21 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract/General_Abstract';
-import backgroundImage from '../../../../assets/bg/IndependentLiving.png';
+import GeneralContent from '../General_Abstract/General_Content';
+import c1 from '../../../../assets/content/nl-en/il_ch1.svg';
+import c2 from '../../../../assets/content/nl-en/il_ch2.svg';
 
 const Chores = ({ onBackClick, readStatus, onToggleRead }) => {
-    const content = (
-        <div>
-            <p>• A List of Chores to Do in a House, With The Corresponding Frequency</p>
-
-            <div className='mt-3'>
-                <p>In this section, we'll outline a helpful list of household chores along with their suggested frequencies. 
-                    This comprehensive guide will cover various tasks essential for maintaining a tidy and organized home. </p>
-            </div>
-            
-        </div>
-    );
+  const contentPictures = [
+    c1,
+    c2,
+  ]
   return (
-    <GeneralAbstract 
-            backgroundImage={backgroundImage}
+    <GeneralContent 
             title="Chores"
-            content={content}
+            content={contentPictures}
             onBackClick={ onBackClick }
             readStatus={readStatus}
             onToggleRead={onToggleRead}
     />
   )
 }
-
 export default Chores

@@ -58,14 +58,13 @@ const Main = ({ background, mainTitle, cardsData, gridCols, navigateTo, readProg
   }
 
     const feedbackLinks = {
-      'personal_finance': 'https://www.google.com/maps',
-      'taxes': 'https://github.com/future-ed/FutureEd-Website',
-      'career_building': 'https://www.google.com/maps',
-      'independent_living': 'https://github.com/future-ed/FutureEd-Website',
-      'health': 'https://www.google.com/maps',
-      'life_skills': 'https://github.com/future-ed/FutureEd-Website',
+      'personal_finance': 'https://docs.google.com/forms/d/e/1FAIpQLSe8oxB7CJ7aiznt1HZZdwvwQnBBU4Ap17BjPL6ytNypaJTyWA/viewform?usp=sharing',
+      'taxes': 'https://docs.google.com/forms/d/e/1FAIpQLSeQ3GecIreAGQVv28fdGC--jBJZE9OpbciMWaTFHxqo4LMHRg/viewform?usp=sharing',
+      'career_building': 'https://docs.google.com/forms/d/e/1FAIpQLSekLuhRdpVJBHfRq2OY7ZmWKvaVkcUmNsRyeKBhKW5wVt3rqQ/viewform?usp=sharing',
+      'independent_living': 'https://docs.google.com/forms/d/e/1FAIpQLSeDOASSX_CwszIMaIpvLK-xzQG83VgusHq5ly3XeLfyGadQIg/viewform?usp=sharing',      'health': 'https://docs.google.com/forms/d/e/1FAIpQLSduYZpE1mXgJZ36S0cTcMD2f8KGvCO1VeJBJ8WAG-Ta_vwTqw/viewform?usp=sharing',
+      'life_skills': 'https://docs.google.com/forms/d/e/1FAIpQLSdHExqIFSwNUcnZVB-3YNs3PVVMKn2XZulf2OC1h0l9fkI5xQ/viewform?usp=sharing',
     };
-  
+
     const navigateToFeedback = () => {
       const feedbackLink = feedbackLinks[subChapter];
       if (feedbackLink) {

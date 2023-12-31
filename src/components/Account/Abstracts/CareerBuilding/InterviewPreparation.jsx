@@ -1,26 +1,25 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract/General_Abstract';
-import backgroundImage from '../../../../assets/bg/CareerBuilding.png';
+import GeneralContent from '../General_Abstract/General_Content';
+import c1 from '../../../../assets/content/nl-en/cb_iq1.svg';
+import c2 from '../../../../assets/content/nl-en/cb_iq2.svg';
+import c3 from '../../../../assets/content/nl-en/cb_iq3.svg';
+import c4 from '../../../../assets/content/nl-en/cb_iq4.svg';
+import c5 from '../../../../assets/content/nl-en/cb_iq5.svg';
+import c6 from '../../../../assets/content/nl-en/cb_iq6.svg';
 
 const InterviewPreparation = ({ onBackClick, readStatus, onToggleRead }) => {
-    const content = (
-        <div>
-            <p>• Tips to Prepare Yourself for an Interview </p>
-            <p>• Often used Interview Questions and How to Approach Them </p>
-            <p>• Make your own template with answers to the common questions (Exercise)</p>
-            
-            <div className='mt-3'>
-                <p>In this section, we'll cover valuable tips to prepare for an interview, including commonly asked 
-                    interview questions and effective ways to answer them. We'll explore strategies to help students 
-                    get ready and answer those often-used interview questions confidently.</p>
-            </div>
-        </div>
-    );
+  const contentPictures = [
+    c1,
+    c2,
+    c3,
+    c4,
+    c5,
+    c6,
+  ]
   return (
-    <GeneralAbstract 
-            backgroundImage={backgroundImage}
+    <GeneralContent 
             title="Interview Preparation"
-            content={content}
+            content={contentPictures}
             onBackClick={ onBackClick }
             readStatus={readStatus}
             onToggleRead={onToggleRead}

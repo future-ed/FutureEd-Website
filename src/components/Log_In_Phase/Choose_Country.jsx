@@ -25,11 +25,15 @@ const Choose_Country = () => {
             
     }}
 
+    const handleHome = () => {
+        navigate('/');
+    }
+
     const info = doc(db, 'users', `${user?.email}`)
   
     return (
         <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen flex flex-col">
-        <img src={Logo} alt="Logo" className="mt-6 self-center" style={{ width: '150px', height: 'auto' }} />
+        <img onClick={handleHome} src={Logo} alt="Logo" className="mt-6 self-center cursor-pointer" style={{ width: '150px', height: 'auto' }} />
     
         <div className="flex-grow flex flex-col items-center justify-center px-4">
             <h1 className='font-bold md:text-3xl py-10 mt-[-35px] text-center'>Choose Your Country</h1>
@@ -43,15 +47,16 @@ const Choose_Country = () => {
                     <option key={country} value={country}>{country}</option>
                 ))}
             </select>
-            <div className='w-full flex justify-center mt-12'>
-                {error && <p className='text-red-500 text-center mb-2'>{error}</p>}
-                <button 
-                    onClick={handleSubmit}
-                    className='font-bold md:w-[330px] md:h-[60px] bg-[#000B28] hover:bg-blue-900 border p-3 rounded-full text-white'
-                >
-                    Continue
-                </button>
+            <div className='flex justify-center items-center'>
+        <div>
+            <div className='h-5 mb-3 mt-4'> 
+                {error && <p className='text-red-500 text-center'>{error}</p>}
             </div>
+            <button 
+            onClick={handleSubmit}
+            className='font-bold md:w-[330px] md:h-[60px] bg-[#000B28] hover:bg-blue-900 border p-3 rounded-full text-white'>Continue</button>
+        </div>
+        </div>
         </div>
         <h1 className='font-medium self-center mb-7 text-[#000B28]'>TERMS OF USE | PRIVACY POLICY</h1>  
     </div>

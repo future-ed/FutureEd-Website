@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import Logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
 import { UserAuth } from '../../context/AuthContext'
+import { useNavigate } from 'react-router-dom';
 
 
 const Forgot_Password = () => {
@@ -9,6 +10,7 @@ const Forgot_Password = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [error, setError] = useState('');
+    const navigate = useNavigate();
 
     const handlePasswordReset = async (e) => {
         e.preventDefault();
@@ -25,12 +27,14 @@ const Forgot_Password = () => {
           }
       }
 
+    const handleHome = () => {
+      navigate('/');
+    }
+
   return (
     <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen flex flex-col">
-    {/* Logo at the top */}
-    <img src={Logo} alt="Logo" className="mt-6 self-center" style={{ width: '150px', height: 'auto' }} />
+    <img onClick={handleHome} src={Logo} alt="Logo" className="mt-6 self-center cursor-pointer" style={{ width: '150px', height: 'auto' }} />
 
-    {/* Container for centering the rest of the content */}
     <div className="flex-grow flex flex-col items-center justify-center px-4 w-full mt-[-90px]">
         <h1 className='font-bold text-3xl py-10 text-center'>Forgot Your Password</h1>
         <form onSubmit={handlePasswordReset} className="w-full max-w-[575px]">

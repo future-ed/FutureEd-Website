@@ -13,7 +13,7 @@ const Create_Successful = () => {
 
     return (
         <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen flex flex-col justify-between">
-            <img src={Logo} alt="Logo" className="mt-7 self-center" style={{ width: '150px', height: 'auto' }} />
+            <img onClick={handleHome} src={Logo} alt="Logo" className="mt-7 self-center cursor-pointer" style={{ width: '150px', height: 'auto' }} />
         
         <div className="flex flex-col items-center justify-center ">
         

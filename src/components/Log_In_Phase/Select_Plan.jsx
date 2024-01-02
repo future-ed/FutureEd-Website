@@ -39,9 +39,13 @@ const Select_Plan = () => {
         }
     }
 
+    const handleHome = () => {
+        navigate('/');
+    }
+
     return (
     <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen items-center relative flex flex-col">
-      <img src={Logo} alt="Logo" className="top-4 mt-6 md:ml-10 my-10" style={{ width: '150px', height: 'auto', marginLeft: '-2px'}} />
+      <img onClick={handleHome} src={Logo} alt="Logo" className="top-4 mt-6 md:ml-10 my-10 cursor-pointer" style={{ width: '150px', height: 'auto', marginLeft: '-2px'}} />
       <h1 className='font-bold md:text-3xl py-10'>Select Your Plan</h1>
       <div className='grid md:grid-cols-3 grid-cols-1 justify-center gap-6 mt-[-30px]'>
                 <button onClick={() => setSelectedCard('Monthly')}

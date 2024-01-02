@@ -49,9 +49,14 @@ const Personal_Info = () => {
             console.log(e.message)  
         }
     }
+
+    const handleHome = () => {
+      navigate('/');
+  }
+
   return (
     <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen flex flex-col justify-between">
-        <img src={Logo} alt="Logo" className="mt-7 self-center" style={{ width: '150px', height: 'auto' }} />
+        <img onClick={handleHome} src={Logo} alt="Logo" className="mt-7 self-center cursor-pointer" style={{ width: '150px', height: 'auto' }} />
     
     <div className="flex flex-col items-center justify-center ">
     
@@ -63,19 +68,19 @@ const Personal_Info = () => {
       <div className='flex flex-col mb-4 relative'>
         <input onChange={(e) => setBirthday(e.target.value)} className='font-light text-black border p-3 rounded-lg w-full' type='text' placeholder='Your Birthdate  DD/MM/YYYY' />
       </div>
-      {error && <p className='text-red-500 text-center mb-4'>{error}</p>}
-      <div className='flex justify-center w-full md:mt-6'>
-      <button 
-        type="submit"
-        className='font-bold w-full md:w-[330px] md:h-[60px] bg-[#000B28] hover:bg-blue-900 border p-3 rounded-full text-white'
-      >
-        Continue
-      </button>
-      </div>
+      <div className='flex justify-center items-center'>
+        <div>
+            <div className='h-5 mb-2'> 
+                {error && <p className='text-red-500 text-center'>{error}</p>}
+            </div>
+            <button 
+            onClick={handleSubmit}
+            className='font-bold md:w-[330px] md:h-[60px] bg-[#000B28] hover:bg-blue-900 border p-3 rounded-full text-white'>Continue</button>
+        </div>
+        </div>
     </form> 
   </div>
 
-  {/* Fixed bottom text */}
   <h1 className='font-medium self-center mb-7 text-[#000B28]'>TERMS OF USE | PRIVACY POLICY</h1>  
 </div>
 

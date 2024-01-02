@@ -18,6 +18,7 @@ const Home = () => {
     const readProgress = useOverallReadProgress();
     const messagesPerPage = 3;
     const totalPages = Math.ceil(totalMessages / messagesPerPage);
+    const displayCurrentPage = totalMessages === 0 ? 0 : currentPage;
     const [showSignOutConfirmation, setShowSignOutConfirmation] = useState(false);
 
     const handleFeedbackClick = () => {
@@ -163,7 +164,7 @@ const Home = () => {
                         &lt;
                     </button>
 
-                    <span className="px-2">{currentPage} / {totalPages}</span>
+                    <span className="px-2">{displayCurrentPage} / {totalPages}</span>
 
                     <button 
                         onClick={handleNext} 

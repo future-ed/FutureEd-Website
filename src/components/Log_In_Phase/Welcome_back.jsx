@@ -29,9 +29,13 @@ const Welcome_Back = () => {
     }
   }
 
+  const handleHome = () => {
+    navigate('/');
+}
+
   return (
     <div className="bg-white min-w-screen max-w-screen bg-cover bg-center bg-no-repeat h-screen flex flex-col">
-    <img src={Logo} alt="Logo" className="mt-7 self-center" style={{ width: '150px', height: 'auto' }} />
+    <img onClick={handleHome} src={Logo} alt="Logo" className="mt-7 self-center cursor-pointer" style={{ width: '150px', height: 'auto' }} />
     
     <div className="flex-grow flex flex-col items-center justify-center px-4">
       <h1 className='font-bold text-3xl my-10 mt-[-50px]'>Welcome Back</h1>

@@ -1,8 +1,6 @@
-// Notifications.js
-
 import React, { useState, useEffect } from 'react';
 import { collection, query, orderBy, onSnapshot } from 'firebase/firestore';
-import { db } from '../firebase'; // Adjust the import according to your file structure
+import { db } from '../firebase'; 
 
 const Notifications = () => {
     const [notifications, setNotifications] = useState([]);

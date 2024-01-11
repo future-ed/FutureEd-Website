@@ -56,6 +56,7 @@ const LifeSkills = () => {
                  mainTitle='Life Skills'
                  cardsData={cardsData}
                  gridCols="md:grid-cols-3 grid-cols-1"
+                 gapx={150}
                  navigateTo={navigateTo} 
                  readProgress={chapterReadProgress}
                  subChapter={'life_skills'}

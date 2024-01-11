@@ -26,6 +26,11 @@ const Home = () => {
         window.open(feedbackUrl, "_blank");
     };
 
+    const handleAssignmentsClick = () => {
+        const feedbackUrl = "https://docs.google.com/document/d/1Pi53nLETLkhH2nfB9J80XzXDr_KmhgO_XSwCzDXLuwg/edit?usp=sharing"; 
+        window.open(feedbackUrl, "_blank");
+    };
+
 
     const handleSignOut = () => {
         setShowSignOutConfirmation(true);
@@ -133,14 +138,17 @@ const Home = () => {
                             alignItems: 'center',
                             height: '240px'
                         }}>
-                            <h2 className='font-bold text-2xl mb-2 text-black mt-[-90px]'>Welcome back,</h2>
+                            <h2 className='font-bold text-2xl mb-2 text-black mt-[-120px]'>Welcome back,</h2>
                             <h2 className='italic font-light text-xl mb-6 text-black'>{userData.name || 'NAME'}</h2>
                         </div>
                     </div>
                     
                     <div className="w-1/2 h-60 bg-gray-100 rounded-lg p-4 ml-4"> 
                         <p className='font-bold mb-2 text-xl'>Assignments</p>
-                        <p>Coming soon</p>
+                        <button onClick={handleAssignmentsClick} className='font-bold hover hover:underline'>
+                            Click here ‼️‼️
+                        </button>
+                        
                         {/* Add assignments content here */}
                     </div>
                 </div>

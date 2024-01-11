@@ -35,61 +35,61 @@ const Navbar = () => {
   }, [user]);
   
   return (
-    <div className='h-screen w-[261px] relative'>
+    <div className='h-screen w-[261px] relative navbar-vertical-line'>
       <div className='flex items-center justify-center text-black text-[14px] w-[261px] h-[72px] border-b'>
           <img src={profileIcon} alt="profileIcon" className="mr-0" style={{ width: '40px', height: '40px' }} />
           <span className='text-center truncate'>{user ? user.email : 'No user logged in'}</span>
       </div>
 
       <div>
-      <div className='flex justify-center text-[14px] text-[#aeacac] mt-6 mb-2'>
+      <div className='flex justify-center text-[16px] text-[#aeacac] mt-6 mb-2'>
         Your Personal Content
       </div>
 
       <Link to="/Home">
-      <button className='flex button-with-line items-center ml-6 mb-1 w-[208px] h-[28px] hover:bg-gray-100 text-[14px] font-bold rounded-lg'>
+      <button className='flex button-with-line items-center ml-6 mb-2 w-[208px] h-[28px] hover:bg-gray-100 text-[16px] font-bold rounded-lg'>
                     <span className='mr-2'>📍</span>
                     Home Page
                 </button>
       </Link>
 
       <Link to="/PersonalFinances">
-        <button className='flex button-with-line items-center ml-6 mb-1 w-[208px] h-[28px] hover:bg-gray-100 text-[14px] font-bold rounded-lg'>
+        <button className='flex button-with-line items-center ml-6 mb-2 w-[208px] h-[28px] hover:bg-gray-100 text-[16px] font-bold rounded-lg'>
         <span className='mr-2'>💰</span> 
         <span>Personal Finances</span>
       </button>
       </Link>
       
       <Link to="/Taxes">
-        <button className='flex button-with-line items-center ml-6 mb-1 w-[208px] h-[28px] hover:bg-gray-100 text-[14px] font-bold rounded-lg'>
+        <button className='flex button-with-line items-center ml-6 mb-2 w-[208px] h-[28px] hover:bg-gray-100 text-[16px] font-bold rounded-lg'>
         <span className='mr-2'>👨🏻‍💼</span> 
         <span>Taxes</span>
       </button>
       </Link>
       
       <Link to="/CareerBuilding">
-        <button className='flex button-with-line items-center ml-6 mb-1 w-[208px] h-[28px] hover:bg-gray-100 text-[14px] font-bold rounded-lg'>
+        <button className='flex button-with-line items-center ml-6 mb-2 w-[208px] h-[28px] hover:bg-gray-100 text-[16px] font-bold rounded-lg'>
         <span className='mr-2'>💼</span> 
         <span>Career Building</span>
       </button>
       </Link>
       
       <Link to="/IndependentLiving">
-        <button className='flex button-with-line items-center ml-6 mb-1 w-[208px] h-[28px] hover:bg-gray-100 text-[14px] font-bold rounded-lg'>
+        <button className='flex button-with-line items-center ml-6 mb-2 w-[208px] h-[28px] hover:bg-gray-100 text-[16px] font-bold rounded-lg'>
         <span className='mr-2'>🏡</span> 
         <span>Independent Living </span>
       </button>
       </Link>
       
       <Link to="/Health">
-        <button className='flex button-with-line items-center ml-6 mb-1 w-[208px] h-[28px] hover:bg-gray-100 text-[14px] font-bold rounded-lg'>
+        <button className='flex button-with-line items-center ml-6 mb-2 w-[208px] h-[28px] hover:bg-gray-100 text-[16px] font-bold rounded-lg'>
         <span className='mr-2'>🍎</span> 
         <span>Health</span>
       </button>
       </Link>
       
       <Link to="/LifeSkills">
-        <button className='flex button-with-line items-center ml-6 w-[208px] h-[28px] hover:bg-gray-100 text-[14px] font-bold rounded-lg'>
+        <button className='flex button-with-line items-center ml-6 w-[208px] h-[28px] hover:bg-gray-100 text-[16px] font-bold rounded-lg'>
         <span className='mr-2'>👩🏻‍🏫</span> 
         <span>Life Skills</span>
       </button>
@@ -118,11 +118,11 @@ const Navbar = () => {
         </div>
       </div>
 
-      <div className='text-[14px] mt-9'>
+      {/* <div className='text-[14px] mt-9'>
         What I did
         <div style={{ position: 'absolute', width: '80%', marginTop: '0.9rem' }}> 
         <ProgressBar 
-            completed={100}
+            completed={0}
             customLabelStyles={{
             color: '#000000',
             fontSize: '13px',
@@ -138,7 +138,7 @@ const Navbar = () => {
         transitionTimingFunction="linear"
         />
         </div>
-      </div>
+      </div> */}
       <img src={Logo} alt="Logo" className="absolute bottom-14 mt-20 self-center ml-7" style={{ width: '102px', height: 'auto' }} />
         </div> 
     </div>

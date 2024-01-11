@@ -79,3 +79,13 @@ li.hollow:before {
   border-radius: 50%; /* Makes it circular */
   background-color: white; /* Background color of the bullet */
 }
+
+.navbar-vertical-line::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px; /* Width of the vertical line */
+  background-color: #eae7e7; /* Color of the vertical line */
+}

@@ -76,6 +76,7 @@ const Health = () => {
                  mainTitle='Health'
                  cardsData={cardsData}
                  gridCols="md:grid-cols-3 grid-cols-1"
+                 gapx={150}
                  navigateTo={navigateTo} 
                  readProgress={chapterReadProgress}
                  subChapter={'health'}

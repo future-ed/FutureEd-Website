@@ -52,7 +52,7 @@ const Card = ({emoji, title, completed, onCardClick }) => {
   )
 }
 
-const Main = ({ background, mainTitle, cardsData, gridCols, navigateTo, readProgress, doProgress, subChapter }) => {
+const Main = ({ background, mainTitle, cardsData, gridCols, gapx, navigateTo, readProgress, doProgress, subChapter }) => {
   const handleCardClick = (path) => {
     navigateTo(path);
   }
@@ -125,7 +125,7 @@ const Main = ({ background, mainTitle, cardsData, gridCols, navigateTo, readProg
           </div> */}
         </div>
         <div className='flex-grow flex justify-center'> {/* Flex container to center the grid */}
-      <div className={`grid ${gridCols} mt-6 gap-y-1 gap-x-[58px]`}> {/* Grid container */}
+      <div className={`grid ${gridCols} mt-6`} style={{ rowGap: '1px', columnGap: `${gapx}px` }}> {/* Grid container */}
         {cardsData.map((card, index) => (
           <Card
             key={index}

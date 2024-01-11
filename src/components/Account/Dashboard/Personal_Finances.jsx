@@ -78,6 +78,7 @@ const navigateTo = (path) => {
               mainTitle="Personal Finance"
               cardsData={cardsData}
               gridCols="md:grid-cols-4 grid-cols-1"
+              gapx={58}
               navigateTo={navigateTo}
               readProgress={chapterReadProgress}
               subChapter={'personal_finance'} />

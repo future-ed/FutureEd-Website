@@ -1,6 +1,6 @@
 import React,  {useState, useEffect}from 'react'
 import Main from './Main'
-import backgroundImage from '../../../assets/bg/Personal_Finances.png';
+import backgroundImage from '../../../assets/bg/Taxes.png';
 import { useReadStatus } from '../../Account/update_read';
 import {useChapterReadProgress} from '../Dashboard/Chapter_Read_Progress'
 
@@ -66,6 +66,7 @@ const Taxes = () => {
               mainTitle='Taxes'
               cardsData={cardsData}
               gridCols='md:grid-cols-3 grid-cols-1'
+              gapx={150}
               navigateTo={navigateTo} 
               readProgress={chapterReadProgress}
               subChapter={'taxes'}

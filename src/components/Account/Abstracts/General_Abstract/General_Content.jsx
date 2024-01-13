@@ -63,13 +63,13 @@ const General_Content = ({ title, content, onBackClick, readStatus, onToggleRead
             src={image}
             alt={`content-${index}`}
             className={`${index === currentImageIndex ? '' : 'hidden'}`}
-            style={{ maxWidth: '100%', maxHeight: 'calc(100vh - 88px)', objectFit: 'contain', margin: 'auto' }} // Adjust the maxHeight if the navigation bar height changes
+            style={{ maxWidth: '100%', maxHeight: 'calc(100vh - 20px)', objectFit: 'contain', margin: 'auto', marginTop:'-85px' }} // Adjust the maxHeight if the navigation bar height changes
           />
         ))}
       </div>
 
       {/* Bottom navigation element: Read Button (if last image) */}
-      <div className="absolute bottom-0 w-full flex justify-end items-center p-4 bg-white">
+      <div className="absolute bottom-0 w-full flex justify-end items-center p-2 bg-white">
         {currentImageIndex === content.length - 1 && (
           <div className="flex items-center mr-10 mb-7">
             <button

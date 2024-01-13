@@ -22,15 +22,20 @@ export const useReadStatus = (chapterDocument) => {
     }, [user, chapterDocument]);
 
     const toggleReadStatus = async (subChapterName) => {
-        const currentStatus = readStatuses[subChapterName];
-        const newStatus = !currentStatus;
-
-        setReadStatuses(prev => ({ ...prev, [subChapterName]: newStatus }));
-
-        if (user?.email && chapterDocument) {
-            const chapterDocRef = doc(db, 'users', user.email, 'read progress', chapterDocument);
-            await updateDoc(chapterDocRef, { [subChapterName]: newStatus });
-        }
+        setReadStatuses(prev => {
+            const newStatus = !prev[subChapterName];
+            const updatedStatuses = { ...prev, [subChapterName]: newStatus };
+    
+            // Update Firestore document
+            if (user?.email && chapterDocument) {
+                const chapterDocRef = doc(db, 'users', user.email, 'read progress', chapterDocument);
+                updateDoc(chapterDocRef, { [subChapterName]: newStatus }).catch(error => {
+                    console.error("Error updating document: ", error);
+                });
+            }
+    
+            return updatedStatuses;
+        });
     };
 
     return [readStatuses, toggleReadStatus];

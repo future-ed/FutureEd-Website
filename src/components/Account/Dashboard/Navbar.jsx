@@ -41,7 +41,6 @@ const Navbar = () => {
           <span className='text-center truncate'>{user ? user.email : 'No user logged in'}</span>
       </div>
 
-
       <div>
       <div className='flex justify-center text-[16px] text-[#aeacac] mt-6 mb-2'>
         Your Personal Content
@@ -97,31 +96,29 @@ const Navbar = () => {
       </Link>
       </div>
 
-    <div className='ml-10'>
-
-
-
-      <div className='text-[14px] absolute bottom-20 mb-16 self-center ml-7'>
+      <div className='text-[14px] ml-14 mt-6'>
         What I've Read
-        <div style={{ position: 'absolute', width: '120%', marginTop: '1rem' }}> 
+        <div style={{ position: 'absolute', width: '65%', marginTop: '1rem' }}> 
         <ProgressBar 
             completed={readPercentage}
             customLabelStyles={{
             color: '#000000',
             fontSize: '13px',
-            position: 'absolute',
+            position: 'absolute', 
             right: 0, 
+            top: '-41px', 
             transform: 'translateY(0)'
         }}
-            height="12px"
+            height="10px"
             bgColor="linear-gradient(to left, #94A9F6, #CA7ED4)"
             labelColor="#e80909"
             transitionTimingFunction="linear"/>
         </div>
       </div>
-      <img src={Logo} alt="Logo" className="absolute bottom-14 mt-20 self-center ml-7" style={{ width: '102px', height: 'auto' }} />
-   
-   
+
+
+    <div className='ml-10'>
+      <img src={Logo} alt="Logo" className="absolute bottom-14 self-center ml-7" style={{ width: '102px', height: 'auto' }} />
     </div> 
   </div>
 

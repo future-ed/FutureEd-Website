@@ -143,7 +143,7 @@ const Home = () => {
                         </div>
                     </div>
                     
-                    <div className="w-1/2 h-60 bg-gray-100 rounded-lg p-4 ml-4"> 
+                    <div className="w-1/2 h-60 bg-gray-100 rounded-lg p-4 ml-4" > 
                         <p className='font-bold mb-2 text-xl'>Assignments</p>
                         <button onClick={handleAssignmentsClick} className='font-bold hover hover:underline'>
                             Click here ‼️‼️

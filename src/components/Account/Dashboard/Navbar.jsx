@@ -41,6 +41,7 @@ const Navbar = () => {
           <span className='text-center truncate'>{user ? user.email : 'No user logged in'}</span>
       </div>
 
+
       <div>
       <div className='flex justify-center text-[16px] text-[#aeacac] mt-6 mb-2'>
         Your Personal Content
@@ -96,52 +97,35 @@ const Navbar = () => {
       </Link>
       </div>
 
-    <div className='ml-10' style={{ marginTop: '200px' }}>
+    <div className='ml-10'>
 
-      <div className='text-[14px] mt-12'>
+
+
+      <div className='text-[14px] absolute bottom-20 mb-16 self-center ml-7'>
         What I've Read
-        <div style={{ position: 'absolute', width: '80%', marginTop: '1rem' }}> 
+        <div style={{ position: 'absolute', width: '120%', marginTop: '1rem' }}> 
         <ProgressBar 
             completed={readPercentage}
             customLabelStyles={{
             color: '#000000',
             fontSize: '13px',
-            position: 'absolute', 
+            position: 'absolute',
             right: 0, 
-            top: '-41px', 
             transform: 'translateY(0)'
         }}
-            height="10px"
-            bgColor="linear-gradient(to left, #9BB1F6, #0D0D97)"
+            height="12px"
+            bgColor="linear-gradient(to left, #94A9F6, #CA7ED4)"
             labelColor="#e80909"
             transitionTimingFunction="linear"/>
         </div>
       </div>
-
-      {/* <div className='text-[14px] mt-9'>
-        What I did
-        <div style={{ position: 'absolute', width: '80%', marginTop: '0.9rem' }}> 
-        <ProgressBar 
-            completed={0}
-            customLabelStyles={{
-            color: '#000000',
-            fontSize: '13px',
-            position: 'absolute',
-            right: 0, 
-            top: '-40px', 
-            transform: 'translateY(0)'
-            
-        }}
-        height="10px"
-        bgColor="linear-gradient(to left, #9BB1F6, #0D0D97)"
-        labelColor="#e80909"
-        transitionTimingFunction="linear"
-        />
-        </div>
-      </div> */}
       <img src={Logo} alt="Logo" className="absolute bottom-14 mt-20 self-center ml-7" style={{ width: '102px', height: 'auto' }} />
-        </div> 
-    </div>
+   
+   
+    </div> 
+  </div>
+
+    
   )
 }
 

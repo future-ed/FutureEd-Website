@@ -21,6 +21,11 @@ import Health from './pages/Dashboard/Health_page';
 import LifeSkills from './pages/Dashboard/LifeSkills_page';
 import HomePage from './pages/Dashboard/Home_page';
 
+import Finance_Assignment from './pages/Dashboard/Finance_Assignments_page';
+import Career_Assignment from './pages/Dashboard/Career_Assignments_page';
+import Health_Assignment from './pages/Dashboard/Health_Assignments_page';
+import IndependentLiving_Assignment from './pages/Dashboard/IndependentLiving_Assignments_page'
+
 // Test
 function App() {
   return (
@@ -89,6 +94,35 @@ function App() {
               </ProtectedRoute>
             } 
             />
+            <Route 
+            path="/Finance_Assignment" 
+            element={<ProtectedRoute>
+              <Finance_Assignment />
+              </ProtectedRoute>
+            } 
+            />
+            <Route 
+            path="/Career_Assignment" 
+            element={<ProtectedRoute>
+              <Career_Assignment />
+              </ProtectedRoute>
+            } 
+            />
+            <Route 
+            path="/Health_Assignment" 
+            element={<ProtectedRoute>
+              <Health_Assignment />
+              </ProtectedRoute>
+            } 
+            />
+            <Route 
+            path="/Independent_Living_Assignment" 
+            element={<ProtectedRoute>
+              <IndependentLiving_Assignment />
+              </ProtectedRoute>
+            } 
+            />
+
         </Routes>
           
       </BrowserRouter>

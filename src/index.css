@@ -89,3 +89,93 @@ li.hollow:before {
   width: 1px; /* Width of the vertical line */
   background-color: #eae7e7; /* Color of the vertical line */
 }
+
+.NavBar {
+  width: 265px; /* Adjust the width as needed */
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh; /* Full viewport height */
+  overflow-y: auto; /* If your NavBar is long and needs scrolling */
+}
+
+.main {
+  margin-left: 265px; /* Same width as NavBar to prevent overlap */
+  width: calc(100% - 200px); /* Remaining width */
+  height: 100vh; /* Full viewport height */
+  overflow-y: auto; /* Allow scrolling */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  text-align: center;
+  padding: 8px;
+}
+
+input[type="text"] {
+  width: 100%;
+  border: none;
+  padding: 4px;
+  /* Adjust padding and styles as needed */
+}
+
+/* Optional: to remove the inner input borders and make them look like normal cells */
+input[type="text"]:focus {
+  outline: none;
+}
+
+.cv-template {
+  font-family: Arial, sans-serif;
+  max-width: 800px;
+  margin: auto;
+}
+
+.cv-header h1 {
+  font-size: 36px;
+  margin-bottom: 0;
+}
+
+.cv-header p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.cv-section h2 {
+  font-size: 24px;
+  /* background-color: black; */
+  color: black;
+  padding: 0px;
+}
+
+.cv-section h3 {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li:before {
+  content: '•';
+  margin-right: 5px;
+}
+
+.custom-list {
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.custom-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  list-style-type: none !important;
+}
+

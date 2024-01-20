@@ -56,7 +56,7 @@ const Navbar = () => {
       <Link to="/PersonalFinances">
         <button className='flex button-with-line items-center ml-6 mb-2 w-[208px] h-[28px] hover:bg-gray-100 text-[16px] font-bold rounded-lg'>
         <span className='mr-2'>💰</span> 
-        <span>Personal Finances</span>
+        <span>Personal Finance</span>
       </button>
       </Link>
       

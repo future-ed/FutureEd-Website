@@ -142,7 +142,7 @@ const Main = ({ background, mainTitle, cardsData, gridCols, gapx, navigateTo, re
       <div className="flex justify-center pb-1">
         <button 
         onClick={navigateToFeedback}
-        className="bg-[#000B28] text-white font-bold py-0 px-4 rounded-full">
+        className="bg-[#000B28] text-white font-bold py-0 px-4 rounded-full hover:underline">
           Feedback
         </button>
       </div>

@@ -26,10 +26,29 @@ const Home = () => {
         window.open(feedbackUrl, "_blank");
     };
 
-    const handleAssignmentsClick = () => {
-        const feedbackUrl = "https://docs.google.com/document/d/1Pi53nLETLkhH2nfB9J80XzXDr_KmhgO_XSwCzDXLuwg/edit?usp=sharing"; 
-        window.open(feedbackUrl, "_blank");
-    };
+    const Finance_assignment = () => {
+        navigate('/Finance_Assignment');
+    }
+
+    const Taxes_assignment = () => {
+        navigate('/Finance_Assignment');
+    }
+
+    const Career_assignment = () => {
+        navigate('/Career_Assignment');
+    }
+
+    const Health_assignment = () => {
+        navigate('/Health_Assignment');
+    }
+
+    const IndependentLiving_assignment = () => {
+        navigate('/Independent_Living_Assignment');
+    }
+
+    const LifeSkills_assignment = () => {
+        navigate('/Independent_Living_Assignment');
+    }
 
 
     const handleSignOut = () => {
@@ -48,6 +67,31 @@ const Home = () => {
     const handleSignOutNo = () => {
         setShowSignOutConfirmation(false);
     };
+
+    const Card = ({ title, description, onCardClick }) => {
+        return (
+          <div 
+            className='bg-[#d4d9dd] w-[150px] h-[100px] rounded-lg my-1.5 text-[#E1DEDE] flex flex-col justify-between items-center p-2 mx-auto sm:mx-0 relative'
+            // style={{ backgroundImage: 'linear-gradient(to top, #020716, #052232)' }}
+            onClick={onCardClick}
+          >
+            <div className='flex flex-col'>
+              <span className='flex items-center'>
+                <h1 className='text-[15px] text-black mt-[4px]'>{title}</h1>
+              </span>
+              <div className='text-[#030303] self-center text-left leading-[2rem] font-light'>
+                <p>{description}</p>
+              </div>
+            </div>
+            <span></span>
+            <svg className="absolute bottom-1 right-1 cursor-pointer" width="50" height="20" viewBox="0 0 50 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 15,10 L 40,10 L 35,5 M 40,10 L 35,15" fill="none" stroke="black" strokeWidth="2"/>
+            </svg>
+          </div>
+        );
+      };
+      
+
     
     useEffect(() => {
         if (user) {
@@ -113,21 +157,21 @@ const Home = () => {
             style={{ backgroundImage: `url(${backgroundImage})` }}>
 
             <div className="bg-white w-[90%] h-[90%] rounded-lg shadow-lg p-12 flex flex-col justify-between">
-                <h1 className='text-[42px] font-bold mb-8 text-start mt-[-36px]'>
+                <h1 className='text-[42px] font-bold mb-6 text-start mt-[-36px]'>
                     Home
                 </h1>
                 {showFeedbackButton && (
                  <button 
                     onClick={handleFeedbackClick}
-                    className="absolute top-[65px] right-[95px] m-4 bg-[#000B28] text-white font-bold py-1 px-4 rounded-full">
+                    className="absolute top-[65px] right-[95px] m-4 bg-[#000B28] text-white font-bold py-1 px-4 rounded-full hover:underline">
                     Feedback
                 </button>
                 )}
 
                 
-            <div className="flex items-start mb-5 w-full">
+            <div className="flex items-start mb-3 w-full">
                     
-                    <div className='w-1/2 h-60 bg-white rounded-lg'>
+                    <div className='w-[45%] h-[280px] bg-white rounded-lg'>
                         <div style={{ 
                             backgroundImage: `url(${home})`, 
                             backgroundSize: 'cover', 
@@ -136,24 +180,55 @@ const Home = () => {
                             flexDirection: 'column',
                             justifyContent: 'center',
                             alignItems: 'center',
-                            height: '240px'
+                            height: '280px'
                         }}>
-                            <h2 className='font-bold text-2xl mb-2 text-black mt-[-120px]'>Welcome back,</h2>
+                            <h2 className='font-bold text-2xl mb-2 text-black mt-[-150px]'>Welcome back,</h2>
                             <h2 className='italic font-light text-xl mb-6 text-black'>{userData.name || 'NAME'}</h2>
                         </div>
                     </div>
                     
-                    <div className="w-1/2 h-60 bg-gray-100 rounded-lg p-4 ml-4" > 
-                        <p className='font-bold mb-2 text-xl'>Assignments</p>
-                        <button onClick={handleAssignmentsClick} className='font-bold hover hover:underline'>
+                    <div className="w-[55%] h-[280px] bg-gray-100 rounded-lg p-3 ml-4" > 
+                        <p className='font-bold mb-1 text-xl ml-2'>Assignments</p>
+                        {/* <button onClick={handleAssignmentsClick} className='font-bold hover hover:underline'>
                             Click here ‼️‼️
-                        </button>
-                        
-                        {/* Add assignments content here */}
+                        </button> */}
+
+                        <div className='grid grid-cols-3 gap-1 ml-2'>
+                        <Card
+                            title="Personal Finance"
+                            description= "💰"
+                            onCardClick={Finance_assignment}
+                          />
+                          <Card
+                            title="Taxes"
+                            description= "💸"
+                            onCardClick={Taxes_assignment}
+                          />
+                          <Card
+                            title="Career Building"
+                            description= "🔨"
+                            onCardClick={Career_assignment}
+                          />
+                          <Card
+                            title="Independent Living"
+                            description= "🏘️"
+                            onCardClick={IndependentLiving_assignment}
+                          />
+                          <Card
+                            title="Health"
+                            description= "📈"
+                            onCardClick={Health_assignment}
+                          />
+                          <Card
+                            title="Life Skills"
+                            description= "🕺🏻"
+                            onCardClick={LifeSkills_assignment}
+                          />
+                        </div>            
                     </div>
                 </div>
 
-                <div className="w-full bg-gray-100 rounded-lg p-4 mb-6 overflow-auto relative h-[210px]"> 
+                <div className="w-full bg-gray-100 rounded-lg p-4 mb-3 overflow-auto relative h-[260px]"> 
                 <p className='font-bold mb-6 text-xl'>Notifications</p>
                 <ul>
                     {notifications.map((notification) => (
@@ -199,8 +274,8 @@ const Home = () => {
             )}
 
             {/* Original Sign Out Button */}
-            <div className="flex justify-center mb-[-30px]">
-                <button onClick={handleSignOut} className="bg-black text-white font-bold py-1 px-10 rounded-full">
+            <div className="flex justify-center mb-[-40px]">
+                <button onClick={handleSignOut} className="bg-black text-white font-bold py-1 px-9 rounded-full">
                     Sign Out
                 </button>
             </div>

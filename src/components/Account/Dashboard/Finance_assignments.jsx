@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import ESBI from './Assignments/Personal Finance/ESBI_Path'; 
-import Golden_Pillars from './Assignments/Personal Finance/The_Golden_Pillars';
+import GoldenPillars from './Assignments/Personal Finance/The_Golden_Pillars';
 import Budgeting from './Assignments/Personal Finance/Your_Budgeting_Plan';
-import Zero_to_ten from './Assignments/Personal Finance/zero_to_ten';
-import Ten_k from './Assignments/Personal Finance/Ten_k';
+import ZeroToTen from './Assignments/Personal Finance/zero_to_ten';
+import TenK from './Assignments/Personal Finance/Ten_k';
 
 const Finance_assignments = () => {
     const navigate = useNavigate();
@@ -19,13 +19,13 @@ const Finance_assignments = () => {
             case 1:
                 return <ESBI />;
             case 2:
-                 return <Golden_Pillars />; 
+                 return <GoldenPillars />; 
             case 3:
                  return <Budgeting />;
             case 4:
-                 return <Zero_to_ten />;
+                 return <ZeroToTen />;
             case 5:
-                 return <Ten_k />;  
+                 return <TenK />;  
             default:   
                 return <ESBI />;
         }

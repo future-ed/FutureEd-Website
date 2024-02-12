@@ -22,7 +22,7 @@ const Independent_Living = () => {
       setCardsData([
       { emoji: '🛠', title: 'Introduction', completed: readStatuses['introduction'] ? 100 : 0, path: 'indepIntroduction' },
       { emoji: '🏠', title: 'Moving Out', completed: readStatuses['moving_out'] ? 100 : 0, path: 'movingOut' },
-      //{ emoji: '🏘', title: 'Buy vs Rent', completed: readStatuses['buy_vs_rent'] ? 100 : 0, path: 'buyVsRent' },
+      { emoji: '🏘', title: 'Buy vs Rent', completed: readStatuses['buy_vs_rent'] ? 100 : 0, path: 'buyVsRent' },
       { emoji: '📋', title: 'Checklist Moving Out', completed: readStatuses['checklist_moving_out'] ? 100 : 0, path: 'checklistMovingOut' },
       { emoji: '🧹', title: 'Chores', completed: readStatuses['chores'] ? 100 : 0, path: 'chores' },
       //{ emoji: '😘', title: 'Dream House Calculation', completed: readStatuses['dream_house_calculation'] ? 100 : 0, path: 'dreamHouseCalculation' },

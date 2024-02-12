@@ -24,11 +24,11 @@ const Health = () => {
         { emoji: '😴', title: 'Sleep', completed: readStatuses['sleep'] ? 100 : 0, path: 'sleep' },
       //{ emoji: '💪🏻', title: 'Exercise', completed: readStatuses['exercise'] ? 100 : 0, path: 'exercise' },
       //{ emoji: '😣', title: 'Stress & Anxiety', completed: readStatuses['stress_and_anxiety'] ? 100 : 0, path: 'stressAnxiety' },
-      //{ emoji: '📱', title: 'Digital Detox', completed: readStatuses['digital_detox'] ? 100 : 0, path: 'digitalDetox' },
+      { emoji: '📱', title: 'Digital Detox', completed: readStatuses['digital_detox'] ? 100 : 0, path: 'digitalDetox' },
       //{ emoji: '😇', title: 'Perfectionism', completed: readStatuses['perfectionism'] ? 100 : 0, path: 'perfectionism' },
       //{ emoji: '🫱🏻‍🫲🏼', title: 'Relationships', completed: readStatuses['relationships'] ? 100 : 0, path: 'relationships' },
       { emoji: '⛑️', title: 'Insurance', completed: readStatuses['insurance'] ? 100 : 0, path: 'insurance' },
-      //{ emoji: '💧', title: 'Hydration', completed: readStatuses['hydration'] ? 100 : 0, path: 'hydration' },
+      { emoji: '💧', title: 'Hydration and Vitamins', completed: readStatuses['hydration'] ? 100 : 0, path: 'hydration' },
       ]);
   }, [readStatuses]);
     

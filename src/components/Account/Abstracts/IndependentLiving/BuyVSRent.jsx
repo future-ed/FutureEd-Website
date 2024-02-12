@@ -1,25 +1,21 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract/General_Abstract';
-import backgroundImage from '../../../../assets/bg/IndependentLiving.png';
+import GeneralContent from '../General_Abstract/General_Content';
+import c1 from '../../../../assets/content/nl-en/il_bvsr1.svg';
+import c2 from '../../../../assets/content/nl-en/il_bvsr2.svg';
+import c3 from '../../../../assets/content/nl-en/il_bvsr3.svg';
+import c4 from '../../../../assets/content/nl-en/il_bvsr4.svg';
 
 const BuyVSRent = ({ onBackClick, readStatus, onToggleRead }) => {
-    const content = (
-        <div>
-            <p>• The Financial decision</p>
-            <p>• Your Situation and Possibilities</p>
-
-            <div className='mt-3'>
-                <p>In this section, we'll discuss the decision-making process between buying and renting, examining the 
-                  financial and personal aspects involved in this choice.</p>
-            </div>
-            
-        </div>
-    );
+  const contentPictures = [
+    c1,
+    c2,
+    c3,
+    c4,
+  ]
   return (
-    <GeneralAbstract 
-            backgroundImage={backgroundImage}
+    <GeneralContent 
             title="Buy vs Rent"
-            content={content}
+            content={contentPictures}
             onBackClick={ onBackClick }
             readStatus={readStatus}
             onToggleRead={onToggleRead}
@@ -28,3 +24,4 @@ const BuyVSRent = ({ onBackClick, readStatus, onToggleRead }) => {
 }
 
 export default BuyVSRent
+

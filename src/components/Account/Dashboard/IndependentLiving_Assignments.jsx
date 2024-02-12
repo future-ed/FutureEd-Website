@@ -12,6 +12,7 @@ const IndependentLiving_Assignments = () => {
     };
 
     const renderExercise = () => {
+        // eslint-disable-next-line 
         switch (currentExercise) {
             case 1:
                 return <MovingOut />;

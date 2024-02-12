@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import CV_Template from '../Dashboard/Assignments/Career Building/CV_Template';
+import CVTemplate from '../Dashboard/Assignments/Career Building/CV_Template';
 import Interview from '../Dashboard/Assignments/Career Building/Interview_Questions';
 import Networking from '../Dashboard/Assignments/Career Building/Networking';
 
@@ -15,13 +15,13 @@ const Career_Assignments = () => {
     const renderExercise = () => {
         switch (currentExercise) {
             case 1:
-                return <CV_Template />;
+                return <CVTemplate />;
             case 2:
                  return <Interview />; 
             case 3:
                  return <Networking />;
             default:   
-                return <CV_Template />;
+                return <CVTemplate />;
         }
     };
 

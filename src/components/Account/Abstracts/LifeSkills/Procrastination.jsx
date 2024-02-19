@@ -1,31 +1,27 @@
 import React from 'react'
-import GeneralAbstract from '../General_Abstract/General_Abstract';
-import backgroundImage from '../../../../assets/bg/LifeSkills.png';
+import GeneralContent from '../General_Abstract/General_Content';
+import c1 from '../../../../assets/content/nl-en/ls_pr1.svg';
+import c2 from '../../../../assets/content/nl-en/ls_pr2.svg';
+import c3 from '../../../../assets/content/nl-en/ls_pr3.svg';
+import c4 from '../../../../assets/content/nl-en/ls_pr4.svg';
 
 const Procrastination = ({ onBackClick, readStatus, onToggleRead }) => {
-    const content = (
-        <div>
-            <p>• What is Procrastination</p>
-            <p>• How to Minimize Procrastination</p>
-            <p>• How to use Procrastination</p>
-
-            <div className='mt-3'>
-                <p>In this section, we'll explore procrastination, defining its nature and impact on productivity. 
-                    We'll discuss effective strategies to minimize procrastination and even explore ways to leverage 
-                    procrastination tendencies for improved productivity and efficiency.</p>
-            </div>          
-        </div>
-    );
+  const contentPictures = [
+    c1,
+    c2,
+    c3,
+    c4,
+  ]
   return (
-    <GeneralAbstract 
-            backgroundImage={backgroundImage}
+    <GeneralContent 
             title="Procrastination"
-            content={content}
+            content={contentPictures}
             onBackClick={ onBackClick }
             readStatus={readStatus}
             onToggleRead={onToggleRead}
     />
   )
 }
+
 
 export default Procrastination

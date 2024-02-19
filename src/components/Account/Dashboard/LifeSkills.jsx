@@ -20,7 +20,7 @@ const LifeSkills = () => {
         { emoji: '📚', title: 'Study Hacks', completed: readStatuses['study_hacks'] ? 100 : 0, path: 'studyHacks' },
       { emoji: '🗓', title: 'Time Management', completed: readStatuses['time_management'] ? 100 : 0, path: 'timeManagement' },
       { emoji: '🖥', title: 'Workspace Optimisation', completed: readStatuses['workspace_optimisation'] ? 100 : 0, path: 'workspaceOptimisation' },
-      //{ emoji: '🤸🏻', title: 'Procrastination', completed: readStatuses['procrastination'] ? 100 : 0, path: 'procrastination' },
+      { emoji: '🤸🏻', title: 'Procrastination', completed: readStatuses['procrastination'] ? 100 : 0, path: 'procrastination' },
       ]);
   }, [readStatuses]);
     

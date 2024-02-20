@@ -11,7 +11,7 @@ const Chores = () => {
         "Bathroom Cleaning"
       ];
       
-      const daysOfWeek = ["Ma", "Di", "Wo", "Do", "Vrij", "Za", "Zo"];
+      const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
     
       // Helper function to render select options
       const renderSelect = () => (

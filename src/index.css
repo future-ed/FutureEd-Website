@@ -179,3 +179,34 @@ li:before {
   list-style-type: none !important;
 }
 
+.gradient-border {
+  position: relative;
+  background: #FFF; /* Assuming a white background for the card */
+  border-radius: 8px; /* Optional: if you want rounded corners */
+  overflow: hidden; /* Ensures the gradient border doesn't exceed the border-radius */
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: -2px; left: -2px;
+  right: -2px; bottom: -2px;
+  z-index: -1;
+  background: linear-gradient(to top, #E7C8EC, #7AE7FF);
+  border-radius: 8px; /* Match the parent's border-radius */
+  padding: 2px; /* This effectively becomes the border width */
+}
+
+.input-large {
+  height: 50px; /* Set a fixed height that is enough for one line of text */
+  padding: 10px; /* Optional: for better text alignment */
+}
+
+/* Style for larger placeholder text */
+.input-placeholder::placeholder {
+  font-size: smaller; /* Make the placeholder text smaller if necessary */
+  white-space: nowrap; /* This will keep the placeholder in one line */
+  overflow: hidden; /* Hide overflowed text */
+  text-overflow: ellipsis; /* Add an ellipsis to text that overflows */
+}
+

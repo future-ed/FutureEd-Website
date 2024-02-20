@@ -11,7 +11,7 @@ const Ten_k = () => {
                 width: '100%', 
                 padding: '8px', 
                 margin: '8px 0', 
-                display: 'block', 
+                display: 'block', // Changed to block for better control
                 border: '1px solid #ccc', 
                 borderRadius: '4px', 
                 boxSizing: 'border-box',

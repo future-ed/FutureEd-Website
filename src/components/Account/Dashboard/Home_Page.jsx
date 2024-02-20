@@ -5,17 +5,17 @@ import { UserAuth } from '../../../context/AuthContext';
 import { db } from '../../../firebase';
 import { doc, onSnapshot } from 'firebase/firestore';
 import { useNavigate } from 'react-router-dom';
-import { useOverallReadProgress} from '../../Account/overall_read_progress';
+// import { useOverallReadProgress} from '../../Account/overall_read_progress';
 
 const Home = () => {
     const { user, logOut } = UserAuth();
     const [userData, setUserData] = useState({});
     const [notifications, setNotifications] = useState([]);
-    const [showFeedbackButton, setShowFeedbackButton] = useState(false);
+    // const [showFeedbackButton, setShowFeedbackButton] = useState(false);
     const [currentPage, setCurrentPage] = useState(1);
     const [totalMessages, setTotalMessages] = useState(0); 
     const navigate = useNavigate();
-    const readProgress = useOverallReadProgress();
+    // const readProgress = useOverallReadProgress();
     const messagesPerPage = 3;
     const totalPages = Math.ceil(totalMessages / messagesPerPage);
     const displayCurrentPage = totalMessages === 0 ? 0 : currentPage;
@@ -31,7 +31,7 @@ const Home = () => {
     }
 
     const Taxes_assignment = () => {
-        navigate('/Finance_Assignment');
+        navigate('/Taxes_Assignment');
     }
 
     const Career_assignment = () => {
@@ -47,7 +47,7 @@ const Home = () => {
     }
 
     const LifeSkills_assignment = () => {
-        navigate('/Independent_Living_Assignment');
+        navigate('');
     }
 
 
@@ -68,48 +68,57 @@ const Home = () => {
         setShowSignOutConfirmation(false);
     };
 
+    const gradientStylePink = {
+        background: 'linear-gradient(to top, #E7C8EC, #7AE7FF )',
+        color: 'transparent', 
+      };
+    
+      
+
     const Card = ({ title, description, onCardClick }) => {
         return (
           <div 
-            className='bg-[#d4d9dd] w-[150px] h-[100px] rounded-lg my-1.5 text-[#E1DEDE] flex flex-col justify-between items-center p-2 mx-auto sm:mx-0 relative'
-            // style={{ backgroundImage: 'linear-gradient(to top, #020716, #052232)' }}
+            className='bg-white w-[150px] h-[100px] rounded-lg my-1.5 text-[#E1DEDE] flex flex-col justify-between items-center p-2 mx-auto sm:mx-0 relative gradient-border cursor-pointer'
+            style={gradientStylePink}
             onClick={onCardClick}
           >
-            <div className='flex flex-col'>
-              <span className='flex items-center'>
-                <h1 className='text-[15px] text-black mt-[4px]'>{title}</h1>
-              </span>
-              <div className='text-[#030303] self-center text-left leading-[2rem] font-light'>
+            <div className='flex flex-col items-center'>
+            <span>
+                <h1 className='text-[#030303] leading-[2rem] mt-[5px]'>{title}</h1>
+            </span>
+            <div className='text-[#1b2750] text-center mt-[-4px]'>
                 <p>{description}</p>
-              </div>
             </div>
+            </div>
+        
             <span></span>
-            <svg className="absolute bottom-1 right-1 cursor-pointer" width="50" height="20" viewBox="0 0 50 20" xmlns="http://www.w3.org/2000/svg">
-              <path d="M 15,10 L 40,10 L 35,5 M 40,10 L 35,15" fill="none" stroke="black" strokeWidth="2"/>
-            </svg>
+            {/* <svg className="absolute bottom-1 right-1 cursor-pointer" width="50" height="20" viewBox="0 0 50 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M 23,10 L 40,10 L 35,5 M 40,10 L 35,15" fill="none" stroke="black" strokeWidth="2"/>
+            </svg> */}
           </div>
         );
       };
-      
-
     
     useEffect(() => {
-        if (user) {
+        if (user && user.email) {
+            console.log('User email:', user.email);
             const userDocRef = doc(db, 'users', user.email);
             const unsubscribeUser = onSnapshot(userDocRef, (userDocSnap) => {
                 if (userDocSnap.exists()) {
                     const userInfo = userDocSnap.data().info;
                     setUserData(userInfo);
-                    if (readProgress === 100) {
-                        setShowFeedbackButton(true);
-                    }
+                    // if (readProgress === 100) {
+                    //     setShowFeedbackButton(true);
+                    // }
 
                     const notificationRef = doc(db, 'notifications', 'notification');
                     const unsubscribeNotifications = onSnapshot(notificationRef, (notificationSnap) => {
                         if (notificationSnap.exists()) {
+                            console.log('Notification data:', notificationSnap.data());
                             const data = notificationSnap.data();
                             const userCountryMessages = Object.entries(data)
                                 .map(([key, value]) => {
+                                    console.log('Created at:', value.created_at);
                                     const date = value.created_at.toDate ? value.created_at.toDate() :
                                         new Date(value.created_at.seconds * 1000);
                                     return {
@@ -141,7 +150,7 @@ const Home = () => {
                 unsubscribeUser();
             };
         }
-    }, [user, readProgress, currentPage]);
+    }, [user, currentPage]);
     
 
     const handleNext = () => {
@@ -160,13 +169,23 @@ const Home = () => {
                 <h1 className='text-[42px] font-bold mb-6 text-start mt-[-36px]'>
                     Home
                 </h1>
-                {showFeedbackButton && (
+                {/* {showFeedbackButton && ( */}
                  <button 
                     onClick={handleFeedbackClick}
-                    className="absolute top-[65px] right-[95px] m-4 bg-[#000B28] text-white font-bold py-1 px-4 rounded-full hover:underline">
-                    Feedback
+                    style={{
+                        backgroundImage: 'linear-gradient(to top, #94A9F6, #CA7ED4)',
+                        color: 'white',
+                        fontWeight: 'bold',
+                        padding: '0.7rem 1rem', 
+                        borderRadius: '9999px',
+                        border: 'none', 
+                        cursor: 'pointer', 
+                        //textDecoration: 'none'
+                      }}
+                    className="absolute top-[58px] right-[95px] m-2 text-white font-bold py-2 px-4 rounded-full hover:underline">
+                    Final Feedback
                 </button>
-                )}
+                {/* )} */}
 
                 
             <div className="flex items-start mb-3 w-full">
@@ -187,41 +206,42 @@ const Home = () => {
                         </div>
                     </div>
                     
-                    <div className="w-[55%] h-[280px] bg-gray-100 rounded-lg p-3 ml-4" > 
-                        <p className='font-bold mb-1 text-xl ml-2'>Assignments</p>
+                    <div className="w-[55%] h-[280px]  rounded-lg p-3 ml-4 bg-gray-100"> 
+                    {/* style={gradientStylePink} */}
+                        <p className='font-bold mb-1 text-xl ml-2 text-black'>Assignments</p>
                         {/* <button onClick={handleAssignmentsClick} className='font-bold hover hover:underline'>
                             Click here ‼️‼️
                         </button> */}
 
                         <div className='grid grid-cols-3 gap-1 ml-2'>
                         <Card
-                            title="Personal Finance"
-                            description= "💰"
+                            title="💰"
+                            description= "Personal Finance"
                             onCardClick={Finance_assignment}
                           />
                           <Card
-                            title="Taxes"
-                            description= "💸"
+                            title="💸"
+                            description= "Taxes"
                             onCardClick={Taxes_assignment}
                           />
                           <Card
-                            title="Career Building"
-                            description= "🔨"
+                            title="🔨"
+                            description= "Career Building"
                             onCardClick={Career_assignment}
                           />
                           <Card
-                            title="Independent Living"
-                            description= "🏘️"
+                            title="🏘️"
+                            description= "Independent Living"
                             onCardClick={IndependentLiving_assignment}
                           />
                           <Card
-                            title="Health"
-                            description= "📈"
+                            title="🩺"
+                            description= "Health"
                             onCardClick={Health_assignment}
                           />
                           <Card
-                            title="Life Skills"
-                            description= "🕺🏻"
+                            title="🕺🏻"
+                            description= "Life Skills"
                             onCardClick={LifeSkills_assignment}
                           />
                         </div>            
@@ -258,7 +278,7 @@ const Home = () => {
                 </div>
             </div>
             {showSignOutConfirmation && (
-                <div className="absolute inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center ml-[20px]">
+                <div className="absolute inset-0 bg-gray-600 bg-opacity-50 flex justify-center items-center">
                     <div className="bg-white p-4 rounded-lg shadow-lg ">
                         <p>Are you sure you want to sign out?</p>
                         <div className="flex justify-center mt-4">
@@ -275,7 +295,7 @@ const Home = () => {
 
             {/* Original Sign Out Button */}
             <div className="flex justify-center mb-[-40px]">
-                <button onClick={handleSignOut} className="bg-black text-white font-bold py-1 px-9 rounded-full">
+                <button onClick={handleSignOut} className="bg-black text-white font-bold py-1 px-3 rounded-md text-sm">
                     Sign Out
                 </button>
             </div>

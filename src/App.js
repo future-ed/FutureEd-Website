@@ -25,6 +25,7 @@ import Finance_Assignment from './pages/Dashboard/Finance_Assignments_page';
 import Career_Assignment from './pages/Dashboard/Career_Assignments_page';
 import Health_Assignment from './pages/Dashboard/Health_Assignments_page';
 import IndependentLiving_Assignment from './pages/Dashboard/IndependentLiving_Assignments_page'
+import Taxes_Assignment from './pages/Dashboard/Tax_Assignments_page';
 
 // Test
 function App() {
@@ -119,6 +120,13 @@ function App() {
             path="/Independent_Living_Assignment" 
             element={<ProtectedRoute>
               <IndependentLiving_Assignment />
+              </ProtectedRoute>
+            } 
+            />
+            <Route 
+            path="/Taxes_Assignment" 
+            element={<ProtectedRoute>
+              <Taxes_Assignment />
               </ProtectedRoute>
             } 
             />

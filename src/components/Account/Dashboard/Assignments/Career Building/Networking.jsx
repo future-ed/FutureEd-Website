@@ -1,68 +1,62 @@
 import React from 'react'
 
 const Networking = () => {
+  const numberOfRows = 10;
+  const rows = Array.from({ length: numberOfRows }, (_, index) => index);
+
   return (
     <div className='text-lg mt-12 ml-[100px] mr-[120px]'>
-     <p>Make a list of the most important people or the richest people you know:</p>
-     <ol className="custom-list"> 
-      {Array.from({ length: 10 }, (_, index) => (
-        <li key={index} style={{ display: 'flex', alignItems: 'center', marginBottom: '0.5rem', listStyleType: 'none' }}>
-          <span style={{ marginRight: '0.5rem' }}>{index + 1}</span>
-          <input
-            type="text"
-            style={{
-              border: 'none',
-            //   borderBottom: '1px solid black',
-              outline: 'none',
-              flex: 1, 
-            }}
-            placeholder="______________"
-          />
-        </li>
-      ))}
-    </ol>
+     <p className='mb-8'>We want you to complete the following chart to begin your networking journey and leverage the people you know to advance your career.</p>
+     <table className="networking-table">
+      <thead>
+        <tr>
+          <th>Most important<br />people you know</th>
+          <th>How can they help you?</th>
+          <th>How can you offer these people value?</th>
+        </tr>
+      </thead>
+      <tbody>
+        {[...Array(numberOfRows)].map((_, rowIndex) => (
+          <tr key={rowIndex}>
+            <td>
+              <input
+                type="text"
+                className="input-large"
+                placeholder={rowIndex < 2 ? (rowIndex === 0 ? '1. Mark Thuberman' : '2. John Smith') : `${rowIndex + 1}.`}
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                className={`input-large ${rowIndex < 2 ? '' : 'input-placeholder'}`}
+                placeholder={
+                  rowIndex === 0
+                    ? 'Connect me to recruiter'
+                    : rowIndex === 1
+                    ? 'Can teach me something about Marketing that benefits me because I want to start digital marketing firm as well.'
+                    : ''
+                }
+              />
+            </td>
+            <td>
+              <input
+                type="text"
+                className={`input-large ${rowIndex < 2 ? '' : 'input-placeholder'}`}
+                placeholder={
+                  rowIndex === 0
+                    ? 'When you meet them at a networking event, show interest in them and the role; be enthusiastic because sometimes you can\'t provide direct value.'
+                    : rowIndex === 1
+                    ? 'Do a short project for free, offer them this'
+                    : ''
+                }
+              />
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
 
-    <div className='mb-8 mt-5'>
-        <h1 className=''>
-        How can they help you move forward in life?
-        </h1>
-        <textarea
-            style={{
-                width: '100%', 
-                padding: '8px', 
-                margin: '8px 0', 
-                display: 'block', 
-                border: '1px solid #ccc', 
-                borderRadius: '4px', 
-                boxSizing: 'border-box',
-                resize: 'vertical',
-                minHeight: '50px', 
-            }}
-            placeholder="Enter your answer here"
-        ></textarea>
-    </div>
-
-    <div className='mb-8'>
-        <h1 className=''>
-        How can you offer these people value?
-        </h1>
-        <textarea
-            style={{
-                width: '100%', 
-                padding: '8px', 
-                margin: '8px 0', 
-                display: 'block', 
-                border: '1px solid #ccc', 
-                borderRadius: '4px', 
-                boxSizing: 'border-box',
-                resize: 'vertical',
-                minHeight: '50px', 
-            }}
-            placeholder="Enter your answer here"
-        ></textarea>
-    </div>
-
-    <p className='mb-12'>Reach out to these people by providing value first.</p>
+    <p className='mb-12 mt-8'>Reach out to these people by providing value first!</p>
     </div>
   )
 }

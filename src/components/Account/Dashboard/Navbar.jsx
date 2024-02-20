@@ -5,40 +5,38 @@ import { Link } from 'react-router-dom'
 import { UserAuth } from '../../../context/AuthContext';
 import profileIcon from '../../../assets/icons/Profile_Icon.png'
 import { useOverallReadProgress} from '../../Account/overall_read_progress';
-import { db } from '../../../firebase'; 
-import { collection, query, where, onSnapshot } from "firebase/firestore";
+// import { db } from '../../../firebase'; 
+// import { collection, query, where, onSnapshot } from "firebase/firestore";
 
 
 const Navbar = () => {
   const { user } = UserAuth();
   const readPercentage = useOverallReadProgress();
-
-  // eslint-disable-next-line
   const [hasNewNotifications, setHasNewNotifications] = useState(false);
 
-  useEffect(() => {
-    if (user) {
-        const notificationsQuery = query(
-            collection(db, "notifications"),
-            where("userId", "==", user.uid),
-            where("isNew", "==", true)
-        );
+  // useEffect(() => {
+  //   if (user) {
+  //       const notificationsQuery = query(
+  //           collection(db, "notifications"),
+  //           where("userId", "==", user.uid),
+  //           where("isNew", "==", true)
+  //       );
 
-        const unsubscribe = onSnapshot(notificationsQuery, (snapshot) => {
-            const hasNew = !snapshot.empty;
-            console.log('New notifications:', hasNew);
-            setHasNewNotifications(hasNew);
-        });
+  //       const unsubscribe = onSnapshot(notificationsQuery, (snapshot) => {
+  //           const hasNew = !snapshot.empty;
+  //           console.log('New notifications:', hasNew);
+  //           setHasNewNotifications(hasNew);
+  //       });
 
-        return () => unsubscribe();
-    }
-  }, [user]);
+  //       return () => unsubscribe();
+  //   }
+  // }, [user]);
   
   return (
     <div className='h-screen w-[261px] relative navbar-vertical-line'>
-      <div className='flex items-center justify-center text-black text-[14px] w-[261px] h-[72px] border-b'>
+      <div className='flex items-center justify-center text-black text-[14px] w-[261px] h-[90px] border-b'>
           <img src={profileIcon} alt="profileIcon" className="mr-0" style={{ width: '40px', height: '40px' }} />
-          <span className='text-center truncate'>{user ? user.email : 'No user logged in'}</span>
+          <span className='text-center truncate text-[16px]'>{user ? user.email : 'No user logged in'}</span>
       </div>
 
       <div>

@@ -87,6 +87,27 @@ const Main = ({ background, mainTitle, cardsData, gridCols, gapx, navigateTo, re
           <h1 className='lg:text-[42px] font-bold text-[25px]'>
             {mainTitle}
           </h1>
+
+          {/* {isSubchapterCompleted() && ( */}
+      <div className="flex justify-center mt-4 hover:underline hover:text-white text-[19px]">
+        <button 
+        onClick={navigateToFeedback}
+        style={{
+          backgroundImage: 'linear-gradient(to top, #94A9F6, #CA7ED4)',
+          color: 'white',
+          fontWeight: 'bold',
+          padding: '0.6rem 1.3rem', 
+          borderRadius: '9999px', 
+          border: 'none', 
+          cursor: 'pointer', 
+          textDecoration: 'none' 
+        }}
+      >
+        Feedback
+      </button>
+
+      </div>
+    {/* )} */}
           {/* FOR PROGRESS WITHIN A SUBJECT */}
           {/* <div className='flex'>
           <div className='flex flex-col items-center text-[14px] mr-10'>
@@ -125,28 +146,18 @@ const Main = ({ background, mainTitle, cardsData, gridCols, gapx, navigateTo, re
           </div> */}
         </div>
         <div className='flex-grow flex justify-center'> {/* Flex container to center the grid */}
-      <div className={`grid ${gridCols} mt-6`} style={{ rowGap: '1px', columnGap: `${gapx}px` }}> {/* Grid container */}
-        {cardsData.map((card, index) => (
-          <Card
-            key={index}
-            emoji={card.emoji}
-            title={card.title}
-            completed={card.completed}
-            onCardClick={() => handleCardClick(card.path)}
-          />
-        ))}
-      </div>
-    </div>
-        
-        {isSubchapterCompleted() && (
-      <div className="flex justify-center pb-1">
-        <button 
-        onClick={navigateToFeedback}
-        className="bg-[#000B28] text-white font-bold py-0 px-4 rounded-full hover:underline">
-          Feedback
-        </button>
-      </div>
-    )}
+          <div className={`grid ${gridCols} mt-6`} style={{ rowGap: '1px', columnGap: `${gapx}px` }}> {/* Grid container */}
+            {cardsData.map((card, index) => (
+              <Card
+               key={index}
+                emoji={card.emoji}
+               title={card.title}
+                completed={card.completed}
+                onCardClick={() => handleCardClick(card.path)}
+              />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -23,7 +23,7 @@ const General_Content = ({ title, content, onBackClick, readStatus, onToggleRead
   return (
     <div className="flex flex-col h-screen w-full relative">
       {/* Top navigation elements */}
-      <div className="w-full flex justify-between items-center p-5 bg-white z-10">
+      <div className="w-full flex justify-between items-center bg-white z-10 mt-9">
         {/* Back Click Arrow (always visible) */}
         <div className="flex items-center">
           <svg onClick={onBackClick} className="cursor-pointer" width="30" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -33,11 +33,11 @@ const General_Content = ({ title, content, onBackClick, readStatus, onToggleRead
         </div>
 
         {/* Navigation buttons */}
-        <div className="flex items-center">
+        <div className="flex items-center mr-4">
           {/* Back Navigation Button (if not the first image) */}
           {currentImageIndex !== 0 && (
             <button
-              className="bg-black text-white rounded-full px-3 py-1 cursor-pointer mr-2"
+              className="bg-black text-white rounded-full px-3.5 py-1.5 cursor-pointer mr-2"
               onClick={() => setCurrentImageIndex(currentImageIndex - 1)}
             >
               &larr; Back
@@ -46,7 +46,7 @@ const General_Content = ({ title, content, onBackClick, readStatus, onToggleRead
           {/* Next Page Button (if not the last image) */}
           {currentImageIndex < content.length - 1 && (
             <button
-              className="bg-black text-white rounded-full px-3 py-1 cursor-pointer"
+              className="bg-black text-white rounded-full px-3.5 py-1.5 cursor-pointer"
               onClick={() => setCurrentImageIndex(currentImageIndex + 1)}
             >
               Next &rarr;
@@ -69,18 +69,18 @@ const General_Content = ({ title, content, onBackClick, readStatus, onToggleRead
       </div>
 
       {/* Bottom navigation element: Read Button (if last image) */}
-      <div className="absolute bottom-0 w-full flex justify-end items-center p-2 bg-white">
+      <div className="absolute bottom-0 w-full flex justify-end items-center bg-white">
         {currentImageIndex === content.length - 1 && (
           <div className="flex items-center mr-10 mb-7">
             <button
               onClick={handleToggleRead}
-              className={`mr-1 border-2 px-1 py-0.9 rounded ${isChecked ? 'border-green-500' : 'border-red-500'}`}
+              className={`mr-1 border-2 px-1.5 py-1 rounded ${isChecked ? 'border-green-500' : 'border-red-500'}`}
             >
               <span style={{ visibility: isChecked ? 'visible' : 'hidden' }}>
                 &#10004;
               </span>
             </button>
-            <span className="text-black">Read</span>
+            <span className="text-black text-[19px] ml-2">Read</span>
           </div>
         )}
       </div>

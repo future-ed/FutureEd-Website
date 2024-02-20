@@ -1,12 +1,32 @@
 import React from 'react'
+import Mouse from '../../../../../assets/Mouse.png'
 
 const CV_Template = () => {
     const fileName = 'CV_Template.docx';
+    const gradientStyleBlue = {
+      background: 'linear-gradient(to top, #94A9F6, #CA7ED4)',
+      //color: 'transparent', 
+    };
 
     return (
         <div className="cv-template">
-          <header className="cv-header mb-7">
-            <h1 className='flex justify-center mt-10'>JOHN DOE</h1>
+          <div className="flex justify-end mt-[30px]" style={{ position: 'relative' }}>
+            <a 
+              href={`${process.env.PUBLIC_URL}/${fileName}`}  
+              download
+              className="text-white bg-black py-2 px-5 rounded-full hover:underline"
+            >
+              Download
+            </a>
+            <img
+              src={Mouse}
+              alt="/"
+              className="absolute bottom-0 right-0 w-[45px] h-[40px]"
+              style={{ transform: 'rotate(4deg)', right: '-5px', bottom: '-60%' }} 
+            />
+          </div>
+          <header className="cv-header mb-7 mt-[-40px]">
+            <h1 className='flex justify-center'>JOHN DOE</h1>
             <p className='flex justify-center'>john.doe@example.com | +31(6)12345678</p>
             <p className='flex justify-center'>www.linkedin.com/in/johndoe</p>
             <p className='flex justify-center'>potential other useful links</p>
@@ -97,16 +117,6 @@ const CV_Template = () => {
                 <p className='font-bold'>Sports Event Coordination: <span className='font-normal'>Organized and coordinated a large-scale soccer tournament for a charity to raise money for a local charity.</span></p>
             </ul>
           </section>
-
-          <div className="flex justify-center mt-10 mb-10">
-            <a 
-              href={`${process.env.PUBLIC_URL}/${fileName}`}  
-              download 
-              className="bg-black text-white py-2 px-4 rounded hover:underline"
-            >
-              Download CV Template
-            </a>
-          </div>
         </div>
       );
 }

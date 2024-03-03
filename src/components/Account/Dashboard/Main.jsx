@@ -58,11 +58,12 @@ const Main = ({ background, mainTitle, cardsData, gridCols, gapx, navigateTo, re
   }
 
     const feedbackLinks = {
-      'personal_finance': 'https://docs.google.com/forms/d/e/1FAIpQLSe8oxB7CJ7aiznt1HZZdwvwQnBBU4Ap17BjPL6ytNypaJTyWA/viewform?usp=sharing',
-      'taxes': 'https://docs.google.com/forms/d/e/1FAIpQLSeQ3GecIreAGQVv28fdGC--jBJZE9OpbciMWaTFHxqo4LMHRg/viewform?usp=sharing',
-      'career_building': 'https://docs.google.com/forms/d/e/1FAIpQLSekLuhRdpVJBHfRq2OY7ZmWKvaVkcUmNsRyeKBhKW5wVt3rqQ/viewform?usp=sharing',
-      'independent_living': 'https://docs.google.com/forms/d/e/1FAIpQLSeDOASSX_CwszIMaIpvLK-xzQG83VgusHq5ly3XeLfyGadQIg/viewform?usp=sharing',      'health': 'https://docs.google.com/forms/d/e/1FAIpQLSduYZpE1mXgJZ36S0cTcMD2f8KGvCO1VeJBJ8WAG-Ta_vwTqw/viewform?usp=sharing',
-      'life_skills': 'https://docs.google.com/forms/d/e/1FAIpQLSdHExqIFSwNUcnZVB-3YNs3PVVMKn2XZulf2OC1h0l9fkI5xQ/viewform?usp=sharing',
+      'personal_finance': 'https://docs.google.com/forms/d/1ivRU01matoxdPa2QnBNcx3hNiqY-Tu6DlAsbUwTmJ4A/edit',
+      'taxes': 'https://docs.google.com/forms/d/1pIhb8kGvEVUsvbsmnZcAMKIwXX7LGoB0qlJ5nLaWA60/edit',
+      'career_building': 'https://docs.google.com/forms/d/1lH9fQbg0uO0DA8X2z1NjWRkEyyDdpiGg-joDyjEYJg0/edit',
+      'independent_living': 'https://docs.google.com/forms/d/1Cf430jfc1GAGHIFYLE2yN0ilMbb2i-o_VhSL5GZv5_E/edit',
+      'life_skills': 'https://docs.google.com/forms/d/1D2fcBx3GTSFoc62iGCXS7HKbd2IpJMzqPhdyeoukeMQ/edit',
+      'health': 'https://docs.google.com/forms/d/1f1BMF_o6_5LEtRhaTugMjNqajFxk15x3qCd4BkGAVwQ/edit',
     };
 
     const navigateToFeedback = () => {

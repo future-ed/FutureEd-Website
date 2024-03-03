@@ -1,6 +1,7 @@
 import React from 'react'
 
 const ESBI_Path = () => {
+    const fileName = 'Your ESBI Path.docx';
     const headers = ["Metric 1", "Metric 2", "Metric 3", "Metric 4", "Metric 5"];
     const rows = ["E", "S", "B", "I"];
     const data = [
@@ -40,6 +41,15 @@ const ESBI_Path = () => {
 
   return (
     <div className='text-lg mt-12 ml-[100px] mr-[120px]'>
+      <div className="flex justify-end mt-[-30px] mb-3" style={{ position: 'relative' }}>
+            <a 
+              href={`${process.env.PUBLIC_URL}/${fileName}`}  
+              download
+              className="text-white bg-black py-2 px-5 rounded-full hover:underline"
+            >
+              Download
+            </a>
+        </div>
       <p className='mb-8'>
       The purpose of this assignment is to make a temporary decision about the path that aligns with you and your goals. As life progresses, your aspirations may change, and it's normal to adjust accordingly. However, it's important to set a goal and choose a path to move forward. So we want you the answer the following questions:
       </p>
@@ -104,7 +114,7 @@ const ESBI_Path = () => {
         <h1 className='font-bold'>
           In what kind of field do you want to work?
         </h1>
-        <textarea
+        {/* <textarea
             style={{
                 width: '100%', 
                 padding: '8px', 
@@ -117,7 +127,7 @@ const ESBI_Path = () => {
                 minHeight: '50px', 
             }}
             placeholder="Enter your answer here"
-        ></textarea>
+        ></textarea> */}
         <p className='italic font-bold mt-10'>Disclaimer: <span className='font-normal italic'>Keep in mind that even within an ESBI category there are different options regarding working remotely, stress and more. Some fields for example like engineering allow you to work completely remotely compared to fields like nursing which is almost always completely on-site. This exercise is a nuanced version of finding your way in life. Do not use it for making an important decision! Use it to discover yourself and your future career path!</span></p>
         </div>
 
@@ -206,7 +216,7 @@ const ESBI_Path = () => {
         <h1 className='font-bold'>
             What is your Secondary motivation for financial success?
         </h1>
-        <textarea
+        {/* <textarea
             style={{
                 width: '100%', 
                 padding: '8px', 
@@ -219,7 +229,7 @@ const ESBI_Path = () => {
                 minHeight: '50px', 
             }}
             placeholder="Enter your answer here"
-        ></textarea>
+        ></textarea> */}
         </div>
 
         <p className='italic mb-12'>Keep in mind that these questions are only meant to be an indicator. You choose your own path and it may even change over time!</p>
@@ -254,7 +264,7 @@ const ESBI_Path = () => {
         </table>
         </div>
         
-        <div>
+        {/* <div>
         <div className='mb-10'>
                 <h1 className='font-bold mb-2'>Now it’s your turn to find some metrics and score them yourself.</h1>
                 <table className='mb-10'>
@@ -365,7 +375,7 @@ const ESBI_Path = () => {
             }}
             placeholder="Enter your answer here"
         ></textarea>
-        </div>
+        </div> */}
     </div>
   )
 }

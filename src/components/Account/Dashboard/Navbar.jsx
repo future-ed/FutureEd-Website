@@ -5,14 +5,32 @@ import { Link } from 'react-router-dom'
 import { UserAuth } from '../../../context/AuthContext';
 import profileIcon from '../../../assets/icons/Profile_Icon.png'
 import { useOverallReadProgress} from '../../Account/overall_read_progress';
-// import { db } from '../../../firebase'; 
-// import { collection, query, where, onSnapshot } from "firebase/firestore";
+import { db } from '../../../firebase'; 
+import { doc, getDoc } from "firebase/firestore";
 
 
 const Navbar = () => {
   const { user } = UserAuth();
   const readPercentage = useOverallReadProgress();
   const [hasNewNotifications, setHasNewNotifications] = useState(false);
+  const [userCountry, setUserCountry] = useState("");
+
+  useEffect(() => {
+    const fetchUserCountry = async () => {
+      if (user && user.email) {
+        const userRef = doc(db, "users", user.email);
+        const userSnap = await getDoc(userRef);
+
+        if (userSnap.exists()) {
+          setUserCountry(userSnap.data().info.country); // Access nested fields appropriately
+        } else {
+          console.log("No such document!");
+        }
+      }
+    };
+
+    fetchUserCountry();
+  }, [user]);
 
   // useEffect(() => {
   //   if (user) {
@@ -114,9 +132,22 @@ const Navbar = () => {
         </div>
       </div>
 
+      {userCountry === "Sint Maarten, (Dutch part)" && (
+        <div className="absolute bottom-20 left-0 right-0 w-[88%] mx-auto flex justify-center">
+        <a href="https://docs.google.com/document/d/19Q0pe7Nrd0fHXBk3k5PukjfKuRVPOZ-hYjc7ofTKZTE/edit#heading=h.c843crkluuf3" target="_blank" rel="noopener noreferrer" 
+           className='rounded-full text-white font-bold py-2 px-4 text-center hover hover:underline'
+           style={{ 
+             backgroundImage: 'linear-gradient(to top, #054B8C, #00B0E4)',
+             display: 'inline-block', // Ensures the gradient covers the button properly
+           }}>
+           <div>Extra Supplements</div>
+          <div>SXM students exclusive!</div>
+        </a>
+      </div>
+      )}
 
     <div className='ml-10'>
-      <img src={Logo} alt="Logo" className="absolute bottom-14 self-center ml-7" style={{ width: '102px', height: 'auto' }} />
+      <img src={Logo} alt="Logo" className="absolute bottom-12 left-0 right-0 mx-auto" style={{ width: '102px', height: 'auto' }} />
     </div> 
   </div>
 

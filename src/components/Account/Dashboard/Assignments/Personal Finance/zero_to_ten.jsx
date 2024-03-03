@@ -1,6 +1,8 @@
 import React from 'react'
 
 const zero_to_ten = () => {
+  const fileName = 'The 10000 Mentality.docx';
+
   const goals = [
     { id: "Goal 1.1", description: "Save up €500 emergency fund" },
     { id: "Goal 1.2", description: "Save up €1.000 emergency fund" },
@@ -26,6 +28,15 @@ const zero_to_ten = () => {
 
   return (
     <div className='text-lg mt-12 ml-[100px] mr-[120px]'>
+      <div className="flex justify-end mt-[-30px] mb-3" style={{ position: 'relative' }}>
+            <a 
+              href={`${process.env.PUBLIC_URL}/${fileName}`}  
+              download
+              className="text-white bg-black py-2 px-5 rounded-full hover:underline"
+            >
+              Download
+            </a>
+        </div>
       <p className='mb-4'>Now that we've talked about different methods to get from the Golden Pillars to the next goal, the €10.000, it's time to make a plan for your next goal. It's important to make a plan and set a goal because it increases your likelihood of achieving it by allowing you to measure your progress and adjust if necessary.</p>
 
       <p className='font-bold mb-4'>Step 1: <span className='font-normal'>Start with the end in mind. </span></p>
@@ -35,7 +46,7 @@ const zero_to_ten = () => {
         <h1 className='font-bold'>
         My goal is to use the 10k for? 
         </h1>
-        <textarea
+        {/* <textarea
             style={{
                 width: '100%', 
                 padding: '8px', 
@@ -48,7 +59,7 @@ const zero_to_ten = () => {
                 minHeight: '50px', 
             }}
             placeholder="Enter your answer here"
-        ></textarea>
+        ></textarea> */}
       </div>
 
       <p className='font-bold mb-4'>Step 2: <span className='font-normal'>Break it down</span></p>
@@ -96,7 +107,7 @@ const zero_to_ten = () => {
       <p className='mb-4'>Everyone can have the same goal, but without action nothing will be accomplished, so we want you to think about the actions you need to take to make sure you can reach your milestones and end up with the €10,000.</p>
       
       <p className='mb-12 font-bold'>What actions are you going to take to hit your milestones? 
-      <textarea
+      {/* <textarea
             style={{
                 width: '100%', 
                 padding: '8px', 
@@ -109,7 +120,8 @@ const zero_to_ten = () => {
                 minHeight: '50px', 
             }}
             placeholder="Enter your answer here"
-        ></textarea></p>
+        ></textarea> */}
+        </p>
     </div>
   )
 }

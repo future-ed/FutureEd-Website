@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 
 const Moving_Out = () => {
+  const fileName = 'Checklist Moving.docx';
   const [bedroomItems, setBedroomItems] = useState([
     { name: "Bed(Frame)", selected: "", isAdded: false },
     { name: "Duvet Cover", selected: "", isAdded: false },
@@ -225,8 +226,8 @@ const Moving_Out = () => {
                           }}
                         >
                           <option value=""></option>
-                          <option value="no">❌</option>
-                          <option value="yes">✅</option>
+                          {/* <option value="no">❌</option>
+                          <option value="yes">✅</option> */}
                         </select>
                       </td>
                     </React.Fragment>
@@ -235,11 +236,11 @@ const Moving_Out = () => {
               ))}
               {/* Last row for Add/Remove buttons */}
               <tr>
-                <td colSpan="6" style={{ textAlign: 'center' }}>
+                {/* <td colSpan="6" style={{ textAlign: 'center' }}>
                   <button className='hover:underline' onClick={() => addRow(setItems)}>Add Row</button>
                   <span> / </span>
                   <button className='hover:underline' onClick={() => removeRow(items, setItems)}>Remove Row</button>
-                </td>
+                </td> */}
               </tr>
             </tbody>
           </table>
@@ -249,6 +250,15 @@ const Moving_Out = () => {
     
   return (
     <div className='text-lg mt-12 ml-[100px] mr-[120px]'>
+      <div className="flex justify-end mt-[-30px] mb-3" style={{ position: 'relative' }}>
+            <a 
+              href={`${process.env.PUBLIC_URL}/${fileName}`}  
+              download
+              className="text-white bg-black py-2 px-5 rounded-full hover:underline"
+            >
+              Download
+            </a>
+        </div>
       <p className='mb-5'>Below is a complete checklist of all the things you will need when you move out. Simply check off the items you have to keep track. If you are missing something personal, just add it to the list!</p>
       <div>
       {renderTable(bedroomItems, setBedroomItems, 'Bedroom')}

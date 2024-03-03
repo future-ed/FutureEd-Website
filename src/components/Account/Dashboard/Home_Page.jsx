@@ -22,7 +22,7 @@ const Home = () => {
     const [showSignOutConfirmation, setShowSignOutConfirmation] = useState(false);
 
     const handleFeedbackClick = () => {
-        const feedbackUrl = "https://docs.google.com/forms/d/e/1FAIpQLSfi-AWfU5V4076d1IYM2z_mLdYi3LMGzTY846AZ_JQAxdlP8w/viewform?usp=sharing"; 
+        const feedbackUrl = "https://docs.google.com/forms/d/1LDlrTcdijb07q7VI-GFm87fFT6nz96o2NkeY5-42Xng/edit"; 
         window.open(feedbackUrl, "_blank");
     };
 
@@ -47,7 +47,7 @@ const Home = () => {
     }
 
     const LifeSkills_assignment = () => {
-        navigate('');
+        navigate('/LifeSkills_Assignment');
     }
 
 
@@ -69,35 +69,31 @@ const Home = () => {
     };
 
     const gradientStylePink = {
-        background: 'linear-gradient(to top, #E7C8EC, #7AE7FF )',
+        background: '[#F7F6FB]',
         color: 'transparent', 
       };
     
       
 
-    const Card = ({ title, description, onCardClick }) => {
+      const Card = ({ title, description, onCardClick }) => {
         return (
-          <div 
-            className='bg-white w-[150px] h-[100px] rounded-lg my-1.5 text-[#E1DEDE] flex flex-col justify-between items-center p-2 mx-auto sm:mx-0 relative gradient-border cursor-pointer'
-            style={gradientStylePink}
-            onClick={onCardClick}
-          >
-            <div className='flex flex-col items-center'>
-            <span>
-                <h1 className='text-[#030303] leading-[2rem] mt-[5px]'>{title}</h1>
-            </span>
-            <div className='text-[#1b2750] text-center mt-[-4px]'>
-                <p>{description}</p>
+            <div 
+                className='w-[150px] h-[107px] rounded-lg my-1.5 text-[#E1DEDE] flex flex-col justify-between items-center p-2 mx-auto sm:mx-0 relative gradient-border cursor-pointer'
+                style={{ backgroundColor: '#f3f4f6' }} 
+                onClick={onCardClick}
+            >
+                <div className='flex flex-col items-center'>
+                    <span>
+                        <h1 className='text-[#030303] leading-[2rem] mt-[5px]'>{title}</h1>
+                    </span>
+                    <div className='text-[#1b2750] text-center mt-[-4px] font-bold'>
+                        <p>{description}</p>
+                    </div>
+                </div>
             </div>
-            </div>
-        
-            <span></span>
-            {/* <svg className="absolute bottom-1 right-1 cursor-pointer" width="50" height="20" viewBox="0 0 50 20" xmlns="http://www.w3.org/2000/svg">
-              <path d="M 23,10 L 40,10 L 35,5 M 40,10 L 35,15" fill="none" stroke="black" strokeWidth="2"/>
-            </svg> */}
-          </div>
         );
-      };
+    };
+    
     
     useEffect(() => {
         if (user && user.email) {
@@ -199,21 +195,22 @@ const Home = () => {
                             flexDirection: 'column',
                             justifyContent: 'center',
                             alignItems: 'center',
-                            height: '240px'
+                            height: '280px',
+                            width:'450px'
                         }}>
-                            <h2 className='font-bold text-2xl mb-2 text-black mt-[-120px]'>Welcome back,</h2>
+                            <h2 className='font-bold text-2xl mb-2 text-black mt-[-165px]'>Welcome back,</h2>
                             <h2 className='italic font-light text-xl mb-6 text-black'>{userData.name || 'NAME'}</h2>
                         </div>
                     </div>
                     
-                    <div className="w-[55%] h-[280px]  rounded-lg p-3 ml-4 bg-gray-100"> 
+                    <div className="w-[55%] h-[280px] rounded-lg p-1 ml-6"> 
                     {/* style={gradientStylePink} */}
                         <p className='font-bold mb-1 text-xl ml-2 text-black'>Assignments</p>
                         {/* <button onClick={handleAssignmentsClick} className='font-bold hover hover:underline'>
                             Click here ‼️‼️
                         </button> */}
 
-                        <div className='grid grid-cols-3 gap-1 ml-2'>
+                        <div className='grid grid-cols-3 gap-3'>
                         <Card
                             title="💰"
                             description= "Personal Finance"

@@ -1,6 +1,7 @@
 import React from 'react'
 
 const Chores = () => {
+  const fileName = 'Chores List.docx';
     const weeklyTasks = [
         "Doing the Dishes", "Take out the Trash", "Doing the Laundry", 
         "Bed Cleaning", "Grocery Shopping", "Vacuuming", "Bathroom Cleaning"
@@ -17,8 +18,8 @@ const Chores = () => {
       const renderSelect = () => (
         <select>
           <option value=""></option>
-          <option value="no">❌</option>
-          <option value="yes">✅</option>
+          {/* <option value="no">❌</option>
+          <option value="yes">✅</option> */}
         </select>
       );
     
@@ -43,6 +44,15 @@ const Chores = () => {
 
   return (
     <div className='text-lg mt-12 ml-[100px] mr-[120px]'>
+      <div className="flex justify-end mt-[-30px] mb-3" style={{ position: 'relative' }}>
+            <a 
+              href={`${process.env.PUBLIC_URL}/${fileName}`}  
+              download
+              className="text-white bg-black py-2 px-5 rounded-full hover:underline"
+            >
+              Download
+            </a>
+        </div>
       <div>
       <h2 className='mb-2'>Weekly</h2>
       <table className='mb-12'>

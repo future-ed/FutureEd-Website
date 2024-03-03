@@ -26,6 +26,7 @@ import CareerAssignment from './pages/Dashboard/Career_Assignments_page';
 import HealthAssignment from './pages/Dashboard/Health_Assignments_page';
 import IndependentLivingAssignment from './pages/Dashboard/IndependentLiving_Assignments_page'
 import TaxesAssignment from './pages/Dashboard/Tax_Assignments_page';
+import LifeskillsAssignment from './pages/Dashboard/LifeSkills_Assignment';
 
 
 function App() {
@@ -127,6 +128,13 @@ function App() {
             path="/Taxes_Assignment" 
             element={<ProtectedRoute>
               <TaxesAssignment />
+              </ProtectedRoute>
+            } 
+            />
+            <Route 
+            path="/Lifeskills_Assignment" 
+            element={<ProtectedRoute>
+              <LifeskillsAssignment />
               </ProtectedRoute>
             } 
             />

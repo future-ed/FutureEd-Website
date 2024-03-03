@@ -1,8 +1,18 @@
 import React from 'react'
 
 const Interview_Questions = () => {
+    const fileName = 'Interview Questions.docx';
   return (
     <div className='text-lg mt-12 ml-[100px] mr-[120px]'>
+        <div className="flex justify-end mt-[-30px] mb-3" style={{ position: 'relative' }}>
+            <a 
+              href={`${process.env.PUBLIC_URL}/${fileName}`}  
+              download
+              className="text-white bg-black py-2 px-5 rounded-full hover:underline"
+            >
+              Download
+            </a>
+        </div>
         <h1 className='font-bold mb-2'>
             Interview Quetions
         </h1>

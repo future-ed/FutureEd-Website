@@ -10,7 +10,7 @@ const CV_Template = () => {
 
     return (
         <div className="cv-template">
-          <div className="flex justify-end mt-[30px]" style={{ position: 'relative' }}>
+          <div className="flex justify-end mt-[30px] mb-3" style={{ position: 'relative' }}>
             <a 
               href={`${process.env.PUBLIC_URL}/${fileName}`}  
               download
@@ -18,12 +18,12 @@ const CV_Template = () => {
             >
               Download
             </a>
-            <img
+            {/* <img
               src={Mouse}
               alt="/"
               className="absolute bottom-0 right-0 w-[45px] h-[40px]"
               style={{ transform: 'rotate(4deg)', right: '-5px', bottom: '-60%' }} 
-            />
+            /> */}
           </div>
           <header className="cv-header mb-7 mt-[-40px]">
             <h1 className='flex justify-center'>JOHN DOE</h1>

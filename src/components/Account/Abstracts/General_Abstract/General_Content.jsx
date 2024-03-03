@@ -34,25 +34,32 @@ const General_Content = ({ title, content, onBackClick, readStatus, onToggleRead
 
         {/* Navigation buttons */}
         <div className="flex items-center mr-4">
-          {/* Back Navigation Button (if not the first image) */}
-          {currentImageIndex !== 0 && (
-            <button
-              className="bg-black text-white rounded-full px-3.5 py-1.5 cursor-pointer mr-2"
-              onClick={() => setCurrentImageIndex(currentImageIndex - 1)}
-            >
-              &larr; Back
-            </button>
-          )}
-          {/* Next Page Button (if not the last image) */}
-          {currentImageIndex < content.length - 1 && (
-            <button
-              className="bg-black text-white rounded-full px-3.5 py-1.5 cursor-pointer"
-              onClick={() => setCurrentImageIndex(currentImageIndex + 1)}
-            >
-              Next &rarr;
-            </button>
-          )}
-        </div>
+        {/* Back Navigation Button (if not the first image) */}
+        {currentImageIndex !== 0 ? (
+          <button
+            className="bg-black text-white rounded-full px-3.5 py-1.5 cursor-pointer mr-2"
+            style={{ minWidth: '75px' }} // Fixed width
+            onClick={() => setCurrentImageIndex(currentImageIndex - 1)}
+          >
+            &larr; Back
+          </button>
+        ) : (
+          <div style={{ minWidth: '75px' }} /> // Invisible placeholder for alignment
+        )}
+        {/* Next Page Button (if not the last image) */}
+        {currentImageIndex < content.length - 1 ? (
+          <button
+            className="bg-black text-white rounded-full px-3.5 py-1.5 cursor-pointer"
+            style={{ minWidth: '75px' }} // Fixed width
+            onClick={() => setCurrentImageIndex(currentImageIndex + 1)}
+          >
+            Next &rarr;
+          </button>
+        ) : (
+          <div style={{ minWidth: '75px' }} /> // Invisible placeholder for alignment
+        )}
+      </div>
+
       </div>
 
       {/* Display content (images) */}

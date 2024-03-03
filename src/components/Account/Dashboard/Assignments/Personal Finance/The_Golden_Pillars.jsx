@@ -1,6 +1,7 @@
 import React from 'react'
 
 const The_Golden_Pillars = () => {
+  const fileName = 'The Golden Pillars & Budget Plan.docx';
   const data = [
     { date: "1-2-2024", netIncome: "€600", livingExpense: "€300", funExpense: "€120", saving: "€180", totalSaved: "€180" },
     { date: "1-3-2024", netIncome: "€600", livingExpense: "€280", funExpense: "€120", saving: "€200", totalSaved: "€380" },
@@ -16,12 +17,21 @@ const The_Golden_Pillars = () => {
   
   return (
     <div className='text-lg mt-12 ml-[100px] mr-[120px]'>
+      <div className="flex justify-end mt-[-30px] mb-3" style={{ position: 'relative' }}>
+            <a 
+              href={`${process.env.PUBLIC_URL}/${fileName}`}  
+              download
+              className="text-white bg-black py-2 px-5 rounded-full hover:underline"
+            >
+              Download
+            </a>
+        </div>
       <p className='mb-8'>Now it is your turn to complete your Golden Pillars! Look at what stage you are at and from there make a plan and follow the roadmap until you have completed all the Golden Pillars. So before you start conquering the Golden Pillars, we want you to have a (budget) plan. If you want a framework to guide you, we recommend the 50/30/20 rule.</p>
 
       {/* <p className='mb-4'> So we want you the answer the following questions:</p> */}
 
       <p className='mb-4'> Determine your monthly living expenses: €
-      <input
+      {/* <input
         type="text"
         style={{
             width: '80px', 
@@ -31,11 +41,11 @@ const The_Golden_Pillars = () => {
             fontSize: '14px',
             marginLeft: '4px', 
         }}
-        placeholder=""/>
+        placeholder=""/> */}
       </p>
 
       <p className='mb-4'> Calculate your monthly average fun expenses: €
-      <input
+      {/* <input
         type="text"
         style={{
             width: '80px', 
@@ -45,11 +55,11 @@ const The_Golden_Pillars = () => {
             fontSize: '14px',
             marginLeft: '4px', 
         }}
-        placeholder=""/>
+        placeholder=""/> */}
       </p>
 
       <p className='mb-4'> Determine your monthly Saving Investing: €
-      <input
+      {/* <input
         type="text"
         style={{
             width: '80px', 
@@ -59,13 +69,13 @@ const The_Golden_Pillars = () => {
             fontSize: '14px',
             marginLeft: '4px', 
         }}
-        placeholder=""/>
+        placeholder=""/> */}
       </p>
 
       <p className='mb-4'> Determine your current ratio;
       <div className='mb-2 mt-5'> 
         <span className='italic'>Living costs:</span>
-      <input
+      {/* <input
         type="text"
         style={{
             width: '80px', 
@@ -75,11 +85,11 @@ const The_Golden_Pillars = () => {
             fontSize: '14px',
             marginLeft: '4px', 
         }}
-        placeholder=""/>
+        placeholder=""/> */}
       </div>
       <div className='mb-2'>
         <span className='italic'>Fun:</span>
-      <input
+      {/* <input
         type="text"
         style={{
             width: '80px', 
@@ -89,11 +99,11 @@ const The_Golden_Pillars = () => {
             fontSize: '14px',
             marginLeft: '4px', 
         }}
-        placeholder=""/>
+        placeholder=""/> */}
       </div>
       <div>
         <span className='italic'>Investment/Saving:</span>
-      <input
+      {/* <input
         type="text"
         style={{
             width: '80px', 
@@ -103,7 +113,7 @@ const The_Golden_Pillars = () => {
             fontSize: '14px',
             marginLeft: '4px', 
         }}
-        placeholder=""/>
+        placeholder=""/> */}
       </div>
       
         
@@ -112,7 +122,7 @@ const The_Golden_Pillars = () => {
       <p className='mb-4 font-bold'> What is the ideal ratio / salary you would like to have?; 
       <div className='mt-4 font-normal italic'> 
         Living costs:
-      <input
+      {/* <input
         type="text"
         style={{
             width: '80px', 
@@ -122,10 +132,10 @@ const The_Golden_Pillars = () => {
             fontSize: '14px',
             marginLeft: '4px', 
         }}
-        placeholder="%"/>
+        placeholder="%"/> */}
         
         <span className='ml-3'>Fun:
-        <input
+        {/* <input
         type="text"
         style={{
             width: '80px', 
@@ -135,11 +145,11 @@ const The_Golden_Pillars = () => {
             fontSize: '14px',
             marginLeft: '4px', 
         }}
-        placeholder="%"/>
+        placeholder="%"/> */}
         </span>
 
         <span className='ml-3'>Investment:
-        <input
+        {/* <input
         type="text"
         style={{
             width: '80px', 
@@ -149,14 +159,14 @@ const The_Golden_Pillars = () => {
             fontSize: '14px',
             marginLeft: '4px', 
         }}
-        placeholder="%"/>
+        placeholder="%"/> */}
         </span>
       </div>
       
       </p>
 
       <p className='mb-12'> How much is that in €; Living costs: €
-      <input
+      {/* <input
         type="text"
         style={{
             width: '80px', 
@@ -166,10 +176,10 @@ const The_Golden_Pillars = () => {
             fontSize: '14px',
             marginLeft: '4px', 
         }}
-        placeholder=""/>
+        placeholder=""/> */}
         
         <span className='ml-3'>Fun: €
-        <input
+        {/* <input
         type="text"
         style={{
             width: '80px', 
@@ -179,11 +189,11 @@ const The_Golden_Pillars = () => {
             fontSize: '14px',
             marginLeft: '4px', 
         }}
-        placeholder=""/>
+        placeholder=""/> */}
         </span>
 
         <span className='ml-3'>Investment: €
-        <input
+        {/* <input
         type="text"
         style={{
             width: '80px', 
@@ -193,7 +203,7 @@ const The_Golden_Pillars = () => {
             fontSize: '14px',
             marginLeft: '4px', 
         }}
-        placeholder=""/>
+        placeholder=""/> */}
         </span>
         <p className='mt-4'>Work towards this salary :)</p>
       </p>

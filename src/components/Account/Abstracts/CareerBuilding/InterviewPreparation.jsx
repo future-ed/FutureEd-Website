@@ -6,12 +6,14 @@ import c3 from '../../../../assets/content/nl-en/cb_iq3.svg';
 import c4 from '../../../../assets/content/nl-en/cb_iq4.svg';
 import c5 from '../../../../assets/content/nl-en/cb_iq5.svg';
 import c6 from '../../../../assets/content/nl-en/cb_iq6.svg';
+import c7 from '../../../../assets/content/nl-en/cb_iq7.svg';
 
 const InterviewPreparation = ({ onBackClick, readStatus, onToggleRead }) => {
   const contentPictures = [
     c1,
     c2,
     c3,
+    c7,
     c4,
     c5,
     c6,

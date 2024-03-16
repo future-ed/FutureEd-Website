@@ -22,7 +22,7 @@ const Home = () => {
     const [showSignOutConfirmation, setShowSignOutConfirmation] = useState(false);
 
     const handleFeedbackClick = () => {
-        const feedbackUrl = "https://docs.google.com/forms/d/1LDlrTcdijb07q7VI-GFm87fFT6nz96o2NkeY5-42Xng/edit"; 
+        const feedbackUrl = "https://forms.gle/1iGNfK7bdPdGNtU28"; 
         window.open(feedbackUrl, "_blank");
     };
 

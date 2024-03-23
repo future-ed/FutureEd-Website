@@ -15,7 +15,7 @@ const SleepQuiz = () => {
 
     <Question
         questionText="2. What is more beneficial before a math exam for optimal performance?"
-        options={['Pulling an all-nighter to study', 'Getting a good nights rest', 'Combining short naps with late-night studying', 'Drinking caffeinated beverages throughout the night']}
+        options={['Pulling an all-nighter to study', 'Getting a good night’s rest', 'Combining short naps with late-night studying', 'Drinking caffeinated beverages throughout the night']}
         correctAnswer="Getting a good night’s rest"
         className="mb-6"
     />
